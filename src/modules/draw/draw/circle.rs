@@ -10,6 +10,7 @@
 
 use acadrust::types::Vector3;
 use acadrust::{Circle, EntityType};
+use rust_i18n::t;
 
 use crate::command::{CadCommand, CmdResult, DynField, TangentObject};
 use crate::modules::draw::defaults;
@@ -135,11 +136,19 @@ impl CadCommand for CircleCommand {
     }
     fn prompt(&self) -> String {
         match &self.step {
-            StepCR::Center => "CIRCLE  Specify center point:".into(),
-            StepCR::Radius(c) => format!(
-                "CIRCLE  Specify radius or type value  <{:.4}>  [center ({:.3},{:.3})]:",
-                self.default_r, c.x, c.y
-            ),
+            StepCR::Center => t!("CIRCLE  Specify center point:").into_owned(),
+            StepCR::Radius(c) => {
+                let r = format!("{:.4}", self.default_r);
+                let cx = format!("{:.3}", c.x);
+                let cy = format!("{:.3}", c.y);
+                t!(
+                    "CIRCLE  Specify radius or type value  <%{r}>  [center (%{cx},%{cy})]:",
+                    r = r,
+                    cx = cx,
+                    cy = cy
+                )
+                .into_owned()
+            }
         }
     }
 
@@ -151,7 +160,7 @@ impl CadCommand for CircleCommand {
                 CmdOption::new("2P", "2P"),
                 CmdOption::new("Ttr", "TTR"),
                 CmdOption::new("Ttt", "TTT"),
-                CmdOption::new("Diameter", "D"),
+                CmdOption::new(t!("Diameter").as_ref(), "D"),
             ],
             StepCR::Radius(_) => vec![],
         }

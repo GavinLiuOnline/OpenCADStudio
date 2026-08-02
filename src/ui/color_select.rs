@@ -8,6 +8,7 @@ use crate::ui::properties::acad_color_display;
 use acadrust::types::Color as AcadColor;
 use iced::widget::{button, column, container, row, text};
 use iced::{Background, Border, Color, Element, Length, Theme};
+use rust_i18n::t;
 
 /// Which "logical" entries the colour list offers besides the standard ACI
 /// colours.
@@ -218,7 +219,7 @@ pub fn color_list<'a>(
         list = list.push(named_row(AcadColor::Index(i)));
     }
     list = list.push(
-        button(text("More…").size(11))
+        button(text(t!("More…")).size(11))
             .on_press(on_more)
             .style(list_row_style)
             .padding([2, 4])

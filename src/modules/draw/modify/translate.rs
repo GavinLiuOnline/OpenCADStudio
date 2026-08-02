@@ -7,6 +7,7 @@
 
 use acadrust::Handle;
 use glam::DVec3;
+use rust_i18n::t;
 
 use crate::command::{CadCommand, CmdResult, EntityTransform};
 use crate::modules::{IconKind, ModuleEvent, ToolDef};
@@ -53,14 +54,21 @@ impl CadCommand for MoveCommand {
 
     fn prompt(&self) -> String {
         match &self.step {
-            Step::Base => format!(
-                "MOVE  Specify base point  [{} objects]:",
-                self.handles.len()
-            ),
-            Step::Target(base) => format!(
-                "MOVE  Specify destination  [base {:.3},{:.3}]:",
-                base.x, base.y
-            ),
+            Step::Base => t!(
+                "MOVE  Specify base point  [%{count} objects]:",
+                count = self.handles.len()
+            )
+            .into_owned(),
+            Step::Target(base) => {
+                let bx = format!("{:.3}", base.x);
+                let by = format!("{:.3}", base.y);
+                t!(
+                    "MOVE  Specify destination  [base %{bx},%{by}]:",
+                    bx = bx,
+                    by = by
+                )
+                .into_owned()
+            }
         }
     }
 

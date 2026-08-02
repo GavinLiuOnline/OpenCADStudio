@@ -13,6 +13,7 @@ use iced::widget::{button, column, container, mouse_area, opaque, row, stack, Sp
 use iced::{
     Background, Border, Element, Event, Length, Padding, Rectangle, Renderer, Size, Theme, Vector,
 };
+use std::borrow::Cow;
 
 #[derive(Debug, Clone, Copy)]
 pub struct ModalOptions {
@@ -257,7 +258,7 @@ pub fn backdrop<'a>(
 /// title bar; pass `Vector::ZERO` to keep it centred.
 pub fn modal<'a>(
     base: impl Into<Element<'a, Message>>,
-    title: &'a str,
+    title: impl Into<Cow<'a, str>>,
     content: impl Into<Element<'a, Message>>,
     on_close: Message,
     offset: Vector,
@@ -284,7 +285,7 @@ pub fn modal<'a>(
     // The dialog name is centred across the content width with the ✕ overlaid
     // at the right edge. The title bar is itself an overlay: the content layer
     // below determines the intrinsic modal width before `Fill` is resolved.
-    let title_text = iced::widget::text(title).size(15);
+    let title_text = iced::widget::text(title.into()).size(15);
     let title_surface: Element<'a, Message> = container(title_text)
         .width(Length::Fill)
         .height(Length::Fixed(24.0))

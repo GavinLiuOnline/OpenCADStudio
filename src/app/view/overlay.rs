@@ -4,6 +4,7 @@ use iced::widget::{
     Space,
 };
 use iced::{Background, Border, Color, Element, Fill, Theme};
+use rust_i18n::t;
 
 pub(super) fn position_canvas_overlay<'a>(
     anchor: iced::Point,
@@ -28,7 +29,7 @@ pub(super) fn text_inline_overlay(
     ed: &super::super::text_inline::TextInlineState,
     canvas: (f32, f32),
 ) -> Element<'_, Message> {
-    let field = text_input("Text", &ed.value)
+    let field = text_input(t!("Text").as_ref(), &ed.value)
         .id(iced::widget::Id::new(TEXT_INLINE_ID))
         .on_input(Message::TextInlineInput)
         .on_submit(Message::TextInlineOk)
@@ -532,7 +533,7 @@ pub(super) fn mtext_editor_overlay<'a>(
         f64::from(writing_area_px / preview_scale).max(slider_min * 2.0);
     let width_slider = column![
         row![
-            text(format!("Width: {:.3}", ed.rect_width)).size(11),
+            text(t!("Width: %{value}", value = format!("{:.3}", ed.rect_width))).size(11),
             Space::new().width(Fill),
             text(format!("{:.0}%", ed.rect_width / slider_max * 100.0)).size(11),
         ]
@@ -642,7 +643,7 @@ pub(super) fn mtext_editor_overlay<'a>(
     let action_bar = container(
         row![
             iced::widget::Space::new().width(width),
-            crate::ui::style::style_manager::tb_button("Apply", Message::MTextApply, true),
+            crate::ui::style::style_manager::tb_button(t!("Apply"), Message::MTextApply, true),
         ]
         .align_y(iced::Alignment::Center),
     )
@@ -673,7 +674,7 @@ pub(super) fn mtext_editor_overlay<'a>(
     // transparent fill lets the dimmed viewport show through beneath.
     crate::ui::modal::modal(
         iced::widget::Space::new().width(Fill).height(Fill),
-        "Text Editor",
+        t!("Text Editor"),
         content,
         Message::MTextCancel,
         modal_offset,
@@ -732,13 +733,13 @@ pub(super) fn viewport_context_menu_overlay(
     let mut items: Vec<Element<'static, Message>> = Vec::new();
 
     if has_cmd {
-        items.push(item("Cancel".to_string(), Message::CommandEscape));
-        items.push(item("Enter".to_string(), Message::CommandFinalize));
+        items.push(item(t!("Cancel").into_owned(), Message::CommandEscape));
+        items.push(item(t!("Enter").into_owned(), Message::CommandFinalize));
     } else {
         if !last_cmds.is_empty() {
             let last = last_cmds[0].clone();
             items.push(item(
-                format!("Repeat {last}"),
+                t!("Repeat %{last}", last = last).into_owned(),
                 Message::Command(last.to_uppercase()),
             ));
             if last_cmds.len() > 1 {
@@ -750,13 +751,13 @@ pub(super) fn viewport_context_menu_overlay(
             items.push(sep());
         }
         if has_selection {
-            items.push(item("Delete".to_string(), Message::DeleteSelected));
+            items.push(item(t!("Delete").into_owned(), Message::DeleteSelected));
             items.push(item(
-                "Move".to_string(),
+                t!("Move").into_owned(),
                 Message::Command("MOVE".to_string()),
             ));
             items.push(item(
-                "Copy".to_string(),
+                t!("Copy").into_owned(),
                 Message::Command("COPY".to_string()),
             ));
             items.push(sep());
@@ -768,7 +769,7 @@ pub(super) fn viewport_context_menu_overlay(
             items.push(
                 button(
                     row![
-                        text("Draw Order").size(12),
+                        text(t!("Draw Order").into_owned()).size(12),
                         iced::widget::Space::new().width(Fill),
                         do_caret,
                     ]
@@ -782,51 +783,51 @@ pub(super) fn viewport_context_menu_overlay(
             );
             if draworder_open {
                 items.push(subitem(
-                    "Bring to Front".to_string(),
+                    t!("Bring to Front").into_owned(),
                     Message::Command("DRAWORDER F".to_string()),
                 ));
                 items.push(subitem(
-                    "Send to Back".to_string(),
+                    t!("Send to Back").into_owned(),
                     Message::Command("DRAWORDER B".to_string()),
                 ));
                 items.push(subitem(
-                    "Bring Above Object".to_string(),
+                    t!("Bring Above Object").into_owned(),
                     Message::DrawOrderPickRef(true),
                 ));
                 items.push(subitem(
-                    "Send Under Object".to_string(),
+                    t!("Send Under Object").into_owned(),
                     Message::DrawOrderPickRef(false),
                 ));
             }
             items.push(sep());
             items.push(item(
-                "Isolate Objects".to_string(),
+                t!("Isolate Objects").into_owned(),
                 Message::Command("ISOLATEOBJECTS".to_string()),
             ));
             items.push(item(
-                "Hide Objects".to_string(),
+                t!("Hide Objects").into_owned(),
                 Message::Command("HIDEOBJECTS".to_string()),
             ));
             items.push(sep());
-            items.push(item("Select Similar".to_string(), Message::SelectSimilar));
+            items.push(item(t!("Select Similar").into_owned(), Message::SelectSimilar));
             items.push(item(
-                "Invert Selection".to_string(),
+                t!("Invert Selection").into_owned(),
                 Message::InvertSelection,
             ));
         }
         if isolation_active {
             items.push(item(
-                "End Object Isolation".to_string(),
+                t!("End Object Isolation").into_owned(),
                 Message::Command("UNISOLATEOBJECTS".to_string()),
             ));
         }
         items.push(item(
-            "Select All".to_string(),
+            t!("Select All").into_owned(),
             Message::Command("SELECTALL".to_string()),
         ));
-        items.push(item("Quick Select...".to_string(), Message::QSelectOpen));
+        items.push(item(t!("Quick Select...").into_owned(), Message::QSelectOpen));
         items.push(item(
-            "Zoom Extents".to_string(),
+            t!("Zoom Extents").into_owned(),
             Message::Command("ZOOM EXTENTS".to_string()),
         ));
     }
@@ -987,13 +988,13 @@ pub(super) fn qselect_overlay<'a>(
     let value_enabled =
         state.property.is_some() && !matches!(state.operator, crate::app::QSelectOp::Any);
 
-    let label = |s: &'static str| {
+    let label = |s: String| {
         text(s)
             .size(12)
             .width(iced::Length::Fixed(90.0))
     };
 
-    let btn = |lbl: &'static str, msg: Message, primary: bool| {
+    let btn = |lbl: String, msg: Message, primary: bool| {
         button(text(lbl).size(12))
             .on_press(msg)
             .style(move |theme: &Theme, st| {
@@ -1027,10 +1028,10 @@ pub(super) fn qselect_overlay<'a>(
     }
 
     let panel_body = column![
-        text("Quick Select").size(14),
+        text(t!("Quick Select").into_owned()).size(14),
         Space::new().height(10),
         row![
-            label("Object type:"),
+            label(t!("Object type:").into_owned()),
             iced::widget::pick_list(
                 Some(type_sel),
                 type_options,
@@ -1049,7 +1050,7 @@ pub(super) fn qselect_overlay<'a>(
         .spacing(8),
         Space::new().height(6),
         row![
-            label("Property:"),
+            label(t!("Property:").into_owned()),
             iced::widget::pick_list(
                 Some(prop_sel),
                 prop_options,
@@ -1068,7 +1069,7 @@ pub(super) fn qselect_overlay<'a>(
         .spacing(8),
         Space::new().height(6),
         row![
-            label("Operator:"),
+            label(t!("Operator:").into_owned()),
             iced::widget::pick_list(
                 Some(state.operator),
                 op_options,
@@ -1080,7 +1081,7 @@ pub(super) fn qselect_overlay<'a>(
         .align_y(iced::Alignment::Center)
         .spacing(8),
         Space::new().height(6),
-        row![label("Value:"), value_input,]
+        row![label(t!("Value:").into_owned()), value_input,]
             .align_y(iced::Alignment::Center)
             .spacing(8),
         Space::new().height(10),
@@ -1089,15 +1090,15 @@ pub(super) fn qselect_overlay<'a>(
                 .on_toggle(Message::QSelectSetAppend)
                 .size(14),
             Space::new().width(6),
-            text("Append to current selection").size(12),
+            text(t!("Append to current selection").into_owned()).size(12),
         ]
         .align_y(iced::Alignment::Center),
         Space::new().height(14),
         row![
             Space::new().width(Fill),
-            btn("Cancel", Message::QSelectClose, false),
+            btn(t!("Cancel").into_owned(), Message::QSelectClose, false),
             Space::new().width(8),
-            btn("Apply", Message::QSelectApply, true),
+            btn(t!("Apply").into_owned(), Message::QSelectApply, true),
         ]
         .align_y(iced::Alignment::Center),
     ]

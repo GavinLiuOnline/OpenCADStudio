@@ -4281,6 +4281,16 @@ impl OpenCADStudio {
                 Task::none()
             }
 
+            Message::LanguageChanged(language) => {
+                if self.language == language {
+                    return Task::none();
+                }
+                self.language = language;
+                language.apply();
+                self.persist_settings_if_changed();
+                Task::none()
+            }
+
             Message::AboutOpen => {
                 self.active_modal = Some(super::ModalKind::About);
                 Task::none()

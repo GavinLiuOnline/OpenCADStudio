@@ -16,6 +16,7 @@ use acadrust::entities::{
 use acadrust::types::Vector3;
 use acadrust::{EntityType, Handle};
 use glam::DVec3;
+use rust_i18n::t;
 use truck_modeling::base::{BoundedCurve, Cut};
 
 use crate::command::{CadCommand, CmdResult};
@@ -430,9 +431,9 @@ impl CadCommand for BreakAtPointCommand {
 
     fn prompt(&self) -> String {
         if self.target.is_none() {
-            "BREAKATPOINT  Select object:".into()
+            t!("BREAKATPOINT  Select object:").into_owned()
         } else {
-            "BREAKATPOINT  Specify break point:".into()
+            t!("BREAKATPOINT  Specify break point:").into_owned()
         }
     }
 

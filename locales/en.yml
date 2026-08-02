@@ -1,0 +1,1878 @@
+_version: 1
+# English locale — the source text doubles as the lookup key, so entries here
+# are identity mappings; `locales/zh-CN.yml` carries the translations.
+"Close": "Close"
+"Language": "Language"
+"Language:": "Language:"
+"Open and Save": "Open and Save"
+"Default save format:": "Default save format:"
+"Used for the first save of a new drawing. Existing drawings keep their file type and version.": "Used for the first save of a new drawing. Existing drawings keep their file type and version."
+"Theme": "Theme"
+"Iced theme:": "Iced theme:"
+"Changing a base colour switches to Custom. Iced generates every component shade from these six colours.": "Changing a base colour switches to Custom. Iced generates every component shade from these six colours."
+"Background": "Background"
+"Text": "Text"
+"Primary": "Primary"
+"Success": "Success"
+"Warning": "Warning"
+"Danger": "Danger"
+"Version": "Version"
+"Platform": "Platform"
+"Arch": "Arch"
+"Copy Info": "Copy Info"
+"CAD application for Architecture & Engineering": "CAD application for Architecture & Engineering"
+"options": "options"
+"%{count} steps available": "%{count} steps available"
+"%{label} history": "%{label} history"
+"Open CAD Studio ready.": "Open CAD Studio ready."
+"Type a command or use the ribbon. Open OBJ: INSERT tab.": "Type a command or use the ribbon. Open OBJ: INSERT tab."
+"Command:": "Command:"
+"Invalid": "Invalid"
+"Literal spaces: Space stays in the line instead of running the command (same as typing a leading '>'). Stays on until toggled off.": "Literal spaces: Space stays in the line instead of running the command (same as typing a leading '>'). Stays on until toggled off."
+"Open or create a drawing to manage layouts.": "Open or create a drawing to manage layouts."
+"Model and layout list": "Model and layout list"
+"Open or create a drawing to add a layout.": "Open or create a drawing to add a layout."
+"Open or create a drawing to switch layouts.": "Open or create a drawing to switch layouts."
+"Annotation / Viewport Scale\nClick to change": "Annotation / Viewport Scale\nClick to change"
+"Cursor coordinates ($COORDS)\nClick to cycle: static / live / polar": "Cursor coordinates ($COORDS)\nClick to cycle: static / live / polar"
+"Orthogonal Mode\nF8": "Orthogonal Mode\nF8"
+"Show Lineweight\nLWDISPLAY": "Show Lineweight\nLWDISPLAY"
+"Dynamic Input\nF12": "Dynamic Input\nF12"
+"Object Snap Tracking\nF11": "Object Snap Tracking\nF11"
+"PAPER: double-click viewport to enter MSPACE\nMODEL: click to switch to Model Space": "PAPER: double-click viewport to enter MSPACE\nMODEL: click to switch to Model Space"
+"Drawing Units (INSUNITS)\nClick to change": "Drawing Units (INSUNITS)\nClick to change"
+"Show Transparency\nForce opaque when off": "Show Transparency\nForce opaque when off"
+"Isolate Objects\nClick for Isolate / Hide / End": "Isolate Objects\nClick for Isolate / Hide / End"
+"Quick Properties\nFloating panel on selection": "Quick Properties\nFloating panel on selection"
+"Selection Filtering\nLimit which object types can be picked": "Selection Filtering\nLimit which object types can be picked"
+"Selection Cycling\nRepeat-click to step through overlapping objects": "Selection Cycling\nRepeat-click to step through overlapping objects"
+"Viewport count in active layout": "Viewport count in active layout"
+"Clean Screen\nHide ribbon and panels": "Clean Screen\nHide ribbon and panels"
+"Customization\nShow or hide status-bar items": "Customization\nShow or hide status-bar items"
+"Polar Tracking (%{angle})\nF10 — left-click on/off\nRight-click cycles · ▾ picks angle": "Polar Tracking (%{angle})\nF10 — left-click on/off\nRight-click cycles · ▾ picks angle"
+"Polar angle\nClick to choose": "Polar angle\nClick to choose"
+"Object Snap: toggle on/off\nF3": "Object Snap: toggle on/off\nF3"
+"Object Snap list\nClick to choose snap types": "Object Snap list\nClick to choose snap types"
+"Rename": "Rename"
+"MODEL": "MODEL"
+"PAPER": "PAPER"
+
+# Synced identity mappings (keys present in zh-CN.yml).
+"Auto": "Auto"
+"Full": "Full"
+"Compact": "Compact"
+"Collapsed": "Collapsed"
+"Layout": "Layout"
+"Manage": "Manage"
+"View": "View"
+"Insert": "Insert"
+"Model": "Model"
+"Draw": "Draw"
+"Annotate": "Annotate"
+"Viewport": "Viewport"
+"Plot": "Plot"
+"Viewport Tools": "Viewport Tools"
+"Navigate": "Navigate"
+"Model Viewports": "Model Viewports"
+"Visual Style": "Visual Style"
+"Projection": "Projection"
+"Preset": "Preset"
+"Palettes": "Palettes"
+"Interface": "Interface"
+"Design": "Design"
+"Customization": "Customization"
+"Cleanup": "Cleanup"
+"Application": "Application"
+"Dimensions": "Dimensions"
+"Leaders": "Leaders"
+"Tables": "Tables"
+"Markup": "Markup"
+"Annotation Scaling": "Annotation Scaling"
+"Reference": "Reference"
+"Point Cloud": "Point Cloud"
+"Block": "Block"
+"Attributes": "Attributes"
+"Import": "Import"
+"Content": "Content"
+"Modify": "Modify"
+"Annotation": "Annotation"
+"Layers": "Layers"
+"Properties": "Properties"
+"Groups": "Groups"
+"Clipboard": "Clipboard"
+"Zoom Window": "Zoom Window"
+"Zoom Out": "Zoom Out"
+"Persp": "Persp"
+"Page Setup": "Page Setup"
+"Export PDF": "Export PDF"
+"Zoom In": "Zoom In"
+"Right": "Right"
+"Zoom\nExtents": "Zoom\nExtents"
+"Pan": "Pan"
+"X-Ray": "X-Ray"
+"Iso": "Iso"
+"Ortho": "Ortho"
+"Wireframe": "Wireframe"
+"Front": "Front"
+"Hidden": "Hidden"
+"3D Orbit": "3D Orbit"
+"Restore": "Restore"
+"User\nInterface": "User\nInterface"
+"Tile\nVert.": "Tile\nVert."
+"UCS\nIcon": "UCS\nIcon"
+"Named": "Named"
+"File\nTabs": "File\nTabs"
+"Clip": "Clip"
+"Purge": "Purge"
+"Viewport\nConfiguration": "Viewport\nConfiguration"
+"Visual\nStyle": "Visual\nStyle"
+"Tool\nPalettes": "Tool\nPalettes"
+"Join": "Join"
+"Tile\nHoriz.": "Tile\nHoriz."
+"Overkill": "Overkill"
+"Attach XREF": "Attach XREF"
+"View\nCube": "View\nCube"
+"Top": "Top"
+"Cascade": "Cascade"
+"Edit Block": "Edit Block"
+"Adjust": "Adjust"
+"Solid": "Solid"
+"Define\nAttributes": "Define\nAttributes"
+"Set Base\nPoint": "Set Base\nPoint"
+"Options": "Options"
+"Design\nCenter": "Design\nCenter"
+"Write Block": "Write Block"
+"Sheet Set\nManager": "Sheet Set\nManager"
+"Synchronize": "Synchronize"
+"Cylinder": "Cylinder"
+"Underlay\nLayers": "Underlay\nLayers"
+"Layout\nTabs": "Layout\nTabs"
+"Find Non-\nPurgeable Items": "Find Non-\nPurgeable Items"
+"Clear": "Clear"
+"Sphere": "Sphere"
+"Create Block": "Create Block"
+"Edit\nAttribute": "Edit\nAttribute"
+"Box": "Box"
+"Multi-View\nBlock": "Multi-View\nBlock"
+"Attach": "Attach"
+"Snap to\nUnderlays": "Snap to\nUnderlays"
+"Content\nBrowser": "Content\nBrowser"
+"Export": "Export"
+"Changelog": "Changelog"
+"Land\nXML": "Land\nXML"
+"Open": "Open"
+"Audit": "Audit"
+"Donate": "Donate"
+"Array Insert": "Array Insert"
+"Insert Block": "Insert Block"
+"About": "About"
+"Report": "Report"
+"Aligned": "Aligned"
+"Angular": "Angular"
+"Link\nData": "Link\nData"
+"Extract\nData": "Extract\nData"
+"Jog Line": "Jog Line"
+"Edit Text": "Edit Text"
+"Baseline": "Baseline"
+"Dim Break": "Dim Break"
+"Dim Text Edit": "Dim Text Edit"
+"Continue": "Continue"
+"Dim Space": "Dim Space"
+"Dim Edit": "Dim Edit"
+"Ordinate": "Ordinate"
+"Diameter": "Diameter"
+"Quick Dim": "Quick Dim"
+"Table": "Table"
+"Radius": "Radius"
+"Leader": "Leader"
+"Cut": "Cut"
+"MText": "MText"
+"MLeader": "MLeader"
+"Tolerance": "Tolerance"
+"Match": "Match"
+"Copy": "Copy"
+"Center Line": "Center Line"
+"Center Mark": "Center Mark"
+"Multiline\nText": "Multiline\nText"
+"Find": "Find"
+"Dimension": "Dimension"
+"Multileader": "Multileader"
+"Scale List": "Scale List"
+"Add Scale": "Add Scale"
+"Scale Edit": "Scale Edit"
+"Sync Scales": "Sync Scales"
+"Linear": "Linear"
+"ByLayer": "ByLayer"
+"Sketch": "Sketch"
+"Point": "Point"
+"Polyline": "Polyline"
+"Add Leader": "Add Leader"
+"Remove Leader": "Remove Leader"
+"Align Leaders": "Align Leaders"
+"Collect Leaders": "Collect Leaders"
+"Helix": "Helix"
+"Line": "Line"
+"3D Polyline": "3D Polyline"
+"Wipeout": "Wipeout"
+"Rev Cloud": "Rev Cloud"
+"Spline": "Spline"
+"Trace": "Trace"
+"Color": "Color"
+"Layer Freeze": "Layer Freeze"
+"Isolate Layer": "Isolate Layer"
+"2D Solid": "2D Solid"
+"Group": "Group"
+"Ungroup": "Ungroup"
+"Layer Off": "Layer Off"
+"Layer Lock": "Layer Lock"
+"Layer Unlock": "Layer Unlock"
+"Turn All Layers On": "Turn All Layers On"
+"Match Layer": "Match Layer"
+"Thaw All Layers": "Thaw All Layers"
+"Make Current": "Make Current"
+"Unisolate Layers": "Unisolate Layers"
+"Circle": "Circle"
+"Arc": "Arc"
+"Paste": "Paste"
+"Break": "Break"
+"Save Block": "Save Block"
+"Discard Block Edit": "Discard Block Edit"
+"Explode": "Explode"
+"Delete": "Delete"
+"Rotate": "Rotate"
+"Offset": "Offset"
+"Mirror": "Mirror"
+"Save Block Edit": "Save Block Edit"
+"Spline Edit": "Spline Edit"
+"Scale": "Scale"
+"Move": "Move"
+"Stretch": "Stretch"
+"Reverse": "Reverse"
+"Measure Geometry": "Measure Geometry"
+"Coordinates": "Coordinates"
+"Ortho Mode": "Ortho Mode"
+"Show Lineweight": "Show Lineweight"
+"Polar Tracking": "Polar Tracking"
+"Dynamic Input": "Dynamic Input"
+"Object Snap Tracking": "Object Snap Tracking"
+"Object Snap": "Object Snap"
+"Model/Paper Space": "Model/Paper Space"
+"Annotation Scale": "Annotation Scale"
+"Drawing Units": "Drawing Units"
+"Show Transparency": "Show Transparency"
+"Isolate Objects": "Isolate Objects"
+"Quick Properties": "Quick Properties"
+"Selection Filtering": "Selection Filtering"
+"Selection Cycling": "Selection Cycling"
+"Viewport Count": "Viewport Count"
+"Clean Screen": "Clean Screen"
+"Type  SHORTCUTS SET <key> <cmd>  to add custom shortcuts.": "Type  SHORTCUTS SET <key> <cmd>  to add custom shortcuts."
+"── Function Keys ──────────────────────────────────────": "── Function Keys ──────────────────────────────────────"
+"Toggle Object Snap": "Toggle Object Snap"
+"Toggle Grid": "Toggle Grid"
+"Toggle Ortho": "Toggle Ortho"
+"Toggle Grid Snap": "Toggle Grid Snap"
+"Toggle Polar Tracking": "Toggle Polar Tracking"
+"Toggle Object Snap Tracking": "Toggle Object Snap Tracking"
+"Toggle Dynamic Input": "Toggle Dynamic Input"
+"── %{MOD} Shortcuts ──────────────────────────────────────": "── %{MOD} Shortcuts ──────────────────────────────────────"
+"New Drawing": "New Drawing"
+"Open File": "Open File"
+"Save": "Save"
+"Save As": "Save As"
+"Undo": "Undo"
+"Redo": "Redo"
+"Find and Replace": "Find and Replace"
+"Copy to Clipboard": "Copy to Clipboard"
+"Cut to Clipboard": "Cut to Clipboard"
+"Paste from Clipboard": "Paste from Clipboard"
+"── Other Keys ──────────────────────────────────────────": "── Other Keys ──────────────────────────────────────────"
+"Finalize command / Repeat last": "Finalize command / Repeat last"
+"Cancel active command": "Cancel active command"
+"Delete selected entities": "Delete selected entities"
+"Command history navigation": "Command history navigation"
+"── Custom Overrides (SHORTCUTS SET) ──────────────────": "── Custom Overrides (SHORTCUTS SET) ──────────────────"
+"  (none — use: SHORTCUTS SET <key> <command>)": "  (none — use: SHORTCUTS SET <key> <command>)"
+"Key": "Key"
+"Action": "Action"
+
+# Synced identity mappings (round 2).
+"Text to find": "Text to find"
+"Replacement text": "Replacement text"
+"Find:": "Find:"
+"Replace with:": "Replace with:"
+"Searches Text, MText, Attribute Definitions, and block attribute values.": "Searches Text, MText, Attribute Definitions, and block attribute values."
+"Replace": "Replace"
+"Replace All": "Replace All"
+"Find Next": "Find Next"
+"Command Aliases": "Command Aliases"
+"Type an alias and the command it runs (e.g. L → LINE). Apply to save to ocad.pgp; closing discards unapplied edits.": "Type an alias and the command it runs (e.g. L → LINE). Apply to save to ocad.pgp; closing discards unapplied edits."
+"Alias": "Alias"
+"Command": "Command"
+"alias": "alias"
+"command": "command"
+"+ Add alias": "+ Add alias"
+"Apply": "Apply"
+"New Layout": "New Layout"
+"Move Left": "Move Left"
+"Move Right": "Move Right"
+"Set Current": "Set Current"
+"Layouts": "Layouts"
+"Model Space": "Model Space"
+"Paper Space Layout": "Paper Space Layout"
+"Name:": "Name:"
+"Status:": "Status:"
+"Active": "Active"
+"Inactive": "Inactive"
+"New name…": "New name…"
+"OK": "OK"
+"Print": "Print"
+"(no page setups)": "(no page setups)"
+"Page setups": "Page setups"
+"New": "New"
+"Layout plots the current sheet using the selected paper size.": "Layout plots the current sheet using the selected paper size."
+"Output": "Output"
+"Properties…": "Properties…"
+"Copies": "Copies"
+"Printer / plotter": "Printer / plotter"
+"Paper": "Paper"
+"Size": "Size"
+"Extents": "Extents"
+"Display": "Display"
+"Window": "Window"
+"What to plot": "What to plot"
+"Pick…": "Pick…"
+"Plot area": "Plot area"
+"Plot offset": "Plot offset"
+"X (mm)": "X (mm)"
+"Y (mm)": "Y (mm)"
+"Center the plot": "Center the plot"
+"Plot scale": "Plot scale"
+"Fit to paper": "Fit to paper"
+"Scale lineweights": "Scale lineweights"
+"Plot style table (pen assignments)": "Plot style table (pen assignments)"
+"Load…": "Load…"
+"Save…": "Save…"
+"Shaded viewport options": "Shaded viewport options"
+"Shade plot": "Shade plot"
+"As displayed": "As displayed"
+"2D Wireframe": "2D Wireframe"
+"3D Wireframe": "3D Wireframe"
+"Hidden Line": "Hidden Line"
+"Flat Shaded": "Flat Shaded"
+"Gouraud Shaded": "Gouraud Shaded"
+"Flat Shaded + Edges": "Flat Shaded + Edges"
+"Gouraud Shaded + Edges": "Gouraud Shaded + Edges"
+"Quality": "Quality"
+"Low": "Low"
+"Normal": "Normal"
+"High": "High"
+"Paper space last": "Paper space last"
+"Plot options": "Plot options"
+"Plot in background": "Plot in background"
+"Object lineweights": "Object lineweights"
+"Plot transparency": "Plot transparency"
+"Merge overlapping lines": "Merge overlapping lines"
+"Plot stamp": "Plot stamp"
+"Orientation": "Orientation"
+"Portrait": "Portrait"
+"Landscape": "Landscape"
+"Plot upside-down": "Plot upside-down"
+"Set current": "Set current"
+"Preview": "Preview"
+
+# Synced identity mappings (round 3).
+"Search…": "Search…"
+"Status": "Status"
+"Name": "Name"
+"On": "On"
+"Freeze": "Freeze"
+"Lock": "Lock"
+"Linetype": "Linetype"
+"Lineweight": "Lineweight"
+"Transparency": "Transparency"
+"linetype": "linetype"
+"lineweight": "lineweight"
+"A newer Open CAD Studio version is published on GitHub.": "A newer Open CAD Studio version is published on GitHub."
+"Attribute": "Attribute"
+"Backwards": "Backwards"
+"Block:  %{block}": "Block:  %{block}"
+"Building scene caches…": "Building scene caches…"
+"Cancel": "Cancel"
+"Finalizing…": "Finalizing…"
+"Height": "Height"
+"Installed": "Installed"
+"Justification": "Justification"
+"Later": "Later"
+"Latest": "Latest"
+"Loading references…": "Loading references…"
+"New Release Available": "New Release Available"
+"No release notes provided.": "No release notes provided."
+"Oblique Angle": "Oblique Angle"
+"Open Release Page": "Open Release Page"
+"Opening file": "Opening file"
+"Parsing entities…": "Parsing entities…"
+"Prompt": "Prompt"
+"Reading file…": "Reading file…"
+"Rotation": "Rotation"
+"Tag": "Tag"
+"Text Options": "Text Options"
+"Text Style": "Text Style"
+"This block has no attributes.": "This block has no attributes."
+"Upside down": "Upside down"
+"Value": "Value"
+"Value:": "Value:"
+"What's new": "What's new"
+"Width Factor": "Width Factor"
+"Working…": "Working…"
+"%{n} layers": "%{n} layers"
+"%{n} saved layers": "%{n} saved layers"
+"API incompatible": "API incompatible"
+"Add from GitHub": "Add from GitHub"
+"Add repository": "Add repository"
+"Added from GitHub": "Added from GitHub"
+"Available plugins": "Available plugins"
+"Browse, install, and manage add-ons. Select one to view its README.": "Browse, install, and manage add-ons. Select one to view its README."
+"Changes affect the saved state only; the drawing is unchanged until Restore.": "Changes affect the saved state only; the drawing is unchanged until Restore."
+"Check your internet or proxy connection, then retry. Manually added repositories remain available.": "Check your internet or proxy connection, then retry. Manually added repositories remain available."
+"Choose New to capture the current layer settings.": "Choose New to capture the current layer settings."
+"Commands:  %{cmds}": "Commands:  %{cmds}"
+"Connecting securely using your system certificate settings.": "Connecting securely using your system certificate settings."
+"Copy details": "Copy details"
+"Current layer": "Current layer"
+"Default": "Default"
+"Description": "Description"
+"Disable": "Disable"
+"Disabled": "Disabled"
+"Download desktop app": "Download desktop app"
+"Edit": "Edit"
+"Enable": "Enable"
+"Fetching the default branch from GitHub.": "Fetching the default branch from GitHub."
+"GitHub URL or owner/repository": "GitHub URL or owner/repository"
+"Hide details": "Hide details"
+"Incompatible": "Incompatible"
+"Install": "Install"
+"Layer": "Layer"
+"Layer state name": "Layer state name"
+"Layer states are stored inside the drawing and remain available after reopening it.": "Layer states are stored inside the drawing and remain available after reopening it."
+"Load failed": "Load failed"
+"Load failed:  %{error}": "Load failed:  %{error}"
+"Loaded": "Loaded"
+"Loading README…": "Loading README…"
+"Loading plugin catalog…": "Loading plugin catalog…"
+"New VP": "New VP"
+"New VP Freeze": "New VP Freeze"
+"New layer state": "New layer state"
+"No additional plugins are available.": "No additional plugins are available."
+"No available plugins match your search.": "No available plugins match your search."
+"No installed plugins match your search.": "No installed plugins match your search."
+"No layer states in this drawing": "No layer states in this drawing"
+"No library": "No library"
+"No matching layer states": "No matching layer states"
+"No plugins installed yet.": "No plugins installed yet."
+"Not set": "Not set"
+"On / Off": "On / Off"
+"On/Off": "On/Off"
+"Open CAD Studio could not trust the certificate presented for the plugin registry. Check your system certificate and proxy settings, then retry.": "Open CAD Studio could not trust the certificate presented for the plugin registry. Check your system certificate and proxy settings, then retry."
+"Open CAD Studio plugins are native packages and cannot run inside a browser. Download the desktop app to browse, install, and use plugins.": "Open CAD Studio plugins are native packages and cannot run inside a browser. Download the desktop app to browse, install, and use plugins."
+"Optional description": "Optional description"
+"Paste a public repository URL. Compatible releases and the README are detected automatically.": "Paste a public repository URL. Compatible releases and the README are detected automatically."
+"Plot style": "Plot style"
+"Plugin API  %{plugin}  is incompatible with this build's API  %{build}  ribbon ABI. Update or rebuild the plugin.": "Plugin API  %{plugin}  is incompatible with this build's API  %{build}  ribbon ABI. Update or rebuild the plugin."
+"Plugin details": "Plugin details"
+"Plugin registry request timed out": "Plugin registry request timed out"
+"Plugins": "Plugins"
+"Plugins are available in the desktop app": "Plugins are available in the desktop app"
+"Properties restored by this state": "Properties restored by this state"
+"README could not be loaded": "README could not be loaded"
+"Restart to load": "Restart to load"
+"Restored properties": "Restored properties"
+"Retry": "Retry"
+"Save Changes": "Save Changes"
+"Save New State": "Save New State"
+"Save captures the current settings of every layer in the drawing.": "Save captures the current settings of every layer in the drawing."
+"Saved layer values": "Saved layer values"
+"Saved state details": "Saved state details"
+"Search layer states…": "Search layer states…"
+"Search layers…": "Search layers…"
+"Search plugins…": "Search plugins…"
+"Select a plugin to read its GitHub README.": "Select a plugin to read its GitHub README."
+"Select the plugin again to load its README.": "Select the plugin again to load its README."
+"Show details": "Show details"
+"Unable to load the plugin registry": "Unable to load the plugin registry"
+"Unable to verify the server certificate": "Unable to verify the server certificate"
+"Unavailable": "Unavailable"
+"Uninstall": "Uninstall"
+"Update from Drawing": "Update from Drawing"
+"Update to  %{tag}": "Update to  %{tag}"
+"View on GitHub": "View on GitHub"
+"no releases": "no releases"
+"More…": "More…"
+"No matching patterns": "No matching patterns"
+"Search patterns…": "Search patterns…"
+"Select an object to view properties": "Select an object to view properties"
+"  Alignment:": "  Alignment:"
+"  Background fill enabled": "  Background fill enabled"
+"  Borders  (type / weight / color / spacing / hidden)": "  Borders  (type / weight / color / spacing / hidden)"
+"  Data type:": "  Data type:"
+"  Fill color:": "  Fill color:"
+"  Format string:": "  Format string:"
+"  Off   Color        Ltype": "  Off   Color        Ltype"
+"  Text color:": "  Text color:"
+"  Text height:": "  Text height:"
+"  Text style:": "  Text style:"
+"  Unit type:": "  Unit type:"
+"#RRGGBB or blank": "#RRGGBB or blank"
+"(default)": "(default)"
+"(no table loaded)": "(no table loaded)"
+"(none)": "(none)"
+"0 = variable": "0 = variable"
+"1st arrowhead (DIMBLK1)": "1st arrowhead (DIMBLK1)"
+"2nd arrowhead (DIMBLK2)": "2nd arrowhead (DIMBLK2)"
+"ACI Color Index": "ACI Color Index"
+"ACI:": "ACI:"
+"Align space:": "Align space:"
+"Alternate": "Alternate"
+"Angular decimals (DIMADEC)": "Angular decimals (DIMADEC)"
+"Angular unit (DIMAUNIT)": "Angular unit (DIMAUNIT)"
+"Angular zero supp (DIMAZIN)": "Angular zero supp (DIMAZIN)"
+"Annotative": "Annotative"
+"Apply cell": "Apply cell"
+"Apply margins": "Apply margins"
+"Apply to ACI": "Apply to ACI"
+"Arc length symbol (DIMARCSYM)": "Arc length symbol (DIMARCSYM)"
+"Arrow size (DIMASZ)": "Arrow size (DIMASZ)"
+"Arrowhead (DIMBLK)": "Arrowhead (DIMBLK)"
+"Arrowhead block:": "Arrowhead block:"
+"Arrowhead size:": "Arrowhead size:"
+"Arrows": "Arrows"
+"Attachment direction:": "Attachment direction:"
+"Backward": "Backward"
+"Big Font:": "Big Font:"
+"Block Content": "Block Content"
+"Block color (ACI):": "Block color (ACI):"
+"Block connection:": "Block connection:"
+"Block rotation:": "Block rotation:"
+"Block scale X:": "Block scale X:"
+"Block scale Y:": "Block scale Y:"
+"Block scale Z:": "Block scale Z:"
+"Block:": "Block:"
+"Bottom attachment:": "Bottom attachment:"
+"Break gap size:": "Break gap size:"
+"Center mark (DIMCEN)": "Center mark (DIMCEN)"
+"Clear Table": "Clear Table"
+"Click a scale to add or remove the object's representation for it.": "Click a scale to add or remove the object's representation for it."
+"Color override (#RRGGBB):": "Color override (#RRGGBB):"
+"Content type:": "Content type:"
+"Current values:": "Current values:"
+"Custom…": "Custom…"
+"Data Row:": "Data Row:"
+"Decimal sep ASCII (DIMDSEP)": "Decimal sep ASCII (DIMDSEP)"
+"Decimals (DIMALTD)": "Decimals (DIMALTD)"
+"Decimals (DIMDEC)": "Decimals (DIMDEC)"
+"Default text:": "Default text:"
+"Description:": "Description:"
+"Dim line between ext (DIMTOFL)": "Dim line between ext (DIMTOFL)"
+"Dim line color ACI (DIMCLRD)": "Dim line color ACI (DIMCLRD)"
+"Dim line linetype (DIMLTYPE)": "Dim line linetype (DIMLTYPE)"
+"Dim line weight (DIMLWD)": "Dim line weight (DIMLWD)"
+"Dimension Line": "Dimension Line"
+"Double-click a scale to rename it; edit its paper : drawing ratio here. New / Copy add a scale. Changes are kept only if you click Apply before closing.": "Double-click a scale to rename it; edit its paper : drawing ratio here. New / Copy add a scale. Changes are kept only if you click Apply before closing."
+"Drawing units": "Drawing units"
+"Editing: %{selected}": "Editing: %{selected}"
+"Elements:": "Elements:"
+"Enable alternate units (DIMALT)": "Enable alternate units (DIMALT)"
+"Enable block rotation": "Enable block rotation"
+"Enable block scale": "Enable block scale"
+"Enable dogleg": "Enable dogleg"
+"Enable landing": "Enable landing"
+"Ext line 1 linetype (DIMLTEX1)": "Ext line 1 linetype (DIMLTEX1)"
+"Ext line 2 linetype (DIMLTEX2)": "Ext line 2 linetype (DIMLTEX2)"
+"Ext line color ACI (DIMCLRE)": "Ext line color ACI (DIMCLRE)"
+"Ext line weight (DIMLWE)": "Ext line weight (DIMLWE)"
+"Extension (DIMDLE)": "Extension (DIMDLE)"
+"Extension (DIMEXE)": "Extension (DIMEXE)"
+"Extension Line": "Extension Line"
+"Fill color ACI (DIMTFILLCLR)": "Fill color ACI (DIMTFILLCLR)"
+"First seg. angle:": "First seg. angle:"
+"Fit": "Fit"
+"Fit (DIMATFIT)": "Fit (DIMATFIT)"
+"Fit (legacy DIMFIT)": "Fit (legacy DIMFIT)"
+"Fixed Height:": "Fixed Height:"
+"Fixed length (DIMFXL)": "Fixed length (DIMFXL)"
+"Fixed-length ext lines (DIMFXLON)": "Fixed-length ext lines (DIMFXLON)"
+"Flow direction:": "Flow direction:"
+"Font File": "Font File"
+"Force text inside (DIMTIX)": "Force text inside (DIMTIX)"
+"Format (DIMLUNIT)": "Format (DIMLUNIT)"
+"Fraction format (DIMFRAC)": "Fraction format (DIMFRAC)"
+"Generate tolerances (DIMTOL)": "Generate tolerances (DIMTOL)"
+"H Margin:": "H Margin:"
+"Header Row:": "Header Row:"
+"Header row suppressed": "Header row suppressed"
+"Height (DIMTXT)": "Height (DIMTXT)"
+"Horizontal inside (DIMTIH)": "Horizontal inside (DIMTIH)"
+"Horizontal just (DIMJUST)": "Horizontal just (DIMJUST)"
+"Horizontal outside (DIMTOH)": "Horizontal outside (DIMTOH)"
+"Jog angle ° (DIMJOGANG)": "Jog angle ° (DIMJOGANG)"
+"Landing distance:": "Landing distance:"
+"Landing gap:": "Landing gap:"
+"Layer State Manager…": "Layer State Manager…"
+"Leader Format": "Leader Format"
+"Leader Structure": "Leader Structure"
+"Leader arrowhead (DIMLDRBLK)": "Leader arrowhead (DIMLDRBLK)"
+"Leader draw order:": "Leader draw order:"
+"Left attachment:": "Left attachment:"
+"Left-to-right (DIMTXTDIRECTION)": "Left-to-right (DIMTXTDIRECTION)"
+"Limits generation (DIMLIM)": "Limits generation (DIMLIM)"
+"Line color (ACI):": "Line color (ACI):"
+"Line type:": "Line type:"
+"Line weight:": "Line weight:"
+"Linear factor (DIMLFAC)": "Linear factor (DIMLFAC)"
+"Lineweight index (0-24, 255=obj):": "Lineweight index (0-24, 255=obj):"
+"Load CTB/STB": "Load CTB/STB"
+"Manage...": "Manage..."
+"Manage…": "Manage…"
+"Max leader points:": "Max leader points:"
+"Minus tolerance (DIMTM)": "Minus tolerance (DIMTM)"
+"Multileader draw order:": "Multileader draw order:"
+"Multiplier (DIMALTF)": "Multiplier (DIMALTF)"
+"No objects": "No objects"
+"Object: %{object_label}": "Object: %{object_label}"
+"Oblique (°):": "Oblique (°):"
+"Offset (DIMEXO)": "Offset (DIMEXO)"
+"Overall scale (DIMSCALE)": "Overall scale (DIMSCALE)"
+"Paper units": "Paper units"
+"Path type:": "Path type:"
+"Place text manually (DIMUPT)": "Place text manually (DIMUPT)"
+"Plus tolerance (DIMTP)": "Plus tolerance (DIMTP)"
+"Point Size:": "Point Size:"
+"Point Style": "Point Style"
+"Right attachment:": "Right attachment:"
+"Round off (DIMALTRND)": "Round off (DIMALTRND)"
+"Round off (DIMRND)": "Round off (DIMRND)"
+"Save As…": "Save As…"
+"Scale factor:": "Scale factor:"
+"Scale/Units": "Scale/Units"
+"Scales": "Scales"
+"Screening (0-100):": "Screening (0-100):"
+"Second seg. angle:": "Second seg. angle:"
+"Select a style to view details.": "Select a style to view details."
+"Separate arrow blocks (DIMSAH)": "Separate arrow blocks (DIMSAH)"
+"Set Size Relative to Screen": "Set Size Relative to Screen"
+"Set Size in Absolute Units": "Set Size in Absolute Units"
+"Spacing (DIMDLI)": "Spacing (DIMDLI)"
+"Style (DIMTXSTY)": "Style (DIMTXSTY)"
+"Styles": "Styles"
+"Suffix (DIMAPOST)": "Suffix (DIMAPOST)"
+"Suffix (DIMPOST)": "Suffix (DIMPOST)"
+"Suppress 1st line (DIMSD1)": "Suppress 1st line (DIMSD1)"
+"Suppress 1st line (DIMSE1)": "Suppress 1st line (DIMSE1)"
+"Suppress 2nd line (DIMSD2)": "Suppress 2nd line (DIMSD2)"
+"Suppress 2nd line (DIMSE2)": "Suppress 2nd line (DIMSE2)"
+"Suppress outside arrows (DIMSOXD)": "Suppress outside arrows (DIMSOXD)"
+"Text alignment:": "Text alignment:"
+"Text always left": "Text always left"
+"Text angle:": "Text angle:"
+"Text color (ACI):": "Text color (ACI):"
+"Text color ACI (DIMCLRT)": "Text color ACI (DIMCLRT)"
+"Text fill mode (DIMTFILL)": "Text fill mode (DIMTFILL)"
+"Text frame": "Text frame"
+"Text gap (DIMGAP)": "Text gap (DIMGAP)"
+"Text height:": "Text height:"
+"Text movement (DIMTMOVE)": "Text movement (DIMTMOVE)"
+"Text style:": "Text style:"
+"Tick size (DIMTSZ)": "Tick size (DIMTSZ)"
+"Title Row:": "Title Row:"
+"Title row suppressed": "Title row suppressed"
+"Tol decimals (DIMALTTD)": "Tol decimals (DIMALTTD)"
+"Tol zero supp (DIMALTTZ)": "Tol zero supp (DIMALTTZ)"
+"Tol. decimals (DIMTDEC)": "Tol. decimals (DIMTDEC)"
+"Tol. scale (DIMTFAC)": "Tol. scale (DIMTFAC)"
+"Tol. vert just (DIMTOLJ)": "Tol. vert just (DIMTOLJ)"
+"Tol. zero supp (DIMTZIN)": "Tol. zero supp (DIMTZIN)"
+"Tolerances": "Tolerances"
+"Top attachment:": "Top attachment:"
+"TrueType (system)": "TrueType (system)"
+"TrueType Font:": "TrueType Font:"
+"TrueType font…": "TrueType font…"
+"Unit format (DIMALTU)": "Unit format (DIMALTU)"
+"Unit format (DIMUNIT)": "Unit format (DIMUNIT)"
+"Units": "Units"
+"V Margin:": "V Margin:"
+"Vertical pos (DIMTAD)": "Vertical pos (DIMTAD)"
+"Vertical pos (DIMTVP)": "Vertical pos (DIMTVP)"
+"Width Factor:": "Width Factor:"
+"Zero suppress (DIMALTZ)": "Zero suppress (DIMALTZ)"
+"Zero suppress (DIMZIN)": "Zero suppress (DIMZIN)"
+"big-font file…": "big-font file…"
+"e.g. Arial": "e.g. Arial"
+"font file…": "font file…"
+"object": "object"
+"units": "units"
+"  Color: %{cur_color}": "  Color: %{cur_color}"
+"  Lineweight: %{cur_lw}": "  Lineweight: %{cur_lw}"
+"  Screening: %{cur_scr}": "  Screening: %{cur_scr}"
+"  ⚠ No closed boundary found.": "  ⚠ No closed boundary found."
+" (%{count} objects)": " (%{count} objects)"
+"%{cmd}  Select objects (%{count} selected, Enter to apply):": "%{cmd}  Select objects (%{count} selected, Enter to apply):"
+"%{cmd}  Select objects:": "%{cmd}  Select objects:"
+"%{n}  Specify center point:": "%{n}  Specify center point:"
+"%{n}  Specify first corner:": "%{n}  Specify first corner:"
+"%{n}  Specify height <Enter for default>:": "%{n}  Specify height <Enter for default>:"
+"%{n}  Specify opposite corner:": "%{n}  Specify opposite corner:"
+"%{n}  Specify radius:": "%{n}  Specify radius:"
+"%{n}  Specify tube radius:": "%{n}  Specify tube radius:"
+"%{prefix}TEXTEDIT Enter text edit mode [Single/Multiple] <%{mode}>:": "%{prefix}TEXTEDIT Enter text edit mode [Single/Multiple] <%{mode}>:"
+"%{prefix}TEXTEDITMODE Enter new value for TEXTEDITMODE <%{v}>:": "%{prefix}TEXTEDITMODE Enter new value for TEXTEDITMODE <%{v}>:"
+"3DPOLY  Specify next point  [Close/Undo]:": "3DPOLY  Specify next point  [Close/Undo]:"
+"3DPOLY  Specify next point  [Undo]:": "3DPOLY  Specify next point  [Undo]:"
+"3DPOLY  Specify start point of polyline:": "3DPOLY  Specify start point of polyline:"
+"ALIGN  Scale objects based on alignment points? [Y/N]:": "ALIGN  Scale objects based on alignment points? [Y/N]:"
+"ALIGN  Select objects (%{count} selected, Enter when done):": "ALIGN  Select objects (%{count} selected, Enter when done):"
+"ALIGN  Specify 1st destination point:": "ALIGN  Specify 1st destination point:"
+"ALIGN  Specify 1st source point:": "ALIGN  Specify 1st source point:"
+"ALIGN  Specify 2nd destination point:": "ALIGN  Specify 2nd destination point:"
+"ALIGN  Specify 2nd source point (Enter = translate only):": "ALIGN  Specify 2nd source point (Enter = translate only):"
+"ARC  Specify center:": "ARC  Specify center:"
+"ARC  Specify end point  [c=(%{cx},%{cy}) r=%{r}]:": "ARC  Specify end point  [c=(%{cx},%{cy}) r=%{r}]:"
+"ARC  Specify start point:": "ARC  Specify start point:"
+"ARC 3P  Specify end point:": "ARC 3P  Specify end point:"
+"ARC 3P  Specify second point on arc:": "ARC 3P  Specify second point on arc:"
+"ARC 3P  Specify start point:": "ARC 3P  Specify start point:"
+"ARC CSA  Click end direction or type arc span in degrees  [start=%{sa}]:": "ARC CSA  Click end direction or type arc span in degrees  [start=%{sa}]:"
+"ARC CSA  Specify center:": "ARC CSA  Specify center:"
+"ARC CSA  Specify start point:": "ARC CSA  Specify start point:"
+"ARC CSL  Click chord end or type chord length  [r=%{r}]:": "ARC CSL  Click chord end or type chord length  [r=%{r}]:"
+"ARC CSL  Specify center:": "ARC CSL  Specify center:"
+"ARC CSL  Specify start point:": "ARC CSL  Specify start point:"
+"ARC Continue  Specify end point  [Ctrl = flip direction]:": "ARC Continue  Specify end point  [Ctrl = flip direction]:"
+"ARC SCA  Click end direction or type arc span in degrees  [start=%{sa}]:": "ARC SCA  Click end direction or type arc span in degrees  [start=%{sa}]:"
+"ARC SCA  Specify center:": "ARC SCA  Specify center:"
+"ARC SCA  Specify start point:": "ARC SCA  Specify start point:"
+"ARC SCE  Specify center:": "ARC SCE  Specify center:"
+"ARC SCE  Specify end point  [r=%{r}]:": "ARC SCE  Specify end point  [r=%{r}]:"
+"ARC SCE  Specify start point:": "ARC SCE  Specify start point:"
+"ARC SCL  Click chord end or type chord length  [r=%{r}]:": "ARC SCL  Click chord end or type chord length  [r=%{r}]:"
+"ARC SCL  Specify center:": "ARC SCL  Specify center:"
+"ARC SCL  Specify start point:": "ARC SCL  Specify start point:"
+"ARC SEA  Specify angle (move cursor perpendicular to chord):": "ARC SEA  Specify angle (move cursor perpendicular to chord):"
+"ARC SEA  Specify end point:": "ARC SEA  Specify end point:"
+"ARC SEA  Specify start point:": "ARC SEA  Specify start point:"
+"ARC SED  Specify end point:": "ARC SED  Specify end point:"
+"ARC SED  Specify start point:": "ARC SED  Specify start point:"
+"ARC SED  Specify tangent direction at start:": "ARC SED  Specify tangent direction at start:"
+"ARC SER  Click radius point or type radius value:": "ARC SER  Click radius point or type radius value:"
+"ARC SER  Specify end point:": "ARC SER  Specify end point:"
+"ARC SER  Specify start point:": "ARC SER  Specify start point:"
+"AREA  Specify first corner point (Enter to cancel):": "AREA  Specify first corner point (Enter to cancel):"
+"AREA  Specify next point (%{n} picked, Enter to calculate):": "AREA  Specify next point (%{n} picked, Enter to calculate):"
+"ARRAY3D  Column spacing  [%{rows}×%{cols}×%{levels}, row=%{rs}]:": "ARRAY3D  Column spacing  [%{rows}×%{cols}×%{levels}, row=%{rs}]:"
+"ARRAY3D  Enter column count  [%{rows} rows]:": "ARRAY3D  Enter column count  [%{rows} rows]:"
+"ARRAY3D  Enter level count  [%{rows}×%{cols}]:": "ARRAY3D  Enter level count  [%{rows}×%{cols}]:"
+"ARRAY3D  Enter row count:": "ARRAY3D  Enter row count:"
+"ARRAY3D  Level spacing  [%{rows}×%{cols}×%{levels}, r=%{rs} c=%{cs}]:": "ARRAY3D  Level spacing  [%{rows}×%{cols}×%{levels}, r=%{rs} c=%{cs}]:"
+"ARRAY3D  Row spacing  [%{rows}×%{cols}×%{levels}]:": "ARRAY3D  Row spacing  [%{rows}×%{cols}×%{levels}]:"
+"ATTDEF  Enter attribute tag (no spaces):": "ATTDEF  Enter attribute tag (no spaces):"
+"ATTDEF  Enter default value for '%{tag}' (Enter=blank):": "ATTDEF  Enter default value for '%{tag}' (Enter=blank):"
+"ATTDEF  Enter prompt for '%{tag}' (Enter=use tag):": "ATTDEF  Enter prompt for '%{tag}' (Enter=use tag):"
+"ATTDEF  Specify insertion point for '%{tag}':": "ATTDEF  Specify insertion point for '%{tag}':"
+"ATTEDIT  Select block with attributes:": "ATTEDIT  Select block with attributes:"
+"Accept": "Accept"
+"Alternate Units": "Alternate Units"
+"Angle = %{angle}°": "Angle = %{angle}°"
+"Angle = 0.0000° (degenerate rays)": "Angle = 0.0000° (degenerate rays)"
+"Area = %{area},  Perimeter = %{perimeter}": "Area = %{area},  Perimeter = %{perimeter}"
+"BASE  Specify base point:": "BASE  Specify base point:"
+"BLEND  Enter continuity [Tangent/Curvature] <%{c}>:": "BLEND  Enter continuity [Tangent/Curvature] <%{c}>:"
+"BLEND  Select first open curve  [Continuity=%{c}]:": "BLEND  Select first open curve  [Continuity=%{c}]:"
+"BLEND  Select second open curve  [Continuity=%{c}]:": "BLEND  Select second open curve  [Continuity=%{c}]:"
+"BLOCK  Enter block name  [%{count} objects selected]:": "BLOCK  Enter block name  [%{count} objects selected]:"
+"BLOCK  Specify base point for \"%{name}\"  [%{count} objects]:": "BLOCK  Specify base point for \"%{name}\"  [%{count} objects]:"
+"BOUNDARY  Pick internal point:%{miss}": "BOUNDARY  Pick internal point:%{miss}"
+"BREAKATPOINT  Select object:": "BREAKATPOINT  Select object:"
+"BREAKATPOINT  Specify break point:": "BREAKATPOINT  Specify break point:"
+"Block \"%{name}\" has no entities.": "Block \"%{name}\" has no entities."
+"Block \"%{name}\" not found.": "Block \"%{name}\" not found."
+"Block \"%{name}\" produced no exportable entities.": "Block \"%{name}\" produced no exportable entities."
+"CENTERLINE  Select first line:": "CENTERLINE  Select first line:"
+"CENTERLINE  Select second line:": "CENTERLINE  Select second line:"
+"CHAMFER  Enter first chamfer distance <%{d1}>:": "CHAMFER  Enter first chamfer distance <%{d1}>:"
+"CHAMFER  Enter second chamfer distance <%{d2}>:": "CHAMFER  Enter second chamfer distance <%{d2}>:"
+"CHAMFER  Select first line  [D1=%{d1} D2=%{d2}]:": "CHAMFER  Select first line  [D1=%{d1} D2=%{d2}]:"
+"CHAMFER  Select second line  [D1=%{d1} D2=%{d2}]:": "CHAMFER  Select second line  [D1=%{d1} D2=%{d2}]:"
+"CHAMFER  Select the adjacent polyline segment  [D1=%{d1} D2=%{d2}]:": "CHAMFER  Select the adjacent polyline segment  [D1=%{d1} D2=%{d2}]:"
+"CIRCLE  Specify center point:": "CIRCLE  Specify center point:"
+"CIRCLE  Specify radius or type value  <%{r}>  [center (%{cx},%{cy})]:": "CIRCLE  Specify radius or type value  <%{r}>  [center (%{cx},%{cy})]:"
+"COPY  Enter number of items to array:": "COPY  Enter number of items to array:"
+"COPY  Specify base point  [%{count} objects]:": "COPY  Specify base point  [%{count} objects]:"
+"COPY  Specify destination  [%{count} copies so far | Array | Enter=done | base %{bx},%{by}]:": "COPY  Specify destination  [%{count} copies so far | Array | Enter=done | base %{bx},%{by}]:"
+"COPY  Specify second point for %{n}-item array  [base %{bx},%{by}]:": "COPY  Specify second point for %{n}-item array  [base %{bx},%{by}]:"
+"COPYBASE  Specify base point:": "COPYBASE  Specify base point:"
+"Continuity": "Continuity"
+"Curvature": "Curvature"
+"DDEDIT  Select text entity:": "DDEDIT  Select text entity:"
+"DIMALIGNED  Enter dimension text (blank = measured value):": "DIMALIGNED  Enter dimension text (blank = measured value):"
+"DIMALIGNED  Specify dimension line location  [Text/Angle]:": "DIMALIGNED  Specify dimension line location  [Text/Angle]:"
+"DIMALIGNED  Specify first extension line origin:": "DIMALIGNED  Specify first extension line origin:"
+"DIMALIGNED  Specify second extension line origin  [Text/Angle]:": "DIMALIGNED  Specify second extension line origin  [Text/Angle]:"
+"DIMALIGNED  Specify text angle (degrees):": "DIMALIGNED  Specify text angle (degrees):"
+"DIMANGULAR  Specify angle vertex:": "DIMANGULAR  Specify angle vertex:"
+"DIMANGULAR  Specify dimension arc location:": "DIMANGULAR  Specify dimension arc location:"
+"DIMANGULAR  Specify first extension line point:": "DIMANGULAR  Specify first extension line point:"
+"DIMANGULAR  Specify second extension line point:": "DIMANGULAR  Specify second extension line point:"
+"DIMBASELINE  No base dimension found. Place a dimension first.": "DIMBASELINE  No base dimension found. Place a dimension first."
+"DIMBASELINE  Specify a second extension line origin (Enter to exit):": "DIMBASELINE  Specify a second extension line origin (Enter to exit):"
+"DIMBREAK  Select dimension to break:": "DIMBREAK  Select dimension to break:"
+"DIMBREAK  Select object to break at, or Enter for Auto:": "DIMBREAK  Select object to break at, or Enter for Auto:"
+"DIMCENTER  Select arc or circle:": "DIMCENTER  Select arc or circle:"
+"DIMCONTINUE  No base dimension found. Place a dimension first.": "DIMCONTINUE  No base dimension found. Place a dimension first."
+"DIMCONTINUE  Specify a second extension line origin (Enter to exit):": "DIMCONTINUE  Specify a second extension line origin (Enter to exit):"
+"DIMDIAMETER  Enter dimension text (blank = measured value):": "DIMDIAMETER  Enter dimension text (blank = measured value):"
+"DIMDIAMETER  Specify center point:": "DIMDIAMETER  Specify center point:"
+"DIMDIAMETER  Specify dimension line location  [Text/Angle]:": "DIMDIAMETER  Specify dimension line location  [Text/Angle]:"
+"DIMDIAMETER  Specify point on circle:": "DIMDIAMETER  Specify point on circle:"
+"DIMDIAMETER  Specify text angle (degrees):": "DIMDIAMETER  Specify text angle (degrees):"
+"DIMEDIT  Enter text override (blank = reset to measured):": "DIMEDIT  Enter text override (blank = reset to measured):"
+"DIMEDIT  Select dimension:": "DIMEDIT  Select dimension:"
+"DIMJOGLINE  Select linear or aligned dimension:": "DIMJOGLINE  Select linear or aligned dimension:"
+"DIMJOGLINE  Specify jog location:": "DIMJOGLINE  Specify jog location:"
+"DIMLINEAR  Enter dimension text (blank = measured value):": "DIMLINEAR  Enter dimension text (blank = measured value):"
+"DIMLINEAR  Specify dimension line location  [Text/Angle]:": "DIMLINEAR  Specify dimension line location  [Text/Angle]:"
+"DIMLINEAR  Specify first extension line origin:": "DIMLINEAR  Specify first extension line origin:"
+"DIMLINEAR  Specify second extension line origin  [Text/Angle]:": "DIMLINEAR  Specify second extension line origin  [Text/Angle]:"
+"DIMLINEAR  Specify text angle (degrees):": "DIMLINEAR  Specify text angle (degrees):"
+"DIMORDINATE  Specify feature location:": "DIMORDINATE  Specify feature location:"
+"DIMORDINATE  Specify leader endpoint:": "DIMORDINATE  Specify leader endpoint:"
+"DIMRADIUS  Enter dimension text (blank = measured value):": "DIMRADIUS  Enter dimension text (blank = measured value):"
+"DIMRADIUS  Specify center point:": "DIMRADIUS  Specify center point:"
+"DIMRADIUS  Specify dimension line location  [Text/Angle]:": "DIMRADIUS  Specify dimension line location  [Text/Angle]:"
+"DIMRADIUS  Specify radius point:": "DIMRADIUS  Specify radius point:"
+"DIMRADIUS  Specify text angle (degrees):": "DIMRADIUS  Specify text angle (degrees):"
+"DIMSPACE  Enter value (0 = auto):": "DIMSPACE  Enter value (0 = auto):"
+"DIMSPACE  Select base dimension:": "DIMSPACE  Select base dimension:"
+"DIMSPACE  Select dimension to space (%{count} selected, Enter when done):": "DIMSPACE  Select dimension to space (%{count} selected, Enter when done):"
+"DIMTEDIT  Select dimension:": "DIMTEDIT  Select dimension:"
+"DIMTEDIT  Specify new location for dimension text:": "DIMTEDIT  Specify new location for dimension text:"
+"DIST  Specify first point:": "DIST  Specify first point:"
+"DIST  Specify second point:": "DIST  Specify second point:"
+"DIVIDE  Enter number of segments:": "DIVIDE  Enter number of segments:"
+"DIVIDE  Select object to divide:": "DIVIDE  Select object to divide:"
+"DONUT  Specify center of donut (Enter to exit):": "DONUT  Specify center of donut (Enter to exit):"
+"DONUT  Specify inside diameter <0>:": "DONUT  Specify inside diameter <0>:"
+"DONUT  Specify outside diameter:": "DONUT  Specify outside diameter:"
+"Decurve": "Decurve"
+"Distance": "Distance"
+"Distance = %{dist},  Angle in XY Plane = %{angle_xy}°\n  Delta X = %{dx},  Delta Y = %{dy},  Delta Z = %{dz}": "Distance = %{dist},  Angle in XY Plane = %{angle_xy}°\n  Delta X = %{dx},  Delta Y = %{dy},  Delta Z = %{dz}"
+"Distance = %{dist},  Angle in XY Plane = %{angle_xy}°,  Angle from XY Plane = %{angle_z}°\n  Delta X = %{dx},  Delta Y = %{dy},  Delta Z = %{dz}": "Distance = %{dist},  Angle in XY Plane = %{angle_xy}°,  Angle from XY Plane = %{angle_z}°\n  Delta X = %{dx},  Delta Y = %{dy},  Delta Z = %{dz}"
+"Done": "Done"
+"Draw manually": "Draw manually"
+"ELLIPSE ARC  Specify center:": "ELLIPSE ARC  Specify center:"
+"ELLIPSE ARC  Specify end angle point or type degrees  [start=%{sa}]:": "ELLIPSE ARC  Specify end angle point or type degrees  [start=%{sa}]:"
+"ELLIPSE ARC  Specify major axis endpoint:": "ELLIPSE ARC  Specify major axis endpoint:"
+"ELLIPSE ARC  Specify minor axis point or type half-length  [major r=%{r}]:": "ELLIPSE ARC  Specify minor axis point or type half-length  [major r=%{r}]:"
+"ELLIPSE ARC  Specify start angle point or type degrees:": "ELLIPSE ARC  Specify start angle point or type degrees:"
+"EXPLODE  Select objects to explode:": "EXPLODE  Select objects to explode:"
+"EXTRUDE  Height:": "EXTRUDE  Height:"
+"EXTRUDE  Select closed profile (Circle, LwPolyline…):": "EXTRUDE  Select closed profile (Circle, LwPolyline…):"
+"GROUP  Enter group name [%{name}]:": "GROUP  Enter group name [%{name}]:"
+"HATCH  Boundary point 1:": "HATCH  Boundary point 1:"
+"HATCH  Pick internal point:%{miss}": "HATCH  Pick internal point:%{miss}"
+"HATCH  Point %{n}:": "HATCH  Point %{n}:"
+"HATCHEDIT  Pattern:%{name}  Scale:%{scale}  Angle:%{angle}  [P <pat> / S <scale> / A <angle> | Enter to apply]:": "HATCHEDIT  Pattern:%{name}  Scale:%{scale}  Angle:%{angle}  [P <pat> / S <scale> / A <angle> | Enter to apply]:"
+"HATCHEDIT  Select hatch:": "HATCHEDIT  Select hatch:"
+"HELIX  Enter number of turns <3>:": "HELIX  Enter number of turns <3>:"
+"HELIX  Specify base radius:": "HELIX  Specify base radius:"
+"HELIX  Specify centre point of base:": "HELIX  Specify centre point of base:"
+"HELIX  Specify helix height:": "HELIX  Specify helix height:"
+"HELIX  Specify top radius <same as base>:": "HELIX  Specify top radius <same as base>:"
+"ID  Specify point:": "ID  Specify point:"
+"IMAGE  Specify insertion point (%{name}):  ": "IMAGE  Specify insertion point (%{name}):  "
+"IMAGE  Specify width (drag right):": "IMAGE  Specify width (drag right):"
+"INSERT  Enter block name:%{hint}": "INSERT  Enter block name:%{hint}"
+"INSERT  Filling attributes...": "INSERT  Filling attributes..."
+"INSERT  Specify insertion point for \"%{name}\"  [Scale/Rotate]:": "INSERT  Specify insertion point for \"%{name}\"  [Scale/Rotate]:"
+"INSERT  Specify rotation angle <0>:": "INSERT  Specify rotation angle <0>:"
+"INSERT  Specify scale factor <1>:": "INSERT  Specify scale factor <1>:"
+"Insert view": "Insert view"
+"JOIN  Select objects to join (%{count} selected, Enter to apply):": "JOIN  Select objects to join (%{count} selected, Enter to apply):"
+"LEADER  Specify arrowhead point:": "LEADER  Specify arrowhead point:"
+"LEADER  Specify next point [%{count} pts — Enter to place text]:": "LEADER  Specify next point [%{count} pts — Enter to place text]:"
+"LENGTHEN  Enter option [DE <delta> / TO <total> / P <pct>]:": "LENGTHEN  Enter option [DE <delta> / TO <total> / P <pct>]:"
+"LENGTHEN  Select object:": "LENGTHEN  Select object:"
+"LIMITS  Specify first corner or [On / Off] <%{v}>:": "LIMITS  Specify first corner or [On / Off] <%{v}>:"
+"LIMITS  Specify opposite corner <%{v}>:": "LIMITS  Specify opposite corner <%{v}>:"
+"LINE  Specify first point:": "LINE  Specify first point:"
+"LINE  Specify next point  [Close/Undo]:": "LINE  Specify next point  [Close/Undo]:"
+"LINE  Specify next point  [Undo]:": "LINE  Specify next point  [Undo]:"
+"LOFT  Select first cross-section:": "LOFT  Select first cross-section:"
+"LOFT  Select next cross-section (%{count} selected, Enter to finish):": "LOFT  Select next cross-section (%{count} selected, Enter to finish):"
+"Last": "Last"
+"Lines": "Lines"
+"MEASURE  Select object to measure:": "MEASURE  Select object to measure:"
+"MEASURE  Specify segment length:": "MEASURE  Specify segment length:"
+"MEASUREGEOM  Enter an option [Distance/Radius/Angle/ARea]:": "MEASUREGEOM  Enter an option [Distance/Radius/Angle/ARea]:"
+"MEASUREGEOM  Select arc or circle:": "MEASUREGEOM  Select arc or circle:"
+"MEASUREGEOM  Specify first corner point (Enter to cancel):": "MEASUREGEOM  Specify first corner point (Enter to cancel):"
+"MEASUREGEOM  Specify first point:": "MEASUREGEOM  Specify first point:"
+"MEASUREGEOM  Specify first ray point:": "MEASUREGEOM  Specify first ray point:"
+"MEASUREGEOM  Specify next point (%{n} picked, Enter to calculate):": "MEASUREGEOM  Specify next point (%{n} picked, Enter to calculate):"
+"MEASUREGEOM  Specify second point:": "MEASUREGEOM  Specify second point:"
+"MEASUREGEOM  Specify second ray point:": "MEASUREGEOM  Specify second ray point:"
+"MEASUREGEOM  Specify vertex point:": "MEASUREGEOM  Specify vertex point:"
+"MINSERT  Enter block name:%{hint}": "MINSERT  Enter block name:%{hint}"
+"MINSERT  Enter column spacing <%{val}>:": "MINSERT  Enter column spacing <%{val}>:"
+"MINSERT  Enter number of columns <%{cols}>:": "MINSERT  Enter number of columns <%{cols}>:"
+"MINSERT  Enter number of rows <%{rows}>:": "MINSERT  Enter number of rows <%{rows}>:"
+"MINSERT  Enter row spacing <%{val}>:": "MINSERT  Enter row spacing <%{val}>:"
+"MINSERT  Specify insertion point for \"%{name}\":": "MINSERT  Specify insertion point for \"%{name}\":"
+"MIRROR  Erase source objects? [Yes/No] <No>:": "MIRROR  Erase source objects? [Yes/No] <No>:"
+"MIRROR  Specify first mirror-line point  [%{count} objects]:": "MIRROR  Specify first mirror-line point  [%{count} objects]:"
+"MIRROR  Specify second point  [p1=%{px},%{py}]:": "MIRROR  Specify second point  [p1=%{px},%{py}]:"
+"MLEADER  Specify arrowhead point:": "MLEADER  Specify arrowhead point:"
+"MLEADER  Specify next point [%{count} pts — Enter to place text]:": "MLEADER  Specify next point [%{count} pts — Enter to place text]:"
+"MLEADERADD  Select a multileader:": "MLEADERADD  Select a multileader:"
+"MLEADERADD  Specify arrowhead location:": "MLEADERADD  Specify arrowhead location:"
+"MLEADERADD  Specify next leader point (%{count} pts, Enter to finish):": "MLEADERADD  Specify next leader point (%{count} pts, Enter to finish):"
+"MLEADERALIGN  Select multileaders to align (Enter when done):": "MLEADERALIGN  Select multileaders to align (Enter when done):"
+"MLEADERALIGN  Specify direction — pick start point:": "MLEADERALIGN  Specify direction — pick start point:"
+"MLEADERALIGN  Specify end point of alignment direction:": "MLEADERALIGN  Specify end point of alignment direction:"
+"MLEADERCOLLECT  Select multileaders to collect (Enter when done):": "MLEADERCOLLECT  Select multileaders to collect (Enter when done):"
+"MLEADERCOLLECT  Specify collected multileader location:": "MLEADERCOLLECT  Specify collected multileader location:"
+"MLEADERREMOVE  Click near the leader line to remove:": "MLEADERREMOVE  Click near the leader line to remove:"
+"MLEADERREMOVE  Select a multileader:": "MLEADERREMOVE  Select a multileader:"
+"MLINE  Enter scale factor:": "MLINE  Enter scale factor:"
+"MLINE  Specify next point (%{count} pts, Enter to finish, C to close, S to set scale):": "MLINE  Specify next point (%{count} pts, Enter to finish, C to close, S to set scale):"
+"MLINE  Specify start point (scale=%{scale}):": "MLINE  Specify start point (scale=%{scale}):"
+"MOVE  Specify base point  [%{count} objects]:": "MOVE  Specify base point  [%{count} objects]:"
+"MOVE  Specify destination  [base %{bx},%{by}]:": "MOVE  Specify destination  [base %{bx},%{by}]:"
+"MTEXT  Specify insertion point:": "MTEXT  Specify insertion point:"
+"MVIEW  Specify corner of viewport or [Polygonal/Object/Fit/Insert view]:": "MVIEW  Specify corner of viewport or [Polygonal/Object/Fit/Insert view]:"
+"MVIEW  Specify opposite corner:": "MVIEW  Specify opposite corner:"
+"MVIEW Insert view  Choose a named view or [New]:": "MVIEW Insert view  Choose a named view or [New]:"
+"MVIEW Insert view  No named views; choose [New]:": "MVIEW Insert view  No named views; choose [New]:"
+"MVIEW Insert view  Specify placement point:": "MVIEW Insert view  Specify placement point:"
+"MVIEW New view  Specify first model-space corner:": "MVIEW New view  Specify first model-space corner:"
+"MVIEW New view  Specify opposite model-space corner:": "MVIEW New view  Specify opposite model-space corner:"
+"MVIEW Object  Select a circle, full ellipse, or closed polyline:": "MVIEW Object  Select a circle, full ellipse, or closed polyline:"
+"MVIEW Polygonal  Specify start point:": "MVIEW Polygonal  Specify start point:"
+"MVIEW Polygonal [%{mode}]  Specify next point or [Arc/Line/Close/Undo] (%{count} points):": "MVIEW Polygonal [%{mode}]  Specify next point or [Arc/Line/Close/Undo] (%{count} points):"
+"Multiple": "Multiple"
+"No": "No"
+"No entities selected for WBLOCK.": "No entities selected for WBLOCK."
+"None of the selected entities could be exported.": "None of the selected entities could be exported."
+"OFFSET  Select object to offset (Enter to finish):": "OFFSET  Select object to offset (Enter to finish):"
+"OFFSET  Specify offset distance or [Through] <%{d}>:": "OFFSET  Specify offset distance or [Through] <%{d}>:"
+"OFFSET%{n}  Click side or [Multiple]  [distance %{d}]:": "OFFSET%{n}  Click side or [Multiple]  [distance %{d}]:"
+"OFFSET%{n}  Click through point or [Multiple]:": "OFFSET%{n}  Click through point or [Multiple]:"
+"OFFSET%{n} Multiple  Click next side [distance %{d}]:": "OFFSET%{n} Multiple  Click next side [distance %{d}]:"
+"OFFSET%{n} Multiple  Click next through point:": "OFFSET%{n} Multiple  Click next through point:"
+"Object": "Object"
+"Off": "Off"
+"PASTECLIP  Pick insertion point:": "PASTECLIP  Pick insertion point:"
+"PEDIT  Enter option:": "PEDIT  Enter option:"
+"PEDIT  Object is not a polyline. Turn it into one?  [Yes/No] <Y>:": "PEDIT  Object is not a polyline. Turn it into one?  [Yes/No] <Y>:"
+"PEDIT  Select polyline (or a line/arc to convert):": "PEDIT  Select polyline (or a line/arc to convert):"
+"PEDIT  Specify new width:": "PEDIT  Specify new width:"
+"PEDIT Join  Select objects to join (%{count} picked), Enter to merge:": "PEDIT Join  Select objects to join (%{count} picked), Enter to merge:"
+"PLOTWINDOW  Specify first corner of plot window:": "PLOTWINDOW  Specify first corner of plot window:"
+"PLOTWINDOW  Specify opposite corner:": "PLOTWINDOW  Specify opposite corner:"
+"POLYGON E  Enter number of sides <%{n}>:": "POLYGON E  Enter number of sides <%{n}>:"
+"POLYGON E  Specify first endpoint of edge [%{n} sides]:": "POLYGON E  Specify first endpoint of edge [%{n} sides]:"
+"POLYGON E  Specify second endpoint of edge [%{n} sides]:": "POLYGON E  Specify second endpoint of edge [%{n} sides]:"
+"Polygonal": "Polygonal"
+"Previous": "Previous"
+"QDIM  Select geometry to dimension (Enter when done):": "QDIM  Select geometry to dimension (Enter when done):"
+"QDIM  Specify dimension line position:": "QDIM  Specify dimension line position:"
+"QUICKPRINT  %{count} selected — Enter to plot, or keep selecting:": "QUICKPRINT  %{count} selected — Enter to plot, or keep selecting:"
+"QUICKPRINT  Select objects to quick-print:": "QUICKPRINT  Select objects to quick-print:"
+"RECT CEN  Specify center point:": "RECT CEN  Specify center point:"
+"RECT CEN  Specify corner point:": "RECT CEN  Specify corner point:"
+"REFCLOSE  [Save/Discard] <Save>:": "REFCLOSE  [Save/Discard] <Save>:"
+"REVCLOUD  Specify next point (%{count} pts, Enter to close):": "REVCLOUD  Specify next point (%{count} pts, Enter to close):"
+"REVCLOUD  Specify start point (arc length = %{arc_length}):": "REVCLOUD  Specify start point (arc length = %{arc_length}):"
+"REVERSE  Select line, polyline or spline to reverse:": "REVERSE  Select line, polyline or spline to reverse:"
+"REVOLVE  Angle of revolution <360>:": "REVOLVE  Angle of revolution <360>:"
+"REVOLVE  Axis end point:": "REVOLVE  Axis end point:"
+"REVOLVE  Axis start point:": "REVOLVE  Axis start point:"
+"REVOLVE  Select profile:": "REVOLVE  Select profile:"
+"ROTATE  Specify first reference point or type reference angle:": "ROTATE  Specify first reference point or type reference angle:"
+"ROTATE  Specify new absolute angle  [ref=%{a}]:": "ROTATE  Specify new absolute angle  [ref=%{a}]:"
+"ROTATE  Specify rotation angle  <%{a}>:": "ROTATE  Specify rotation angle  <%{a}>:"
+"ROTATE  Specify rotation center  [%{count} objects]:": "ROTATE  Specify rotation center  [%{count} objects]:"
+"ROTATE  Specify second reference point:": "ROTATE  Specify second reference point:"
+"Radius = %{radius},  Diameter = %{diameter}": "Radius = %{radius},  Diameter = %{diameter}"
+"SCALE  Specify base point  [%{count} objects]:": "SCALE  Specify base point  [%{count} objects]:"
+"SCALE  Specify first reference point or type reference length:": "SCALE  Specify first reference point or type reference length:"
+"SCALE  Specify new length from base or type a length  [ref=%{d}]:": "SCALE  Specify new length from base or type a length  [ref=%{d}]:"
+"SCALE  Specify scale factor  <%{f}>:": "SCALE  Specify scale factor  <%{f}>:"
+"SCALE  Specify second reference point:": "SCALE  Specify second reference point:"
+"SKETCH  Pen down — move to sketch, click to lift, Enter to record:": "SKETCH  Pen down — move to sketch, click to lift, Enter to record:"
+"SKETCH  Pen up — click to lower the pen, Enter to record:": "SKETCH  Pen up — click to lower the pen, Enter to record:"
+"SOLID  Specify first point:": "SOLID  Specify first point:"
+"SOLID  Specify fourth point:": "SOLID  Specify fourth point:"
+"SOLID  Specify second point:": "SOLID  Specify second point:"
+"SOLID  Specify third point:": "SOLID  Specify third point:"
+"SPLINE  Specify first control point:": "SPLINE  Specify first control point:"
+"SPLINE  Specify next point  [%{n} pts]:": "SPLINE  Specify next point  [%{n} pts]:"
+"STRETCH  Specify base point:": "STRETCH  Specify base point:"
+"STRETCH  Specify first corner of crossing window  [%{count} objects]:": "STRETCH  Specify first corner of crossing window  [%{count} objects]:"
+"STRETCH  Specify first corner of crossing window:": "STRETCH  Specify first corner of crossing window:"
+"STRETCH  Specify new point  [base %{bx},%{bz}]:": "STRETCH  Specify new point  [base %{bx},%{bz}]:"
+"STRETCH  Specify opposite corner:": "STRETCH  Specify opposite corner:"
+"SWEEP  Select path (Line, Arc, LwPolyline):": "SWEEP  Select path (Line, Arc, LwPolyline):"
+"SWEEP  Select profile to sweep:": "SWEEP  Select profile to sweep:"
+"TABLE  Enter number of columns [%{cols}]:": "TABLE  Enter number of columns [%{cols}]:"
+"TABLE  Enter number of rows (incl. header) [%{rows}]  (%{cols} cols):": "TABLE  Enter number of rows (incl. header) [%{rows}]  (%{cols} cols):"
+"TABLE  Specify insertion point  [%{cols}×%{rows}]:": "TABLE  Specify insertion point  [%{cols}×%{rows}]:"
+"TEXT  Specify insertion point:": "TEXT  Specify insertion point:"
+"TEXTEDIT Select an annotation object or [Undo Mode] <exit>:": "TEXTEDIT Select an annotation object or [Undo Mode] <exit>:"
+"TEXTEDIT Select an annotation object or [Undo Mode]:": "TEXTEDIT Select an annotation object or [Undo Mode]:"
+"TOLERANCE  Enter tolerance text:": "TOLERANCE  Enter tolerance text:"
+"TOLERANCE  Specify insertion point  [%{text}]:": "TOLERANCE  Specify insertion point  [%{text}]:"
+"TORIENT  New absolute rotation <Most Readable>:": "TORIENT  New absolute rotation <Most Readable>:"
+"TORIENT  Specify second point:": "TORIENT  Specify second point:"
+"TRACE  Specify next point  [Undo]:": "TRACE  Specify next point  [Undo]:"
+"TRACE  Specify start point:": "TRACE  Specify start point:"
+"TRACE  Specify trace width <%{w}>:": "TRACE  Specify trace width <%{w}>:"
+"Tangent": "Tangent"
+"Through": "Through"
+"UCS  name of UCS to delete:": "UCS  name of UCS to delete:"
+"UCS  name to save current UCS as:": "UCS  name to save current UCS as:"
+"UCS  new origin point:": "UCS  new origin point:"
+"UCS  option [World/Z/X/Y/Origin/Save/Delete] or name:": "UCS  option [World/Z/X/Y/Origin/Save/Delete] or name:"
+"UCS  rotation angle about X (degrees):": "UCS  rotation angle about X (degrees):"
+"UCS  rotation angle about Y (degrees):": "UCS  rotation angle about Y (degrees):"
+"UCS  rotation angle about Z (degrees):": "UCS  rotation angle about Z (degrees):"
+"UCS  value:": "UCS  value:"
+"UNGROUP  Select grouped objects:": "UNGROUP  Select grouped objects:"
+"VPLAYER  F <layer> = Freeze  |  T <layer> = Thaw  |  Enter = Exit": "VPLAYER  F <layer> = Freeze  |  T <layer> = Thaw  |  Enter = Exit"
+"WIPEOUT  Specify first point or [Polyline]:": "WIPEOUT  Specify first point or [Polyline]:"
+"WIPEOUT  Specify next point or [Undo/Close] (%{n} points):": "WIPEOUT  Specify next point or [Undo/Close] (%{n} points):"
+"WIPEOUT Polyline  Select a closed planar polyline:": "WIPEOUT Polyline  Select a closed planar polyline:"
+"WIPEOUT Rectangular  Specify first corner:": "WIPEOUT Rectangular  Specify first corner:"
+"WIPEOUT Rectangular  Specify opposite corner:": "WIPEOUT Rectangular  Specify opposite corner:"
+"Width": "Width"
+"X = %{x},  Y = %{y},  Z = %{z}": "X = %{x},  Y = %{y},  Z = %{z}"
+"XATTACH  Specify insertion point for \"%{name}\":": "XATTACH  Specify insertion point for \"%{name}\":"
+"XLINE  Specify a point:": "XLINE  Specify a point:"
+"XLINE  Specify through point:": "XLINE  Specify through point:"
+"Yes": "Yes"
+"ZOOM WINDOW  Specify first corner:": "ZOOM WINDOW  Specify first corner:"
+"ZOOM WINDOW  Specify opposite corner:": "ZOOM WINDOW  Specify opposite corner:"
+"eXit": "eXit"
+
+# ---- Start page / properties panel labels ----
+'%{count} objects selected': '%{count} objects selected'
+'%{scope} Visual Style': '%{scope} Visual Style'
+3D Visualization: 3D Visualization
+AC Version: AC Version
+Active Viewport: Active Viewport
+Adjust Colors for Background: Adjust Colors for Background
+Advanced: Advanced
+Alignment: Alignment
+All: All
+Alt enabled: Alt enabled
+Alt format: Alt format
+Alt precision: Alt precision
+Alt prefix/suffix: Alt prefix/suffix
+Alt roundoff: Alt roundoff
+Alt scale factor: Alt scale factor
+Alt suppress leading zeros: Alt suppress leading zeros
+Alt suppress trailing zeros: Alt suppress trailing zeros
+Ambient: Ambient
+Angle: Angle
+Angle format: Angle format
+Angle precision: Angle precision
+Angles: Angles
+Annotation scale: Annotation scale
+Annotative scale: Annotative scale
+Arc End (deg): Arc End (deg)
+Arc Start (deg): Arc Start (deg)
+Arc X: Arc X
+Arc Y: Arc Y
+Arc Z: Arc Z
+Arc length: Arc length
+Arc-Aligned Text: Arc-Aligned Text
+Area: Area
+Arrow: Arrow
+Arrow size: Arrow size
+Arrowhead: Arrowhead
+Arrowhead size: Arrowhead size
+Associative: Associative
+Attachment type: Attachment type
+Attenuation: Attenuation
+Axis Point: Axis Point
+Axis Vector: Axis Vector
+Back Line: Back Line
+Background color: Background color
+Background mask: Background mask
+Background transparency: Background transparency
+Base X: Base X
+Base Y: Base Y
+Base Z: Base Z
+Base point X: Base point X
+Base point Y: Base point Y
+Base point Z: Base point Z
+Base radius: Base radius
+Big Font: Big Font
+Blend Creases: Blend Creases
+Block color: Block color
+Block connection: Block connection
+Block contents: Block contents
+Block rotation: Block rotation
+Block scale: Block scale
+Bold: Bold
+Book: Book
+Bottom Height: Bottom Height
+Boundary width: Boundary width
+Break heights: Break heights
+Brightness: Brightness
+Browser storage: Browser storage
+Bump Map: Bump Map
+C++ Class: C++ Class
+CV Hull: CV Hull
+Camera: Camera
+Cast Shadows: Cast Shadows
+Center: Center
+Center X: Center X
+Center Y: Center Y
+Center Z: Center Z
+Centered: Centered
+Centroid: Centroid
+Character Set: Character Set
+Character Spacing: Character Spacing
+Chord X: Chord X
+Chord Y: Chord Y
+Chord Z: Chord Z
+Circumference: Circumference
+Class: Class
+Class / Entity: Class / Entity
+Class ID: Class ID
+Class Version: Class Version
+Classification Scheme: Classification Scheme
+Clip inverted: Clip inverted
+Clipping: Clipping
+Clippings: Clippings
+Closed: Closed
+Color 1: Color 1
+Color 2: Color 2
+Color Book: Color Book
+Color Name: Color Name
+Color Temperature: Color Temperature
+Column count: Column count
+Column gutter: Column gutter
+Column width: Column width
+Columns: Columns
+Constant: Constant
+Constrain: Constrain
+Contents: Contents
+Contrast: Contrast
+Control Point: Control Point
+Control Point Count: Control Point Count
+Control Point X: Control Point X
+Control Point Y: Control Point Y
+Control Point Z: Control Point Z
+Coordination Model: Coordination Model
+Creased Edges: Creased Edges
+Croppings: Croppings
+Cumulative area: Cumulative area
+Current Color Scheme: Current Color Scheme
+Current Vertex: Current Vertex
+Current vertex: Current vertex
+Cutting Line: Cutting Line
+DWG Payload: DWG Payload
+DWG Version: DWG Version
+DXF Codes: DXF Codes
+DXF Name: DXF Name
+DXF Subclass: DXF Subclass
+Data: Data
+Data Points: Data Points
+Data Size: Data Size
+Database Curves: Database Curves
+Decimal separator: Decimal separator
+Decoded Data: Decoded Data
+Defined height: Defined height
+Defined width: Defined width
+Definition: Definition
+Definition X: Definition X
+Definition Y: Definition Y
+Definition Z: Definition Z
+Degree: Degree
+Delta X: Delta X
+Delta Y: Delta Y
+Delta Z: Delta Z
+Diffuse: Diffuse
+Diffuse Map: Diffuse Map
+Dim line 1: Dim line 1
+Dim line 2: Dim line 2
+Dim line color: Dim line color
+Dim line ext: Dim line ext
+Dim line forced: Dim line forced
+Dim line inside: Dim line inside
+Dim line lineweight: Dim line lineweight
+Dim prefix/suffix: Dim prefix/suffix
+Dim roundoff: Dim roundoff
+Dim scale linear: Dim scale linear
+Dim scale overall: Dim scale overall
+Dim style: Dim style
+Dim units: Dim units
+Dimension style: Dimension style
+Direction: Direction
+Direction X: Direction X
+Direction Y: Direction Y
+Direction Z: Direction Z
+Direction vector X: Direction vector X
+Direction vector Y: Direction vector Y
+Direction vector Z: Direction vector Z
+Discussions: Discussions
+Discussions load from GitHub.: Discussions load from GitHub.
+Double: Double
+Draft: Draft
+Draft Distances: Draft Distances
+Drawing View: Drawing View
+Dynamic Block Entity: Dynamic Block Entity
+Edge 1: Edge 1
+Edge 2: Edge 2
+Edge 3: Edge 3
+Edge 4: Edge 4
+Edge style: Edge style
+Edges: Edges
+Elevation: Elevation
+Elevation Gradient: Elevation Gradient
+Elevation Max: Elevation Max
+Elevation Min: Elevation Min
+Embedded Curves: Embedded Curves
+Embedded MText: Embedded MText
+Enabled: Enabled
+End Angle: End Angle
+End Limit: End Limit
+End Tangent X: End Tangent X
+End Tangent Y: End Tangent Y
+End Tangent Z: End Tangent Z
+End X: End X
+End Y: End Y
+End Z: End Z
+End angle: End angle
+End parameter: End parameter
+End segment width: End segment width
+Entity Transform: Entity Transform
+Ext Rotation (deg): Ext Rotation (deg)
+Ext line 1: Ext line 1
+Ext line 2: Ext line 2
+Ext line color: Ext line color
+Ext line ext: Ext line ext
+Ext line fixed: Ext line fixed
+Ext line fixed length: Ext line fixed length
+Ext line lineweight: Ext line lineweight
+Ext line offset: Ext line offset
+Extended Lighting: Extended Lighting
+Extents Max: Extents Max
+Extents Min: Extents Min
+Extra Modeler Data: Extra Modeler Data
+Face: Face
+Face count: Face count
+Face style: Face style
+Fade: Fade
+Falloff Angle: Falloff Angle
+Feature X: Feature X
+Feature Y: Feature Y
+Feature Z: Feature Z
+Field contents: Field contents
+Files you open will show up here.: Files you open will show up here.
+Fill color: Fill color
+First X: First X
+First Y: First Y
+First Z: First Z
+Fit Point: Fit Point
+Fit Point Count: Fit Point Count
+Fit Point X: Fit Point X
+Fit Point Y: Fit Point Y
+Fit Point Z: Fit Point Z
+Fit Tolerance: Fit Tolerance
+Fit/Smooth: Fit/Smooth
+Fit/smooth: Fit/smooth
+Fixed Elevation Range: Fixed Elevation Range
+Flag: Flag
+Flags: Flags
+Font: Font
+Format: Format
+Frame Text: Frame Text
+From DXF: From DXF
+Frozen Layers: Frozen Layers
+General: General
+Geographic Position Marker: Geographic Position Marker
+Geometry: Geometry
+Global width: Global width
+Gloss: Gloss
+Gradient type: Gradient type
+Graphics: Graphics
+Handle: Handle
+Has Leader: Has Leader
+High Threshold: High Threshold
+History: History
+Horizontal Dir (deg): Horizontal Dir (deg)
+Horizontal Landing: Horizontal Landing
+Hotspot Angle: Hotspot Angle
+Hyperlink: Hyperlink
+ISO pen width: ISO pen width
+Identifier: Identifier
+Illuminance Distance: Illuminance Distance
+Indicator Alpha: Indicator Alpha
+Indicator Color: Indicator Color
+Insert X: Insert X
+Insert Y: Insert Y
+Insert Z: Insert Z
+Intensity: Intensity
+Intensity Color Scheme: Intensity Color Scheme
+Intensity Gradient: Intensity Gradient
+Intensity Range: Intensity Range
+Intensity Scheme: Intensity Scheme
+Internal: Internal
+Invert: Invert
+Invisible: Invisible
+Island detection style: Island detection style
+Isoline List: Isoline List
+Isolines: Isolines
+Italic: Italic
+Jog Angle: Jog Angle
+Jog X: Jog X
+Jog Y: Jog Y
+Jog Z: Jog Z
+Justify: Justify
+Keep recent files: Keep recent files
+Kind: Kind
+Knot Parameterization: Knot Parameterization
+Lamp Preset: Lamp Preset
+Landing Gap: Landing Gap
+Landing distance: Landing distance
+Landing gap: Landing gap
+Layout Print Configuration: Layout Print Configuration
+Leader 1 X: Leader 1 X
+Leader 1 Y: Leader 1 Y
+Leader 1 Z: Leader 1 Z
+Leader 2 X: Leader 2 X
+Leader 2 Y: Leader 2 Y
+Leader 2 Z: Leader 2 Z
+Leader Length: Leader Length
+Leader X: Leader X
+Leader Y: Leader Y
+Leader Z: Leader Z
+Leader color: Leader color
+Leader extension: Leader extension
+Leader linetype: Leader linetype
+Leader lineweight: Leader lineweight
+Leader type: Leader type
+Left Attachment: Left Attachment
+Left Offset: Left Offset
+Legacy Entity: Legacy Entity
+Length: Length
+Less: Less
+Level of Smoothness: Level of Smoothness
+Light: Light
+Line Spacing: Line Spacing
+Line space distance: Line space distance
+Line space factor: Line space factor
+Line space style: Line space style
+Lines & Arrows: Lines & Arrows
+Linetype generation: Linetype generation
+Linetype scale: Linetype scale
+Linked cells: Linked cells
+Loading discussions…: Loading discussions…
+Loading videos…: Loading videos…
+Lock position: Lock position
+Locked: Locked
+Loft Flags: Loft Flags
+Loft Transform: Loft Transform
+Low Threshold: Low Threshold
+Luminance: Luminance
+M closed: M closed
+M density: M density
+M vertex count: M vertex count
+Major axis vector X: Major axis vector X
+Major axis vector Y: Major axis vector Y
+Major axis vector Z: Major axis vector Z
+Major radius: Major radius
+Manual heights: Manual heights
+Manual positions: Manual positions
+Map Size: Map Size
+Mass Properties: Mass Properties
+Material: Material
+Material Bindings: Material Bindings
+Material Details: Material Details
+Maximum Intensity: Maximum Intensity
+Measurement: Measurement
+Merged ranges: Merged ranges
+Minimum Intensity: Minimum Intensity
+Minor axis vector X: Minor axis vector X
+Minor axis vector Y: Minor axis vector Y
+Minor axis vector Z: Minor axis vector Z
+Minor radius: Minor radius
+Misc: Misc
+Mode: Mode
+Modeler Display Data: Modeler Display Data
+Modeler Format: Modeler Format
+Modeler Geometry: Modeler Geometry
+Monochrome: Monochrome
+More Colors…: More Colors…
+Multileader style: Multileader style
+Multiple lines: Multiple lines
+N closed: N closed
+N density: N density
+N vertex count: N vertex count
+NURB Version: NURB Version
+Named View: Named View
+No selection: No selection
+Normal Map: Normal Map
+Normal X: Normal X
+Normal Y: Normal Y
+Normal Z: Normal Z
+Notes: Notes
+Number: Number
+Number of Edges: Number of Edges
+Number of Faces: Number of Faces
+Number of Grips: Number of Grips
+Number of Vertices: Number of Vertices
+Number of turns: Number of turns
+OLE Frame: OLE Frame
+Object References: Object References
+Obliquing: Obliquing
+Offset From Arc: Offset From Arc
+Opacity: Opacity
+Opacity Map: Opacity Map
+Open Discussions on GitHub: Open Discussions on GitHub
+Open File…: Open File…
+Open playlist on YouTube: Open playlist on YouTube
+Ordinate Type: Ordinate Type
+Origin: Origin
+Origin X: Origin X
+Origin Y: Origin Y
+Origin Z: Origin Z
+Out Of Range Behavior: Out Of Range Behavior
+Overall scale: Overall scale
+Override Center X: Override Center X
+Override Center Y: Override Center Y
+Override Center Z: Override Center Z
+Override Option: Override Option
+Partial: Partial
+Path Entity Transform: Path Entity Transform
+Path Transform: Path Transform
+Pattern: Pattern
+Pattern name: Pattern name
+Payload: Payload
+Perimeter: Perimeter
+Photometric: Photometric
+Physical Intensity: Physical Intensity
+Physical Method: Physical Method
+Pinned: Pinned
+Pitch And Family: Pitch And Family
+Planar: Planar
+Plot Glyph: Plot Glyph
+Plot style table: Plot style table
+Plot table attached to: Plot table attached to
+Plot table type: Plot table type
+Point 1 X: Point 1 X
+Point 1 Y: Point 1 Y
+Point 1 Z: Point 1 Z
+Point 2 X: Point 2 X
+Point 2 Y: Point 2 Y
+Point 2 Z: Point 2 Z
+Point 3 X: Point 3 X
+Point 3 Y: Point 3 Y
+Point 3 Z: Point 3 Z
+Point 4 X: Point 4 X
+Point 4 Y: Point 4 Y
+Point 4 Z: Point 4 Z
+Point Cloud Display: Point Cloud Display
+Point Cloud Ex: Point Cloud Ex
+Point Cloud Ex Display: Point Cloud Ex Display
+Point Count: Point Count
+Point X: Point X
+Point Y: Point Y
+Point Z: Point Z
+Position: Position
+Position X: Position X
+Position Y: Position Y
+Position Z: Position Z
+Precision: Precision
+Primary Units: Primary Units
+Property Bag: Property Bag
+Proxy Entity: Proxy Entity
+Proxy ID: Proxy ID
+Radius ratio: Radius ratio
+Reactor: Reactor
+Recent Documents: Recent Documents
+Recent Files: Recent Files
+Records: Records
+Reference Point: Reference Point
+Reflection Map: Reflection Map
+Reflectivity: Reflectivity
+Refraction: Refraction
+Refraction Map: Refraction Map
+Registered Class Entity: Registered Class Entity
+Remote Text: Remote Text
+Render Flags: Render Flags
+Repeat bottom labels: Repeat bottom labels
+Repeat top labels: Repeat top labels
+Revision: Revision
+Revolve Entity: Revolve Entity
+Revolve Flags: Revolve Flags
+Right Attachment: Right Attachment
+Right Offset: Right Offset
+Rows: Rows
+SHX: SHX
+Saved File: Saved File
+Scale Object: Scale Object
+Scale X: Scale X
+Scale Y: Scale Y
+Scale Z: Scale Z
+Second X: Second X
+Second Y: Second Y
+Second Z: Second Z
+Section Object: Section Object
+Section Points: Section Points
+Section Symbol: Section Symbol
+Section Vertices: Section Vertices
+Segments: Segments
+Self Illumination: Self Illumination
+Send Feedback: Send Feedback
+Settings: Settings
+Shadow flags: Shadow flags
+Shadows: Shadows
+Shape: Shape
+Show: Show
+Show Clipping: Show Clipping
+Show Cropping: Show Cropping
+Show Intensity: Show Intensity
+Show clipped: Show clipped
+Show image: Show image
+Show underlay: Show underlay
+Softness: Softness
+Source Files: Source Files
+Source block: Source block
+Spacing: Spacing
+Specular: Specular
+Specular Map: Specular Map
+Sponsors: Sponsors
+Start Angle: Start Angle
+Start Limit: Start Limit
+Start Tangent X: Start Tangent X
+Start Tangent Y: Start Tangent Y
+Start Tangent Z: Start Tangent Z
+Start X: Start X
+Start Y: Start Y
+Start Z: Start Z
+Start angle: Start angle
+Start parameter: Start parameter
+Start segment width: Start segment width
+State: State
+Storage Size: Storage Size
+Stored Point Counts: Stored Point Counts
+Style: Style
+Style Handle: Style Handle
+Style Name: Style Name
+Style justification: Style justification
+Style scale: Style scale
+Stylization Type: Stylization Type
+Support on Patreon: Support on Patreon
+Supporters: Supporters
+Suppress leading zeros: Suppress leading zeros
+Suppress trailing zeros: Suppress trailing zeros
+Surface Area: Surface Area
+Surface Construction: Surface Construction
+Sweep / Path: Sweep / Path
+Sweep Entity: Sweep Entity
+Sweep Entity Transform: Sweep Entity Transform
+Sweep Options: Sweep Options
+Sweep Transform: Sweep Transform
+Sweep Vector: Sweep Vector
+Symbol Scale: Symbol Scale
+Table Breaks: Table Breaks
+Table height: Table height
+Table style: Table style
+Table width: Table width
+Target X: Target X
+Target Y: Target Y
+Target Z: Target Z
+Tessellation: Tessellation
+Text Alignment: Text Alignment
+Text Color: Text Color
+Text Direction: Text Direction
+Text Payload: Text Payload
+Text Position: Text Position
+Text Rotation (deg): Text Rotation (deg)
+Text Size: Text Size
+Text Visible: Text Visible
+Text X: Text X
+Text Y: Text Y
+Text Z: Text Z
+Text alignment X: Text alignment X
+Text alignment Y: Text alignment Y
+Text alignment Z: Text alignment Z
+Text color: Text color
+Text height: Text height
+Text inside: Text inside
+Text inside align: Text inside align
+Text movement: Text movement
+Text offset: Text offset
+Text outside align: Text outside align
+Text pos hor: Text pos hor
+Text pos vert: Text pos vert
+Text style: Text style
+Thickness: Thickness
+Tolerance display: Tolerance display
+Tolerance limit lower: Tolerance limit lower
+Tolerance limit upper: Tolerance limit upper
+Tolerance pos vert: Tolerance pos vert
+Tolerance precision: Tolerance precision
+Tolerance suppress leading zeros: Tolerance suppress leading zeros
+Tolerance suppress trailing zeros: Tolerance suppress trailing zeros
+Tolerance text height: Tolerance text height
+Top Height: Top Height
+Top radius: Top radius
+Total angle: Total angle
+Transform: Transform
+Translucence: Translucence
+Triangles: Triangles
+Turn height: Turn height
+Turn slope: Turn slope
+Turns: Turns
+Tutorials: Tutorials
+Twist: Twist
+Type: Type
+U Isolines: U Isolines
+U Vector 1: U Vector 1
+U Vector 2: U Vector 2
+UCS Name: UCS Name
+UCS Origin: UCS Origin
+UCS X: UCS X
+UCS Y: UCS Y
+UCS Z: UCS Z
+UCS icon On: UCS icon On
+UCS icon at origin: UCS icon at origin
+UCS per viewport: UCS per viewport
+UID: UID
+Underlay Adjust: Underlay Adjust
+Underlay layers: Underlay layers
+Underlay name: Underlay name
+Underlay path: Underlay path
+Underlined: Underlined
+Uniform scale: Uniform scale
+Unit Factor: Unit Factor
+Unknown Flags: Unknown Flags
+Use Limits: Use Limits
+User Text: User Text
+V Isolines: V Isolines
+V Vector 1: V Vector 1
+V Vector 2: V Vector 2
+V-Align: V-Align
+Verify: Verify
+Vertex: Vertex
+Vertex 1 X: Vertex 1 X
+Vertex 1 Y: Vertex 1 Y
+Vertex 1 Z: Vertex 1 Z
+Vertex 2 X: Vertex 2 X
+Vertex 2 Y: Vertex 2 Y
+Vertex 2 Z: Vertex 2 Z
+Vertex 3 X: Vertex 3 X
+Vertex 3 Y: Vertex 3 Y
+Vertex 3 Z: Vertex 3 Z
+Vertex 4 X: Vertex 4 X
+Vertex 4 Y: Vertex 4 Y
+Vertex 4 Z: Vertex 4 Z
+Vertex X: Vertex X
+Vertex Y: Vertex Y
+Vertex Z: Vertex Z
+Vertex count: Vertex count
+Vertical Direction: Vertical Direction
+Vertices: Vertices
+Videos: Videos
+Videos load from the internet.: Videos load from the internet.
+View Representation: View Representation
+View Silhouettes: View Silhouettes
+View Symbol Flags: View Symbol Flags
+View Symbol Version: View Symbol Version
+Visual style: Visual style
+Volume: Volume
+Watertight: Watertight
+Web: Web
+Web File: Web File
+Weight: Weight
+Welcome: Welcome
+Width factor: Width factor
+Wireframe Cache: Wireframe Cache
+Wires: Wires
+Wizard Flag: Wizard Flag
+X Scale: X Scale
+
+# ---- Start page / properties panel labels ----
+'"%{file_name}" could not be saved.': '"%{file_name}" could not be saved.'
+'"%{file_name}" was changed by another application.': '"%{file_name}" was changed by another application.'
+'%{count} selected layers': '%{count} selected layers'
+? '%{subject} still %{has} %{count} %{obj}.
+
+
+  Deleting will also remove %{those} from the drawing. Continue?'
+: '%{subject} still %{has} %{count} %{obj}.
+
+
+  Deleting will also remove %{those} from the drawing. Continue?'
+3D Face: 3D Face
+3D Solid: 3D Solid
+Annotation Object Scale: Annotation Object Scale
+Append to current selection: Append to current selection
+Attribute Definition: Attribute Definition
+Attribute Editor: Attribute Editor
+Back: Back
+Block End: Block End
+Block Reference: Block Reference
+Body: Body
+Bring Above Object: Bring Above Object
+Bring to Front: Bring to Front
+Default Application: Default Application
+Delete Layer: Delete Layer
+Delete Objects: Delete Objects
+'Details: %{error}': 'Details: %{error}'
+Dimension Style Manager: Dimension Style Manager
+Discard: Discard
+Do you want to save changes to "%{name}"?: Do you want to save changes to "%{name}"?
+Draw Order: Draw Order
+Drawing: Drawing
+Drawing Changed on Disk: Drawing Changed on Disk
+Edit Layer State: Edit Layer State
+Ellipse: Ellipse
+End Object Isolation: End Object Isolation
+Enter: Enter
+Extended Entity: Extended Entity
+External Reference: External Reference
+'File name:': 'File name:'
+'Format:': 'Format:'
+Hatch: Hatch
+Hide Objects: Hide Objects
+Invert Selection: Invert Selection
+Keyboard Shortcuts: Keyboard Shortcuts
+Layer "%{name}": Layer "%{name}"
+Layer Manager: Layer Manager
+Layer State Manager: Layer State Manager
+Layout Manager: Layout Manager
+MLine: MLine
+Make Open CAD Studio your default CAD app?: Make Open CAD Studio your default CAD app?
+Mesh: Mesh
+MultiLeader: MultiLeader
+Multileader Style Manager: Multileader Style Manager
+Multiline Style Manager: Multiline Style Manager
+Not now: Not now
+'Object type:': 'Object type:'
+Open .dwg and .dxf drawings in Open CAD Studio by default. You can change this later in your system settings.: Open .dwg and .dxf drawings in Open CAD Studio by default. You can change this later in your
+  system settings.
+'Operator:': 'Operator:'
+Overwrite: Overwrite
+PERF: PERF
+'Path: %{path}': 'Path: %{path}'
+Plot Style Editor: Plot Style Editor
+Plugin Manager: Plugin Manager
+PolyfaceMesh: PolyfaceMesh
+PolygonMesh: PolygonMesh
+Polyline2D: Polyline2D
+Polyline3D: Polyline3D
+'Property:': 'Property:'
+Quick Select: Quick Select
+Quick Select...: Quick Select...
+Raster Image: Raster Image
+Ray: Ray
+Region: Region
+Reload from Disk: Reload from Disk
+Repeat %{last}: Repeat %{last}
+Save Drawing As: Save Drawing As
+Save Warning: Save Warning
+Save anyway: Save anyway
+Save as...: Save as...
+Save in source version: Save in source version
+? Saving now could destroy those external changes. Reload the disk copy, save your local work elsewhere, or explicitly overwrite it.
+: Saving now could destroy those external changes. Reload the disk copy, save your local work elsewhere, or explicitly overwrite it.
+Scale Manager: Scale Manager
+Select All: Select All
+Select Similar: Select Similar
+Send Under Object: Send Under Object
+Send to Back: Send to Back
+Seqend: Seqend
+Surface: Surface
+Table Style Manager: Table Style Manager
+Text Editor: Text Editor
+Text Style Manager: Text Style Manager
+? The file is open or being used by another application. Close it there and retry, or save this drawing under a different name.
+: The file is open or being used by another application. Close it there and retry, or save this drawing under a different name.
+The selected layer state is no longer available.: The selected layer state is no longer available.
+? 'This drawing contains %{count} AEC/Civil objects that "%{target}" cannot store, so they will not be saved.
+
+
+  To keep them, save in the source version (%{src_version}).'
+: 'This drawing contains %{count} AEC/Civil objects that "%{target}" cannot store, so they will not be saved.
+
+
+  To keep them, save in the source version (%{src_version}).'
+Unable to Save Drawing: Unable to Save Drawing
+Underlay: Underlay
+Unknown: Unknown
+Unsaved Changes: Unsaved Changes
+Update Available: Update Available
+View Border: View Border
+'Width: %{value}': 'Width: %{value}'
+XLine: XLine
+Yes, set as default: Yes, set as default
+Zoom Extents: Zoom Extents
+
+# ---- Ribbon dynamic tool / dropdown labels ----
+? 'Autodesk
+
+  ReCap'
+: 'Autodesk
+
+  ReCap'
+2-Point: 2-Point
+3-Point: 3-Point
+Axis, End: Axis, End
+Boundary: Boundary
+Center, Axes: Center, Axes
+Center, Diameter: Center, Diameter
+Center, Radius: Center, Radius
+Center, Start, Angle: Center, Start, Angle
+Center, Start, End: Center, Start, End
+Center, Start, Length: Center, Start, Length
+Chamfer: Chamfer
+Cone: Cone
+Edit Aliases: Edit Aliases
+Ellipse Arc: Ellipse Arc
+Extend: Extend
+Fillet: Fillet
+Frames & Print: Frames & Print
+Frames Off: Frames Off
+Frames On: Frames On
+Gradient: Gradient
+Intersect: Intersect
+Load Partial CUI: Load Partial CUI
+Paste as Block: Paste as Block
+Paste to Original Coordinates: Paste to Original Coordinates
+Path Array: Path Array
+Polar Array: Polar Array
+Polygon - Circumscribed: Polygon - Circumscribed
+Polygon - Edge: Polygon - Edge
+Polygon - Inscribed: Polygon - Inscribed
+Rectangle - Center: Rectangle - Center
+Rectangle - Rotated: Rectangle - Rotated
+Rectangle - Two Corners: Rectangle - Two Corners
+Rectangular Array: Rectangular Array
+Shaded: Shaded
+Start, Center, Angle: Start, Center, Angle
+Start, Center, End: Start, Center, End
+Start, Center, Length: Start, Center, Length
+Start, End, Angle: Start, End, Angle
+Start, End, Direction: Start, End, Direction
+Start, End, Radius: Start, End, Radius
+Subtract: Subtract
+Tan, Tan, Radius: Tan, Tan, Radius
+Tan, Tan, Tan: Tan, Tan, Tan
+Torus: Torus
+Trim: Trim
+Union: Union
+Wedge: Wedge

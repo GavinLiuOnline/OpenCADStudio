@@ -11,6 +11,7 @@ use acadrust::Handle;
 use glam::DVec3;
 
 use crate::command::{CadCommand, CmdResult};
+use rust_i18n::t;
 
 /// Parse a TEXTEDITMODE value. Accepts `0`/`m`/`multiple`/`false` (Multiple → false)
 /// and `1`/`s`/`single`/`true` (Single → true), case-insensitive. Returns `None`
@@ -69,9 +70,9 @@ impl CadCommand for TexteditCommand {
         match self.step {
             Step::PickObject => {
                 if self.edit_count == 0 {
-                    "TEXTEDIT Select an annotation object or [Undo Mode]:".to_string()
+                    t!("TEXTEDIT Select an annotation object or [Undo Mode]:").into_owned()
                 } else {
-                    "TEXTEDIT Select an annotation object or [Undo Mode] <exit>:".to_string()
+                    t!("TEXTEDIT Select an annotation object or [Undo Mode] <exit>:").into_owned()
                 }
             }
             Step::EnterMode => {
@@ -80,13 +81,16 @@ impl CadCommand for TexteditCommand {
                 } else {
                     ""
                 };
-                format!(
-                    "{prefix}TEXTEDIT Enter text edit mode [Single/Multiple] <{}>:",
-                    match self.mode {
-                        TextEditMode::Single => "Single",
-                        TextEditMode::Multiple => "Multiple",
-                    }
+                let mode = match self.mode {
+                    TextEditMode::Single => "Single",
+                    TextEditMode::Multiple => "Multiple",
+                };
+                t!(
+                    "%{prefix}TEXTEDIT Enter text edit mode [Single/Multiple] <%{mode}>:",
+                    prefix = prefix,
+                    mode = mode
                 )
+                .into_owned()
             }
         }
     }
@@ -224,7 +228,12 @@ impl CadCommand for TexteditmodeCommand {
         } else {
             ""
         };
-        format!("{prefix}TEXTEDITMODE Enter new value for TEXTEDITMODE <{v}>:")
+        t!(
+            "%{prefix}TEXTEDITMODE Enter new value for TEXTEDITMODE <%{v}>:",
+            prefix = prefix,
+            v = v
+        )
+        .into_owned()
     }
 
     fn wants_text_input(&self) -> bool {

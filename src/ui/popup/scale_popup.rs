@@ -2,6 +2,7 @@
 
 use iced::widget::{button, row, text};
 use iced::{Element, Fill};
+use rust_i18n::t;
 
 use crate::app::Message;
 use crate::ui::statusbar::status_menu::Entry;
@@ -59,7 +60,7 @@ fn scale_row(label: String, active: bool, msg: Message) -> Element<'static, Mess
 }
 
 fn manage_row() -> Element<'static, Message> {
-    button(text("Manage...").size(11))
+    button(text(t!("Manage...")).size(11))
         .on_press(Message::ScaleManagerOpen)
         .style(button::primary)
         .width(Fill)

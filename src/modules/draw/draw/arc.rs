@@ -15,6 +15,7 @@
 
 use acadrust::types::Vector3;
 use acadrust::{Arc as CadArc, EntityType};
+use rust_i18n::t;
 
 use crate::command::{CadCommand, CmdResult};
 use crate::modules::IconKind;
@@ -312,12 +313,20 @@ impl CadCommand for ArcCommand {
     }
     fn prompt(&self) -> String {
         match self.step {
-            0 => "ARC  Specify center:".into(),
-            1 => "ARC  Specify start point:".into(),
-            _ => format!(
-                "ARC  Specify end point  [c=({:.2},{:.2}) r={:.3}]:",
-                self.c.x, self.c.y, self.r
-            ),
+            0 => t!("ARC  Specify center:").into_owned(),
+            1 => t!("ARC  Specify start point:").into_owned(),
+            _ => {
+                let cx = format!("{:.2}", self.c.x);
+                let cy = format!("{:.2}", self.c.y);
+                let r = format!("{:.3}", self.r);
+                t!(
+                    "ARC  Specify end point  [c=(%{cx},%{cy}) r=%{r}]:",
+                    cx = cx,
+                    cy = cy,
+                    r = r
+                )
+                .into_owned()
+            }
         }
     }
 
@@ -434,9 +443,9 @@ impl CadCommand for Arc3PCommand {
     }
     fn prompt(&self) -> String {
         match self.pts.len() {
-            0 => "ARC 3P  Specify start point:".into(),
-            1 => "ARC 3P  Specify second point on arc:".into(),
-            _ => "ARC 3P  Specify end point:".into(),
+            0 => t!("ARC 3P  Specify start point:").into_owned(),
+            1 => t!("ARC 3P  Specify second point on arc:").into_owned(),
+            _ => t!("ARC 3P  Specify end point:").into_owned(),
         }
     }
     fn on_point(&mut self, pt: DVec3) -> CmdResult {
@@ -531,9 +540,12 @@ impl CadCommand for ArcSCECommand {
     }
     fn prompt(&self) -> String {
         match self.step {
-            0 => "ARC SCE  Specify start point:".into(),
-            1 => "ARC SCE  Specify center:".into(),
-            _ => format!("ARC SCE  Specify end point  [r={:.3}]:", self.r),
+            0 => t!("ARC SCE  Specify start point:").into_owned(),
+            1 => t!("ARC SCE  Specify center:").into_owned(),
+            _ => {
+                let r = format!("{:.3}", self.r);
+                t!("ARC SCE  Specify end point  [r=%{r}]:", r = r).into_owned()
+            }
         }
     }
     fn on_point(&mut self, pt: DVec3) -> CmdResult {
@@ -628,12 +640,16 @@ impl CadCommand for ArcSCACommand {
     }
     fn prompt(&self) -> String {
         match self.step {
-            0 => "ARC SCA  Specify start point:".into(),
-            1 => "ARC SCA  Specify center:".into(),
-            _ => format!(
-                "ARC SCA  Click end direction or type arc span in degrees  [start={:.1}°]:",
-                self.sa.to_degrees()
-            ),
+            0 => t!("ARC SCA  Specify start point:").into_owned(),
+            1 => t!("ARC SCA  Specify center:").into_owned(),
+            _ => {
+                let sa = format!("{:.1}°", self.sa.to_degrees());
+                t!(
+                    "ARC SCA  Click end direction or type arc span in degrees  [start=%{sa}]:",
+                    sa = sa
+                )
+                .into_owned()
+            }
         }
     }
     fn on_point(&mut self, pt: DVec3) -> CmdResult {
@@ -755,12 +771,16 @@ impl CadCommand for ArcSCLCommand {
     }
     fn prompt(&self) -> String {
         match self.step {
-            0 => "ARC SCL  Specify start point:".into(),
-            1 => "ARC SCL  Specify center:".into(),
-            _ => format!(
-                "ARC SCL  Click chord end or type chord length  [r={:.3}]:",
-                self.r
-            ),
+            0 => t!("ARC SCL  Specify start point:").into_owned(),
+            1 => t!("ARC SCL  Specify center:").into_owned(),
+            _ => {
+                let r = format!("{:.3}", self.r);
+                t!(
+                    "ARC SCL  Click chord end or type chord length  [r=%{r}]:",
+                    r = r
+                )
+                .into_owned()
+            }
         }
     }
     fn on_point(&mut self, pt: DVec3) -> CmdResult {
@@ -856,9 +876,9 @@ impl CadCommand for ArcSEACommand {
     }
     fn prompt(&self) -> String {
         match self.step {
-            0 => "ARC SEA  Specify start point:".into(),
-            1 => "ARC SEA  Specify end point:".into(),
-            _ => "ARC SEA  Specify angle (move cursor perpendicular to chord):".into(),
+            0 => t!("ARC SEA  Specify start point:").into_owned(),
+            1 => t!("ARC SEA  Specify end point:").into_owned(),
+            _ => t!("ARC SEA  Specify angle (move cursor perpendicular to chord):").into_owned(),
         }
     }
     fn on_point(&mut self, pt: DVec3) -> CmdResult {
@@ -931,9 +951,9 @@ impl CadCommand for ArcSERCommand {
     }
     fn prompt(&self) -> String {
         match self.step {
-            0 => "ARC SER  Specify start point:".into(),
-            1 => "ARC SER  Specify end point:".into(),
-            _ => "ARC SER  Click radius point or type radius value:".into(),
+            0 => t!("ARC SER  Specify start point:").into_owned(),
+            1 => t!("ARC SER  Specify end point:").into_owned(),
+            _ => t!("ARC SER  Click radius point or type radius value:").into_owned(),
         }
     }
     fn on_point(&mut self, pt: DVec3) -> CmdResult {
@@ -1044,9 +1064,9 @@ impl CadCommand for ArcSEDCommand {
     }
     fn prompt(&self) -> String {
         match self.step {
-            0 => "ARC SED  Specify start point:".into(),
-            1 => "ARC SED  Specify end point:".into(),
-            _ => "ARC SED  Specify tangent direction at start:".into(),
+            0 => t!("ARC SED  Specify start point:").into_owned(),
+            1 => t!("ARC SED  Specify end point:").into_owned(),
+            _ => t!("ARC SED  Specify tangent direction at start:").into_owned(),
         }
     }
     fn on_point(&mut self, pt: DVec3) -> CmdResult {
@@ -1125,12 +1145,16 @@ impl CadCommand for ArcCSACommand {
     }
     fn prompt(&self) -> String {
         match self.step {
-            0 => "ARC CSA  Specify center:".into(),
-            1 => "ARC CSA  Specify start point:".into(),
-            _ => format!(
-                "ARC CSA  Click end direction or type arc span in degrees  [start={:.1}°]:",
-                self.sa.to_degrees()
-            ),
+            0 => t!("ARC CSA  Specify center:").into_owned(),
+            1 => t!("ARC CSA  Specify start point:").into_owned(),
+            _ => {
+                let sa = format!("{:.1}°", self.sa.to_degrees());
+                t!(
+                    "ARC CSA  Click end direction or type arc span in degrees  [start=%{sa}]:",
+                    sa = sa
+                )
+                .into_owned()
+            }
         }
     }
     fn on_point(&mut self, pt: DVec3) -> CmdResult {
@@ -1247,12 +1271,16 @@ impl CadCommand for ArcCSLCommand {
     }
     fn prompt(&self) -> String {
         match self.step {
-            0 => "ARC CSL  Specify center:".into(),
-            1 => "ARC CSL  Specify start point:".into(),
-            _ => format!(
-                "ARC CSL  Click chord end or type chord length  [r={:.3}]:",
-                self.r
-            ),
+            0 => t!("ARC CSL  Specify center:").into_owned(),
+            1 => t!("ARC CSL  Specify start point:").into_owned(),
+            _ => {
+                let r = format!("{:.3}", self.r);
+                t!(
+                    "ARC CSL  Click chord end or type chord length  [r=%{r}]:",
+                    r = r
+                )
+                .into_owned()
+            }
         }
     }
     fn on_point(&mut self, pt: DVec3) -> CmdResult {
@@ -1356,7 +1384,7 @@ impl CadCommand for ArcContCommand {
         "ARC_CONT"
     }
     fn prompt(&self) -> String {
-        "ARC Continue  Specify end point  [Ctrl = flip direction]:".into()
+        t!("ARC Continue  Specify end point  [Ctrl = flip direction]:").into_owned()
     }
     fn set_ctrl(&mut self, ctrl: bool) {
         self.ctrl = ctrl;

@@ -13,6 +13,7 @@
 use acadrust::entities::LwVertex;
 use acadrust::types::Vector2;
 use acadrust::{EntityType, LwPolyline};
+use rust_i18n::t;
 
 use crate::command::{CadCommand, CmdResult};
 use crate::modules::IconKind;
@@ -386,9 +387,9 @@ impl CadCommand for RectCenCommand {
     }
     fn prompt(&self) -> String {
         if self.center.is_none() {
-            "RECT CEN  Specify center point:".into()
+            t!("RECT CEN  Specify center point:").into_owned()
         } else {
-            "RECT CEN  Specify corner point:".into()
+            t!("RECT CEN  Specify corner point:").into_owned()
         }
     }
     fn on_point(&mut self, pt: DVec3) -> CmdResult {
@@ -753,15 +754,26 @@ impl CadCommand for PolyECommand {
 
     fn prompt(&self) -> String {
         match self.step {
-            0 => format!("POLYGON E  Enter number of sides <{}>:", self.sides),
-            1 => format!(
-                "POLYGON E  Specify first endpoint of edge [{} sides]:",
-                self.sides
-            ),
-            _ => format!(
-                "POLYGON E  Specify second endpoint of edge [{} sides]:",
-                self.sides
-            ),
+            0 => {
+                let n = self.sides;
+                t!("POLYGON E  Enter number of sides <%{n}>:", n = n).into_owned()
+            }
+            1 => {
+                let n = self.sides;
+                t!(
+                    "POLYGON E  Specify first endpoint of edge [%{n} sides]:",
+                    n = n
+                )
+                .into_owned()
+            }
+            _ => {
+                let n = self.sides;
+                t!(
+                    "POLYGON E  Specify second endpoint of edge [%{n} sides]:",
+                    n = n
+                )
+                .into_owned()
+            }
         }
     }
 

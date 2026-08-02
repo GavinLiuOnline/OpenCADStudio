@@ -5,6 +5,8 @@ use iced::widget::{
     button, checkbox, column, container, row, scrollable, text, text_input, Column,
 };
 use iced::{Background, Border, Element, Theme};
+use rust_i18n::t;
+use std::borrow::Cow;
 
 fn btn_s(accent: bool) -> impl Fn(&Theme, button::Status) -> button::Style {
     move |theme: &Theme, st| {
@@ -66,7 +68,7 @@ pub fn view_window<'a>(
     sizing: crate::ui::modal::ModalSizing,
 ) -> Element<'a, Message> {
     // ── Right: Details panel ──────────────────────────────────────────────
-    let info_row = |label: &'static str, val: String| -> Element<'_, Message> {
+    let info_row = |label: Cow<'static, str>, val: String| -> Element<'_, Message> {
         row![
             text(label).size(11).style(muted_style).width(160),
             text(val).size(11),
@@ -76,12 +78,12 @@ pub fn view_window<'a>(
         .into()
     };
 
-    let cell_editor = |row_label: &'static str,
+    let cell_editor = |row_label: Cow<'static, str>,
                        row: u8,
                        rs: &acadrust::objects::RowCellStyle|
      -> Element<'a, Message> {
         let r = row as usize;
-        let cell_in = |label: &'static str,
+        let cell_in = |label: Cow<'static, str>,
                        placeholder: &'static str,
                        value: &'a str,
                        field: &'static str|
@@ -103,7 +105,7 @@ pub fn view_window<'a>(
         };
         // Shared colour selector — sends the chosen colour through the same
         // cell edit as an ACI string.
-        let cell_color = |label: &'static str, value: &'a str, field: &'static str| -> Element<'a, Message> {
+        let cell_color = |label: Cow<'static, str>, value: &'a str, field: &'static str| -> Element<'a, Message> {
             let cur = crate::ui::color_select::aci_string_to_color(value);
             let open = color_open == Some((row, field));
             let selector = crate::ui::color_select::color_selector(
@@ -133,17 +135,17 @@ pub fn view_window<'a>(
             .spacing(3)
             .push(text(row_label).size(11).style(primary_style))
             .push(cell_in(
-                "  Text style:",
+                t!("  Text style:"),
                 "Standard",
                 &cell_textstyle[r],
                 "textstyle",
             ))
-            .push(cell_in("  Text height:", "0.18", &cell_height[r], "height"))
-            .push(cell_color("  Text color:", &cell_textcolor[r], "textcolor"))
-            .push(cell_color("  Fill color:", &cell_fillcolor[r], "fillcolor"))
+            .push(cell_in(t!("  Text height:"), "0.18", &cell_height[r], "height"))
+            .push(cell_color(t!("  Text color:"), &cell_textcolor[r], "textcolor"))
+            .push(cell_color(t!("  Fill color:"), &cell_fillcolor[r], "fillcolor"))
             .push(
                 row![
-                    text("  Alignment:").size(11).style(muted_style).width(150),
+                    text(t!("  Alignment:")).size(11).style(muted_style).width(150),
                     iced::widget::pick_list(
                         Some(format!("{:?}", rs.alignment)),
                         [
@@ -171,16 +173,16 @@ pub fn view_window<'a>(
             )
             .push(
                 checkbox(rs.fill_enabled)
-                    .label("  Background fill enabled")
+                    .label(t!("  Background fill enabled"))
                     .on_toggle(move |_| Message::TableStyleCellToggleFill(row))
                     .size(14)
                     .text_size(11),
             )
-            .push(cell_in("  Data type:", "0", &cell_datatype[r], "datatype"))
-            .push(cell_in("  Unit type:", "0", &cell_unittype[r], "unittype"))
-            .push(cell_in("  Format string:", "", &cell_format[r], "format"))
+            .push(cell_in(t!("  Data type:"), "0", &cell_datatype[r], "datatype"))
+            .push(cell_in(t!("  Unit type:"), "0", &cell_unittype[r], "unittype"))
+            .push(cell_in(t!("  Format string:"), "", &cell_format[r], "format"))
             .push(
-                text("  Borders  (type / weight / color / spacing / hidden)")
+                text(t!("  Borders  (type / weight / color / spacing / hidden)"))
                     .size(10)
                     .style(muted_style),
             );
@@ -253,7 +255,7 @@ pub fn view_window<'a>(
         }
 
         col.push(
-            button(text("Apply cell").size(11))
+            button(text(t!("Apply cell")).size(11))
                 .on_press(Message::TableStyleCellApply(row))
                 .style(btn_s(true))
                 .padding([4, 12]),
@@ -264,9 +266,9 @@ pub fn view_window<'a>(
     let details: Element<'_, Message> = if let Some(s) = selected_style {
         scrollable(
             column![
-                info_row("Name:", s.name.clone()),
+                info_row(t!("Name:"), s.name.clone()),
                 row![
-                    text("Description:").size(11).style(muted_style).width(160),
+                    text(t!("Description:")).size(11).style(muted_style).width(160),
                     text_input("", description_buf)
                         .on_input(|v| Message::TableStyleEdit {
                             field: "description",
@@ -278,7 +280,7 @@ pub fn view_window<'a>(
                 .spacing(8)
                 .align_y(iced::Center),
                 row![
-                    text("Flow direction:").size(11).style(muted_style).width(160),
+                    text(t!("Flow direction:")).size(11).style(muted_style).width(160),
                     iced::widget::pick_list(
                         Some(format!("{:?}", s.flow_direction)),
                         ["Down", "Up"]
@@ -294,12 +296,12 @@ pub fn view_window<'a>(
                 .spacing(8)
                 .align_y(iced::Center),
                 checkbox(s.annotative)
-                    .label("Annotative")
+                    .label(t!("Annotative"))
                     .on_toggle(|_| Message::TableStyleToggleAnnotative)
                     .size(14)
                     .text_size(11),
                 row![
-                    text("H Margin:").size(11).style(muted_style).width(160),
+                    text(t!("H Margin:")).size(11).style(muted_style).width(160),
                     text_input("1.5", hmargin_buf)
                         .on_input(|v| Message::TableStyleEdit {
                             field: "hmargin",
@@ -311,7 +313,7 @@ pub fn view_window<'a>(
                 .spacing(8)
                 .align_y(iced::Center),
                 row![
-                    text("V Margin:").size(11).style(muted_style).width(160),
+                    text(t!("V Margin:")).size(11).style(muted_style).width(160),
                     text_input("1.5", vmargin_buf)
                         .on_input(|v| Message::TableStyleEdit {
                             field: "vmargin",
@@ -323,22 +325,22 @@ pub fn view_window<'a>(
                 .spacing(8)
                 .align_y(iced::Center),
                 checkbox(s.title_suppressed)
-                    .label("Title row suppressed")
+                    .label(t!("Title row suppressed"))
                     .on_toggle(|_| Message::TableStyleToggle("title_sup"))
                     .size(14)
                     .text_size(11),
                 checkbox(s.header_suppressed)
-                    .label("Header row suppressed")
+                    .label(t!("Header row suppressed"))
                     .on_toggle(|_| Message::TableStyleToggle("header_sup"))
                     .size(14)
                     .text_size(11),
-                button(text("Apply margins").size(11))
+                button(text(t!("Apply margins")).size(11))
                     .on_press(Message::TableStyleApply)
                     .style(btn_s(true))
                     .padding([4, 12]),
-                cell_editor("Data Row:", 0, &s.data_row_style),
-                cell_editor("Header Row:", 1, &s.header_row_style),
-                cell_editor("Title Row:", 2, &s.title_row_style),
+                cell_editor(t!("Data Row:"), 0, &s.data_row_style),
+                cell_editor(t!("Header Row:"), 1, &s.header_row_style),
+                cell_editor(t!("Title Row:"), 2, &s.title_row_style),
             ]
             .spacing(6)
             .padding([12, 12]),
@@ -347,7 +349,7 @@ pub fn view_window<'a>(
         .height(sizing.height)
         .into()
     } else {
-        container(text("Select a style to view details.").size(11).style(muted_style))
+        container(text(t!("Select a style to view details.")).size(11).style(muted_style))
             .padding([12, 12])
             .into()
     };

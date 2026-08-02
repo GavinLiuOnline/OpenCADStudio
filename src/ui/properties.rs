@@ -19,6 +19,7 @@ use iced::widget::{
 use iced::{
     mouse, Background, Border, Color, Element, Length, Padding, Point, Rectangle, Size, Theme,
 };
+use rust_i18n::t;
 
 // ── Row-height-derived constants ─────────────────────────────────────────
 const FONT_SZ: f32 = ROW_H * 0.42; // ≈11 px
@@ -333,7 +334,7 @@ impl Default for PropertiesPanel {
 impl PropertiesPanel {
     pub fn empty() -> Self {
         Self {
-            title: "No Selection".into(),
+            title: t!("No selection").into_owned(),
             ..Default::default()
         }
     }
@@ -347,7 +348,7 @@ impl PropertiesPanel {
 
     pub fn view(&self) -> Element<'_, Message> {
         // ── Header ──────────────────────────────────────────────────────────
-        let header = container(text("Properties").size(12))
+        let header = container(text(t!("Properties")).size(12))
             .style(|theme: &Theme| container::Style {
                 background: Some(Background::Color(
                     theme.palette().background.weak.color,
@@ -397,7 +398,7 @@ impl PropertiesPanel {
         // ── Content ─────────────────────────────────────────────────────────
         let content: Element<'_, Message> = if self.sections.is_empty() {
             container(
-                text("Select an object to view properties")
+                text(t!("Select an object to view properties"))
                     .size(10)
                     .style(hint_text_style),
             )
@@ -1058,7 +1059,7 @@ impl PropertiesPanel {
             return prop_row_widget(label, head.into());
         }
 
-        let search = text_input("Search patterns…", &self.hatch_pattern_search)
+        let search = text_input(t!("Search patterns…").as_ref(), &self.hatch_pattern_search)
             .id(iced::widget::Id::new("hatch-pattern-search"))
             .on_input(Message::PropHatchPatternSearchChanged)
             .on_submit(Message::PropHatchPatternConfirm)
@@ -1127,7 +1128,7 @@ impl PropertiesPanel {
 
         let results: Element<'_, Message> = if visible.is_empty() {
             container(
-                text("No matching patterns")
+                text(t!("No matching patterns"))
                     .size(FONT_SZ)
                     .style(hint_text_style),
             )
@@ -1227,9 +1228,13 @@ pub fn color_picker_dropdown<'a>(
             } else {
                 crate::ui::icons::themed_arrow_down(9.0)
             },
-            text(if palette_open { "Less" } else { "More Colors…" })
-                .size(10)
-                .style(hint_text_style),
+            text(if palette_open {
+                t!("Less").into_owned()
+            } else {
+                t!("More Colors…").into_owned()
+            })
+            .size(10)
+            .style(hint_text_style),
         ]
         .spacing(4)
         .align_y(iced::Center),
@@ -1365,7 +1370,11 @@ fn render_stepper_row<'a>(label: &'a str, display: &'a str) -> Element<'a, Messa
 }
 
 fn render_bool_row<'a>(label: &'a str, field: &'static str, value: bool) -> Element<'a, Message> {
-    let btn_label = if value { "Yes" } else { "No" };
+    let btn_label = if value {
+        t!("Yes").into_owned()
+    } else {
+        t!("No").into_owned()
+    };
     let btn =
         button(
             text(btn_label)

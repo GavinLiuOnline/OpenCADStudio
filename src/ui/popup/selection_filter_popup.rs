@@ -6,6 +6,7 @@ use rustc_hash::FxHashSet as HashSet;
 
 use iced::widget::{button, container, row, text};
 use iced::{Background, Element, Fill, Theme};
+use rust_i18n::t;
 
 use crate::app::Message;
 use crate::ui::statusbar::status_menu::Entry;
@@ -80,7 +81,7 @@ fn type_row(name: String, included: bool) -> Element<'static, Message> {
 
 fn empty_row() -> Element<'static, Message> {
     container(
-        text("No objects").size(11).style(|theme: &Theme| text::Style {
+        text(t!("No objects")).size(11).style(|theme: &Theme| text::Style {
             color: Some(
                 theme
                     .palette()

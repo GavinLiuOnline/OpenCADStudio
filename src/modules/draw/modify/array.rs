@@ -15,6 +15,7 @@
 
 use acadrust::Handle;
 use glam::{DVec3, Mat4};
+use rust_i18n::t;
 
 use crate::command::{CadCommand, CmdResult, EntityTransform};
 use crate::modules::draw::defaults;
@@ -911,29 +912,58 @@ impl CadCommand for Array3DCommand {
 
     fn prompt(&self) -> String {
         match self.step {
-            Array3DStep::Rows => "ARRAY3D  Enter row count:".into(),
-            Array3DStep::Cols { rows } => format!("ARRAY3D  Enter column count  [{rows} rows]:"),
-            Array3DStep::Levels { rows, cols } => {
-                format!("ARRAY3D  Enter level count  [{rows}×{cols}]:")
+            Array3DStep::Rows => t!("ARRAY3D  Enter row count:").into_owned(),
+            Array3DStep::Cols { rows } => {
+                t!("ARRAY3D  Enter column count  [%{rows} rows]:", rows = rows).into_owned()
             }
-            Array3DStep::RowSp { rows, cols, levels } => {
-                format!("ARRAY3D  Row spacing  [{rows}×{cols}×{levels}]:")
-            }
+            Array3DStep::Levels { rows, cols } => t!(
+                "ARRAY3D  Enter level count  [%{rows}×%{cols}]:",
+                rows = rows,
+                cols = cols
+            )
+            .into_owned(),
+            Array3DStep::RowSp { rows, cols, levels } => t!(
+                "ARRAY3D  Row spacing  [%{rows}×%{cols}×%{levels}]:",
+                rows = rows,
+                cols = cols,
+                levels = levels
+            )
+            .into_owned(),
             Array3DStep::ColSp {
                 rows,
                 cols,
                 levels,
                 row_sp,
-            } => format!("ARRAY3D  Column spacing  [{rows}×{cols}×{levels}, row={row_sp:.0}]:"),
+            } => {
+                let rs = format!("{:.0}", row_sp);
+                t!(
+                    "ARRAY3D  Column spacing  [%{rows}×%{cols}×%{levels}, row=%{rs}]:",
+                    rows = rows,
+                    cols = cols,
+                    levels = levels,
+                    rs = rs
+                )
+                .into_owned()
+            }
             Array3DStep::LvlSp {
                 rows,
                 cols,
                 levels,
                 row_sp,
                 col_sp,
-            } => format!(
-                "ARRAY3D  Level spacing  [{rows}×{cols}×{levels}, r={row_sp:.0} c={col_sp:.0}]:"
-            ),
+            } => {
+                let rs = format!("{:.0}", row_sp);
+                let cs = format!("{:.0}", col_sp);
+                t!(
+                    "ARRAY3D  Level spacing  [%{rows}×%{cols}×%{levels}, r=%{rs} c=%{cs}]:",
+                    rows = rows,
+                    cols = cols,
+                    levels = levels,
+                    rs = rs,
+                    cs = cs
+                )
+                .into_owned()
+            }
         }
     }
 

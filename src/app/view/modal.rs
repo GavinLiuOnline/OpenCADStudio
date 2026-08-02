@@ -1,6 +1,8 @@
 use super::super::{Message, OpenCADStudio};
 use iced::widget::{button, column, container, row, text, Space};
 use iced::{Background, Element, Fit, Theme};
+use rust_i18n::t;
+use std::borrow::Cow;
 
 impl OpenCADStudio {
     #[cfg(target_arch = "wasm32")]
@@ -10,41 +12,41 @@ impl OpenCADStudio {
 
     /// Title shown in the active modal's title bar. Keep in sync with the
     /// [`Self::modal_content`] dispatch.
-    pub(super) fn modal_title(&self) -> &'static str {
+    pub(super) fn modal_title(&self) -> Cow<'static, str> {
         use super::super::ModalKind as K;
         match self.active_modal {
-            Some(K::About) => "About",
-            Some(K::Shortcuts) => "Keyboard Shortcuts",
-            Some(K::Aliases) => "Command Aliases",
-            Some(K::Options) => "Options",
-            Some(K::FindReplace) => "Find and Replace",
-            Some(K::PluginManager) => "Plugin Manager",
-            Some(K::UpdateNotice) => "Update Available",
-            Some(K::Layers) => "Layer Manager",
-            Some(K::LayerStateManager) => "Layer State Manager",
-            Some(K::LayerStateEditor) => "Edit Layer State",
-            Some(K::Plot) => "Plot",
-            Some(K::LayoutManager) => "Layout Manager",
-            Some(K::ScaleManager) => "Scale Manager",
-            Some(K::AnnoObjectScale) => "Annotation Object Scale",
-            Some(K::Plotstyle) => "Plot Style Editor",
-            Some(K::TextStyle) => "Text Style Manager",
-            Some(K::MlStyle) => "Multiline Style Manager",
-            Some(K::TableStyle) => "Table Style Manager",
-            Some(K::MLeaderStyle) => "Multileader Style Manager",
-            Some(K::DimStyle) => "Dimension Style Manager",
-            Some(K::AssocPrompt) => "Default Application",
-            Some(K::AecDropWarning) => "Save Warning",
+            Some(K::About) => t!("About"),
+            Some(K::Shortcuts) => t!("Keyboard Shortcuts"),
+            Some(K::Aliases) => t!("Command Aliases"),
+            Some(K::Options) => t!("Options"),
+            Some(K::FindReplace) => t!("Find and Replace"),
+            Some(K::PluginManager) => t!("Plugin Manager"),
+            Some(K::UpdateNotice) => t!("Update Available"),
+            Some(K::Layers) => t!("Layer Manager"),
+            Some(K::LayerStateManager) => t!("Layer State Manager"),
+            Some(K::LayerStateEditor) => t!("Edit Layer State"),
+            Some(K::Plot) => t!("Plot"),
+            Some(K::LayoutManager) => t!("Layout Manager"),
+            Some(K::ScaleManager) => t!("Scale Manager"),
+            Some(K::AnnoObjectScale) => t!("Annotation Object Scale"),
+            Some(K::Plotstyle) => t!("Plot Style Editor"),
+            Some(K::TextStyle) => t!("Text Style Manager"),
+            Some(K::MlStyle) => t!("Multiline Style Manager"),
+            Some(K::TableStyle) => t!("Table Style Manager"),
+            Some(K::MLeaderStyle) => t!("Multileader Style Manager"),
+            Some(K::DimStyle) => t!("Dimension Style Manager"),
+            Some(K::AssocPrompt) => t!("Default Application"),
+            Some(K::AecDropWarning) => t!("Save Warning"),
             #[cfg(not(target_arch = "wasm32"))]
-            Some(K::FileInUse) => "Unable to Save Drawing",
+            Some(K::FileInUse) => t!("Unable to Save Drawing"),
             #[cfg(not(target_arch = "wasm32"))]
-            Some(K::ExternalChange) => "Drawing Changed on Disk",
-            Some(K::LayerDeleteWarning) => "Delete Layer",
-            Some(K::Unsaved) => "Unsaved Changes",
-            Some(K::PointStyle) => "Point Style",
-            Some(K::AttributeEditor) => "Attribute Editor",
-            Some(K::SaveDialog) => "Save Drawing As",
-            None => "",
+            Some(K::ExternalChange) => t!("Drawing Changed on Disk"),
+            Some(K::LayerDeleteWarning) => t!("Delete Layer"),
+            Some(K::Unsaved) => t!("Unsaved Changes"),
+            Some(K::PointStyle) => t!("Point Style"),
+            Some(K::AttributeEditor) => t!("Attribute Editor"),
+            Some(K::SaveDialog) => t!("Save Drawing As"),
+            None => Cow::Borrowed(""),
         }
     }
 
@@ -99,6 +101,7 @@ impl OpenCADStudio {
                         &self.default_save_format,
                         &self.ui_theme,
                         &self.theme_color_inputs,
+                        self.language,
                         flow,
                     )
                 },
@@ -229,7 +232,7 @@ impl OpenCADStudio {
                     )
                 } else {
                     sized(
-                        container(text("The selected layer state is no longer available."))
+                        container(text(t!("The selected layer state is no longer available.")))
                             .padding(16)
                             .into(),
                         520,
@@ -927,12 +930,12 @@ fn sized_flow<'a>(
     )
 }
 
-fn dialog_button(
-    label: &'static str,
+fn dialog_button<'a>(
+    label: impl Into<Cow<'a, str>>,
     message: Message,
     style: fn(&Theme, button::Status) -> button::Style,
-) -> Element<'static, Message> {
-    button(text(label).size(13))
+) -> Element<'a, Message> {
+    button(text(label.into()).size(13))
         .on_press(message)
         .style(style)
         .padding([6, 18])
@@ -962,10 +965,10 @@ fn save_as_dialog_window<'a>(filename: &'a str, format: &'a str) -> Element<'a, 
         .iter()
         .copied()
         .find(|&s| s == format);
-    let label = |s: &'static str| text(s).size(11).style(dialog_muted_text_style);
+    let label = |s: String| text(s).size(11).style(dialog_muted_text_style);
 
     let mut items: Vec<Element<'a, Message>> = Vec::new();
-    items.push(text("Save Drawing As").size(14).into());
+    items.push(text(t!("Save Drawing As")).size(14).into());
     items.push(Space::new().height(12).into());
 
     // Web has no native file dialog, so the file name is typed here. On native
@@ -974,7 +977,7 @@ fn save_as_dialog_window<'a>(filename: &'a str, format: &'a str) -> Element<'a, 
     {
         items.push(
             row![
-                label("File name:").width(70),
+                label(t!("File name:").into_owned()).width(70),
                 iced::widget::text_input("drawing.dwg", filename)
                     .on_input(Message::SaveDialogFilenameChanged)
                     .size(13)
@@ -992,7 +995,7 @@ fn save_as_dialog_window<'a>(filename: &'a str, format: &'a str) -> Element<'a, 
 
     items.push(
         row![
-            label("Format:").width(70),
+            label(t!("Format:").into_owned()).width(70),
             iced::widget::pick_list(
                 sel_fmt,
                 crate::io::SAVE_FORMAT_OPTIONS,
@@ -1009,9 +1012,9 @@ fn save_as_dialog_window<'a>(filename: &'a str, format: &'a str) -> Element<'a, 
     items.push(
         row![
             Space::new().width(Fit),
-            dialog_button("Save as...", Message::SaveDialogConfirm, button::primary),
+            dialog_button(t!("Save as..."), Message::SaveDialogConfirm, button::primary),
             Space::new().width(8),
-            dialog_button("Cancel", Message::SaveDialogCancel, button::secondary),
+            dialog_button(t!("Cancel"), Message::SaveDialogCancel, button::secondary),
         ]
         .into(),
     );
@@ -1027,18 +1030,21 @@ fn save_as_dialog_window<'a>(filename: &'a str, format: &'a str) -> Element<'a, 
 }
 
 fn unsaved_changes_dialog_window(name: &str) -> Element<'static, Message> {
-    let body_text = format!("Do you want to save changes to \"{}\"?", name);
+    let body_text = t!(
+        "Do you want to save changes to \"%{name}\"?",
+        name = name
+    );
 
     container(
         column![
             text(body_text).size(13),
             iced::widget::Space::new().height(20),
             row![
-                dialog_button("Save", Message::UnsavedDialogSave, button::primary),
+                dialog_button(t!("Save"), Message::UnsavedDialogSave, button::primary),
                 iced::widget::Space::new().width(8),
-                dialog_button("Discard", Message::UnsavedDialogDiscard, button::danger),
+                dialog_button(t!("Discard"), Message::UnsavedDialogDiscard, button::danger),
                 iced::widget::Space::new().width(8),
-                dialog_button("Cancel", Message::UnsavedDialogCancel, button::secondary),
+                dialog_button(t!("Cancel"), Message::UnsavedDialogCancel, button::secondary),
             ],
         ]
         .spacing(0),
@@ -1054,19 +1060,18 @@ fn file_in_use_dialog_window(path: &str, error: &str) -> Element<'static, Messag
     let file_name = std::path::Path::new(path)
         .file_name()
         .map(|name| name.to_string_lossy().into_owned())
-        .unwrap_or_else(|| "Drawing".to_string());
-    let heading = format!("\"{file_name}\" could not be saved.");
-    let path_line = format!("Path: {path}");
-    let details = format!("Details: {error}");
+        .unwrap_or_else(|| t!("Drawing").into_owned());
+    let heading = t!("\"%{file_name}\" could not be saved.", file_name = file_name);
+    let path_line = t!("Path: %{path}", path = path);
+    let details = t!("Details: %{error}", error = error);
 
     container(
         column![
             text(heading).size(14),
             Space::new().height(8),
-            text(
-                "The file is open or being used by another application. \
-                 Close it there and retry, or save this drawing under a different name."
-            )
+            text(t!(
+                "The file is open or being used by another application. Close it there and retry, or save this drawing under a different name."
+            ))
             .size(13)
             .width(Fit),
             Space::new().height(12),
@@ -1076,19 +1081,19 @@ fn file_in_use_dialog_window(path: &str, error: &str) -> Element<'static, Messag
             Space::new().height(18),
             row![
                 dialog_button(
-                    "Retry",
+                    t!("Retry"),
                     Message::SaveFileInUseRetry,
                     button::primary
                 ),
                 Space::new().width(8),
                 dialog_button(
-                    "Save As",
+                    t!("Save As"),
                     Message::SaveFileInUseSaveAs,
                     button::secondary
                 ),
                 Space::new().width(8),
                 dialog_button(
-                    "Cancel",
+                    t!("Cancel"),
                     Message::SaveFileInUseCancel,
                     button::secondary
                 ),
@@ -1108,18 +1113,17 @@ fn external_change_dialog_window(path: &str) -> Element<'static, Message> {
     let file_name = std::path::Path::new(path)
         .file_name()
         .map(|name| name.to_string_lossy().into_owned())
-        .unwrap_or_else(|| "Drawing".to_string());
-    let heading = format!("\"{file_name}\" was changed by another application.");
-    let path_line = format!("Path: {path}");
+        .unwrap_or_else(|| t!("Drawing").into_owned());
+    let heading = t!("\"%{file_name}\" was changed by another application.", file_name = file_name);
+    let path_line = t!("Path: %{path}", path = path);
 
     container(
         column![
             text(heading).size(14),
             Space::new().height(8),
-            text(
-                "Saving now could destroy those external changes. Reload the disk copy, \
-                 save your local work elsewhere, or explicitly overwrite it."
-            )
+            text(t!(
+                "Saving now could destroy those external changes. Reload the disk copy, save your local work elsewhere, or explicitly overwrite it."
+            ))
             .size(13)
             .width(Fit),
             Space::new().height(12),
@@ -1127,25 +1131,25 @@ fn external_change_dialog_window(path: &str) -> Element<'static, Message> {
             Space::new().height(18),
             row![
                 dialog_button(
-                    "Reload from Disk",
+                    t!("Reload from Disk"),
                     Message::ExternalChangeReload,
                     button::primary
                 ),
                 Space::new().width(8),
                 dialog_button(
-                    "Save As",
+                    t!("Save As"),
                     Message::ExternalChangeSaveAs,
                     button::secondary
                 ),
                 Space::new().width(8),
                 dialog_button(
-                    "Overwrite",
+                    t!("Overwrite"),
                     Message::ExternalChangeOverwrite,
                     button::danger
                 ),
                 Space::new().width(8),
                 dialog_button(
-                    "Cancel",
+                    t!("Cancel"),
                     Message::ExternalChangeCancel,
                     button::secondary
                 ),
@@ -1165,10 +1169,11 @@ fn external_change_dialog_window(path: &str) -> Element<'static, Message> {
 /// bytes, so saving to a different version or to DXF would drop them. Offers to
 /// save in the source version (keep them) or proceed (drop them).
 fn aec_drop_dialog_window(count: usize, target: &str, src_version: &str) -> Element<'static, Message> {
-    let body_text = format!(
-        "This drawing contains {count} AEC/Civil objects that \"{target}\" \
-         cannot store, so they will not be saved.\n\n\
-         To keep them, save in the source version ({src_version})."
+    let body_text = t!(
+        "This drawing contains %{count} AEC/Civil objects that \"%{target}\" cannot store, so they will not be saved.\n\nTo keep them, save in the source version (%{src_version}).",
+        count = count,
+        target = target,
+        src_version = src_version,
     );
 
     container(
@@ -1177,14 +1182,14 @@ fn aec_drop_dialog_window(count: usize, target: &str, src_version: &str) -> Elem
             iced::widget::Space::new().height(20),
             row![
                 dialog_button(
-                    "Save in source version",
+                    t!("Save in source version"),
                     Message::AecDropSameVersion,
                     button::primary
                 ),
                 iced::widget::Space::new().width(8),
-                dialog_button("Save anyway", Message::AecDropProceed, button::warning),
+                dialog_button(t!("Save anyway"), Message::AecDropProceed, button::warning),
                 iced::widget::Space::new().width(8),
-                dialog_button("Back", Message::AecDropBack, button::secondary),
+                dialog_button(t!("Back"), Message::AecDropBack, button::secondary),
             ],
         ]
         .spacing(0),
@@ -1201,15 +1206,20 @@ fn aec_drop_dialog_window(count: usize, target: &str, src_version: &str) -> Elem
 /// erases them and removes the layers; "Cancel" leaves everything.
 fn layer_delete_warning_window(names: &[String], count: usize) -> Element<'static, Message> {
     let obj = if count == 1 { "object" } else { "objects" };
+    let has = if names.len() == 1 { "has" } else { "hold" };
+    let those = if count == 1 { "that object" } else { "those objects" };
     let subject = if names.len() == 1 {
-        format!("Layer \"{}\"", names[0])
+        t!("Layer \"%{name}\"", name = names[0]).into_owned()
     } else {
-        format!("{} selected layers", names.len())
+        t!("%{count} selected layers", count = names.len()).into_owned()
     };
-    let body_text = format!(
-        "{subject} still {} {count} {obj}.\n\nDeleting will also remove {} from the drawing. Continue?",
-        if names.len() == 1 { "has" } else { "hold" },
-        if count == 1 { "that object" } else { "those objects" }
+    let body_text = t!(
+        "%{subject} still %{has} %{count} %{obj}.\n\nDeleting will also remove %{those} from the drawing. Continue?",
+        subject = subject,
+        has = has,
+        count = count,
+        obj = obj,
+        those = those,
     );
 
     container(
@@ -1218,12 +1228,12 @@ fn layer_delete_warning_window(names: &[String], count: usize) -> Element<'stati
             iced::widget::Space::new().height(20),
             row![
                 dialog_button(
-                    "Delete Objects",
+                    t!("Delete Objects"),
                     Message::LayerDeleteConfirm,
                     button::danger
                 ),
                 iced::widget::Space::new().width(8),
-                dialog_button("Cancel", Message::CloseModal, button::secondary),
+                dialog_button(t!("Cancel"), Message::CloseModal, button::secondary),
             ],
         ]
         .spacing(0),
@@ -1241,19 +1251,19 @@ fn layer_delete_warning_window(names: &[String], count: usize) -> Element<'stati
 fn default_assoc_dialog_window() -> Element<'static, Message> {
     container(
         column![
-            text("Make Open CAD Studio your default CAD app?")
+            text(t!("Make Open CAD Studio your default CAD app?"))
                 .size(15),
             iced::widget::Space::new().height(10),
-            text("Open .dwg and .dxf drawings in Open CAD Studio by default. You can change this later in your system settings.")
+            text(t!("Open .dwg and .dxf drawings in Open CAD Studio by default. You can change this later in your system settings."))
                 .size(12)
                 .style(dialog_muted_text_style),
             iced::widget::Space::new().height(22),
             row![
                 iced::widget::Space::new().width(Fit),
-                dialog_button("Not now", Message::AssocPromptNo, button::secondary),
+                dialog_button(t!("Not now"), Message::AssocPromptNo, button::secondary),
                 iced::widget::Space::new().width(8),
                 dialog_button(
-                    "Yes, set as default",
+                    t!("Yes, set as default"),
                     Message::AssocPromptYes,
                     button::primary
                 ),

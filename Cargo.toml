@@ -19,7 +19,13 @@ winresource = "0.1"
 default = ["solid3d"]
 solid3d = ["dep:truck-meshalgo", "dep:truck-shapeops", "dep:lzma-sys"]
 
+[package.metadata.i18n]
+available-locales = ["en", "zh-CN"]
+default-locale = "en"
+load-path = "locales"
+
 [dependencies]
+rust-i18n = "4"
 serde_json = "1"
 serde = { version = "1", features = ["derive"] }
 semver = "1"

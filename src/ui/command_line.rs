@@ -4,6 +4,7 @@ use iced::time::Instant;
 
 use crate::app::Message;
 use crate::command::CmdOption;
+use rust_i18n::t;
 use iced::widget::{
     button, column, container, opaque, row, rule, text, text_editor, text_input, tooltip, Space,
 };
@@ -111,8 +112,8 @@ pub enum EntryKind {
 impl CommandLine {
     pub fn new() -> Self {
         let mut cl = Self::default();
-        cl.push_info("Open CAD Studio ready.");
-        cl.push_info("Type a command or use the ribbon. Open OBJ: INSERT tab.");
+        cl.push_info(t!("Open CAD Studio ready.").as_ref());
+        cl.push_info(t!("Type a command or use the ribbon. Open OBJ: INSERT tab.").as_ref());
         cl
     }
 
@@ -194,13 +195,13 @@ impl CommandLine {
     }
 
     pub fn push_command(&mut self, cmd: &str) {
-        self.push(EntryKind::Command, format!("Command: {cmd}"));
+        self.push(EntryKind::Command, format!("{} {cmd}", t!("Command:")));
     }
     pub fn push_output(&mut self, msg: &str) {
         self.push(EntryKind::Output, msg.to_string());
     }
     pub fn push_error(&mut self, msg: &str) {
-        self.push(EntryKind::Error, format!("*Invalid*  {msg}"));
+        self.push(EntryKind::Error, format!("*{}*  {msg}", t!("Invalid")));
     }
     /// Append an error unless it is already the latest history line. Repeated
     /// retry failures should refresh the concise message, not flood history
@@ -430,7 +431,7 @@ impl CommandLine {
                 }
             });
         let prompt = container(
-            text("Command:").size(11).style(|theme: &Theme| iced::widget::text::Style {
+            text(t!("Command:")).size(11).style(|theme: &Theme| iced::widget::text::Style {
                 color: Some(theme.palette().success.base.color),
             }),
         )
@@ -468,7 +469,7 @@ impl CommandLine {
             }
         });
         let literal_tip = container(
-            text("Literal spaces: Space stays in the line instead of running the command (same as typing a leading '>'). Stays on until toggled off.")
+            text(t!("Literal spaces: Space stays in the line instead of running the command (same as typing a leading '>'). Stays on until toggled off."))
                 .size(11),
         )
         .padding([3, 6])
@@ -582,7 +583,7 @@ impl CommandLine {
             let copy_btn = button(
                 row![
                     crate::ui::icons::themed_success(crate::ui::icons::COPY, 11.0),
-                    text("Copy").size(11),
+                    text(t!("Copy")).size(11),
                 ]
                 .spacing(4)
                 .align_y(iced::Center),
@@ -593,7 +594,7 @@ impl CommandLine {
             let clear_btn = button(
                 row![
                     crate::ui::icons::themed_warning(crate::ui::icons::TRASH, 11.0),
-                    text("Clear").size(11),
+                    text(t!("Clear")).size(11),
                 ]
                 .spacing(4)
                 .align_y(iced::Center),

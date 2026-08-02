@@ -7,6 +7,7 @@
 
 use acadrust::Handle;
 use glam::DVec3;
+use rust_i18n::t;
 
 use crate::command::{CadCommand, CmdResult, EntityTransform};
 use crate::modules::{IconKind, ModuleEvent, ToolDef};
@@ -61,24 +62,31 @@ impl CadCommand for CopyCommand {
 
     fn prompt(&self) -> String {
         if self.awaiting_count {
-            return "COPY  Enter number of items to array:".to_string();
+            return t!("COPY  Enter number of items to array:").into_owned();
         }
         match &self.step {
-            Step::Base => format!(
-                "COPY  Specify base point  [{} objects]:",
-                self.handles.len()
-            ),
+            Step::Base => t!(
+                "COPY  Specify base point  [%{count} objects]:",
+                count = self.handles.len()
+            )
+            .into_owned(),
             Step::Placing(base) => {
                 if let Some(n) = self.array_count {
-                    format!(
-                        "COPY  Specify second point for {n}-item array  [base {:.3},{:.3}]:",
-                        base.x, base.y
+                    t!(
+                        "COPY  Specify second point for %{n}-item array  [base %{bx},%{by}]:",
+                        n = n,
+                        bx = format!("{:.3}", base.x),
+                        by = format!("{:.3}", base.y)
                     )
+                    .into_owned()
                 } else {
-                    format!(
-                        "COPY  Specify destination  [{} copies so far | Array | Enter=done | base {:.3},{:.3}]:",
-                        self.count, base.x, base.y
+                    t!(
+                        "COPY  Specify destination  [%{count} copies so far | Array | Enter=done | base %{bx},%{by}]:",
+                        count = self.count,
+                        bx = format!("{:.3}", base.x),
+                        by = format!("{:.3}", base.y)
                     )
+                    .into_owned()
                 }
             }
         }

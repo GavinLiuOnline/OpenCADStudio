@@ -11,6 +11,8 @@ use iced::widget::{
     Space,
 };
 use iced::{Background, Border, Element, Fit, Length, Theme};
+use rust_i18n::t;
+use std::borrow::Cow;
 
 /// Sentinel entries in the printer dropdown (not real printer names).
 pub const OUT_DEFAULT: &str = "System default printer";
@@ -285,7 +287,7 @@ fn hdivider<'a>(width: Length) -> Element<'a, Message> {
         .into()
 }
 
-fn section_label<'a>(s: &'static str) -> Element<'a, Message> {
+fn section_label<'a>(s: Cow<'static, str>) -> Element<'a, Message> {
     text(s).size(11).style(muted_style).into()
 }
 
@@ -339,7 +341,7 @@ fn setup_row<'a>(
 /// A `label : dropdown` row. `ctor` turns the picked string into a dialog
 /// message.
 fn drop_row<'a>(
-    label: &'a str,
+    label: Cow<'static, str>,
     options: Vec<String>,
     selected: Option<String>,
     ctor: fn(String) -> PlotDlgMsg,
@@ -357,7 +359,7 @@ fn drop_row<'a>(
 }
 
 fn drop_row_enabled<'a>(
-    label: &'a str,
+    label: Cow<'static, str>,
     options: Vec<String>,
     selected: Option<String>,
     ctor: fn(String) -> PlotDlgMsg,
@@ -380,7 +382,7 @@ fn drop_row_enabled<'a>(
 
 /// A `label : text field` row.
 fn field_row<'a>(
-    label: &'a str,
+    label: Cow<'static, str>,
     value: &'a str,
     ctor: fn(String) -> PlotDlgMsg,
     width: u16,
@@ -399,7 +401,7 @@ fn field_row<'a>(
 }
 
 fn field_row_enabled<'a>(
-    label: &'a str,
+    label: Cow<'static, str>,
     value: &'a str,
     ctor: fn(String) -> PlotDlgMsg,
     width: u16,
@@ -420,7 +422,7 @@ fn field_row_enabled<'a>(
 }
 
 /// A single option checkbox bound to a `PlotFlag`.
-fn check<'a>(label: &'a str, on: bool, flag: PlotFlag) -> Element<'a, Message> {
+fn check<'a>(label: Cow<'static, str>, on: bool, flag: PlotFlag) -> Element<'a, Message> {
     checkbox(on)
         .label(label)
         .on_toggle(move |_| Message::PlotDlg(PlotDlgMsg::Flag(flag)))
@@ -430,7 +432,7 @@ fn check<'a>(label: &'a str, on: bool, flag: PlotFlag) -> Element<'a, Message> {
 }
 
 fn check_enabled<'a>(
-    label: &'a str,
+    label: Cow<'static, str>,
     on: bool,
     flag: PlotFlag,
     enabled: bool,
@@ -453,7 +455,7 @@ fn panel<'a>(content: impl Into<Element<'a, Message>>) -> Element<'a, Message> {
 }
 
 fn strs(items: &[&str]) -> Vec<String> {
-    items.iter().map(|s| s.to_string()).collect()
+    items.iter().map(|&s| t!(s).to_string()).collect()
 }
 
 pub fn view_window(
@@ -462,7 +464,7 @@ pub fn view_window(
 ) -> Element<'_, Message> {
     let width = sizing.width;
     let height = sizing.height;
-    let action = if s.to_file { "Export PDF" } else { "Print" };
+    let action = if s.to_file { t!("Export PDF") } else { t!("Print") };
     let is_special = s.selected_setup == SETUP_NONE || s.selected_setup == SETUP_PREV;
     let sel_is_layout = s.selected_setup.len() >= 2
         && s.selected_setup.starts_with('*')
@@ -483,7 +485,7 @@ pub fn view_window(
         .map(|name| setup_row(name, &s.selected_setup, renaming, rename_buf))
         .collect();
     let list_body: Element<'_, Message> = if rows.is_empty() {
-        container(text("(no page setups)").size(11).style(muted_style))
+        container(text(t!("(no page setups)")).size(11).style(muted_style))
             .padding([6, 8])
             .into()
     } else {
@@ -499,7 +501,7 @@ pub fn view_window(
                     .size(11)
                     .padding([4, 8])
                     .width(Length::Fill),
-                button(text("Save").size(11))
+                button(text(t!("Save")).size(11))
                     .on_press(Message::PlotDlg(PlotDlgMsg::NameCommit))
                     .style(btn(true))
                     .padding([4, 8]),
@@ -515,7 +517,7 @@ pub fn view_window(
         };
     let list_panel = container(
         column![
-            text("Page setups").size(10).style(muted_style),
+            text(t!("Page setups")).size(10).style(muted_style),
             new_name,
             container(list_body)
                 .style(|theme: &Theme| {
@@ -546,20 +548,20 @@ pub fn view_window(
         left: 12.0,
     });
 
-    let mut copy_button = button(text("Copy").size(11))
+    let mut copy_button = button(text(t!("Copy")).size(11))
         .style(btn(false))
         .padding([4, 12]);
     if can_copy {
         copy_button = copy_button.on_press(Message::PlotDlg(PlotDlgMsg::CopySetup));
     }
-    let mut delete_button = button(text("Delete").size(11))
+    let mut delete_button = button(text(t!("Delete")).size(11))
         .style(btn(false))
         .padding([4, 12]);
     if is_named {
         delete_button = delete_button.on_press(Message::PlotDlg(PlotDlgMsg::DeleteSetup));
     }
     let left_bar = row![
-        button(text("New").size(11))
+        button(text(t!("New")).size(11))
             .on_press(Message::PlotDlg(PlotDlgMsg::NewSetup))
             .style(btn(false))
             .padding([4, 12]),
@@ -579,7 +581,7 @@ pub fn view_window(
     };
     let paper_opts: Vec<String> = PaperSize::ALL.iter().map(|p| p.label().to_string()).collect();
     let paper_note: Element<'_, Message> = if s.area == "Layout" {
-        text("Layout plots the current sheet using the selected paper size.")
+        text(t!("Layout plots the current sheet using the selected paper size."))
             .size(10)
             .style(muted_style)
             .width(width)
@@ -588,7 +590,7 @@ pub fn view_window(
         Space::new().height(0).into()
     };
     let mut output_row = row![
-        text("Output").size(11).style(muted_style).width(92),
+        text(t!("Output")).size(11).style(muted_style).width(92),
         iced::widget::pick_list(printer_sel, printer_opts, |value| value.to_string())
             .on_select(|value| Message::PlotDlg(PlotDlgMsg::Printer(value)))
             .text_size(12)
@@ -599,7 +601,7 @@ pub fn view_window(
     .align_y(iced::Center);
     if !s.to_file {
         output_row = output_row.push(
-            button(text("Properties…").size(11))
+            button(text(t!("Properties…")).size(11))
                 .on_press(Message::PlotDlg(PlotDlgMsg::PrinterProperties))
                 .style(btn(false))
                 .padding([4, 8]),
@@ -608,11 +610,11 @@ pub fn view_window(
     let copies_row: Element<'_, Message> = if s.to_file {
         Space::new().height(0).into()
     } else {
-        field_row("Copies", &s.copies, PlotDlgMsg::Copies, 60)
+        field_row(t!("Copies"), &s.copies, PlotDlgMsg::Copies, 60)
     };
     let printer_panel = panel(
         column![
-            section_label("Printer / plotter"),
+            section_label(t!("Printer / plotter")),
             output_row,
             copies_row,
         ]
@@ -621,17 +623,17 @@ pub fn view_window(
 
     // ── Paper, area, offset, scale ────────────────────────────────────────
     let paper_panel = panel(column![
-        section_label("Paper"),
-        drop_row("Size", paper_opts, Some(s.paper.clone()), PlotDlgMsg::Paper, width),
+        section_label(t!("Paper")),
+        drop_row(t!("Size"), paper_opts, Some(s.paper.clone()), PlotDlgMsg::Paper, width),
         paper_note,
     ].spacing(7));
 
     let mut area_options = strs(&["Extents", "Display", "Window"]);
     if s.paper_space {
-        area_options.insert(0, "Layout".to_string());
+        area_options.insert(0, t!("Layout").to_string());
     }
     let mut area_row = row![
-        text("What to plot").size(11).style(muted_style).width(92),
+        text(t!("What to plot")).size(11).style(muted_style).width(92),
         iced::widget::pick_list(Some(s.area.clone()), area_options, |value| value.to_string())
             .on_select(|value| Message::PlotDlg(PlotDlgMsg::Area(value)))
             .text_size(12)
@@ -642,7 +644,7 @@ pub fn view_window(
     .align_y(iced::Center);
     if s.area == "Window" {
         area_row = area_row.push(
-            button(text("Pick…").size(11))
+            button(text(t!("Pick…")).size(11))
                 .on_press(Message::PlotDlg(PlotDlgMsg::PickWindow))
                 .style(btn(false))
                 .padding([4, 10]),
@@ -650,27 +652,29 @@ pub fn view_window(
     }
     let common_area = s.area != "Layout";
     let area_panel = panel(column![
-        section_label("Plot area"),
+        section_label(t!("Plot area")),
         area_row,
-        section_label("Plot offset"),
+        section_label(t!("Plot offset")),
         column![
-            field_row_enabled("X (mm)", &s.offset_x, PlotDlgMsg::OffsetX, 70, common_area && !s.center),
-            field_row_enabled("Y (mm)", &s.offset_y, PlotDlgMsg::OffsetY, 70, common_area && !s.center),
+            field_row_enabled(t!("X (mm)"), &s.offset_x, PlotDlgMsg::OffsetX, 70, common_area && !s.center),
+            field_row_enabled(t!("Y (mm)"), &s.offset_y, PlotDlgMsg::OffsetY, 70, common_area && !s.center),
         ]
         .spacing(7),
-        check_enabled("Center the plot", s.center, PlotFlag::Center, common_area),
+        check_enabled(t!("Center the plot"), s.center, PlotFlag::Center, common_area),
     ].spacing(7));
     let scale_options = s.scales.iter().map(|(name, _)| name.clone()).collect();
     let scale_panel = panel(column![
-        section_label("Plot scale"),
+        section_label(t!("Plot scale")),
         check_enabled(
-            "Fit to paper",
+            t!("Fit to paper"),
             s.fit_to_paper,
             PlotFlag::FitToPaper,
             common_area,
         ),
+        // "Scale" intentionally stays untranslated: it would clash with the
+        // ribbon's zoom tool label under the same lookup key.
         drop_row_enabled(
-            "Scale",
+            Cow::Borrowed("Scale"),
             scale_options,
             Some(s.scale.clone()),
             PlotDlgMsg::Scale,
@@ -678,7 +682,7 @@ pub fn view_window(
             common_area && !s.fit_to_paper,
         ),
         check_enabled(
-            "Scale lineweights",
+            t!("Scale lineweights"),
             s.scale_lw && !s.fit_to_paper,
             PlotFlag::ScaleLw,
             common_area && !s.fit_to_paper,
@@ -701,20 +705,20 @@ pub fn view_window(
         s.style_name.clone()
     };
     let style_panel = panel(column![
-        section_label("Plot style table (pen assignments)"),
+        section_label(t!("Plot style table (pen assignments)")),
         drop_row(
-            "Table",
+            t!("Table"),
             style_options,
             Some(style_selected),
             PlotDlgMsg::Style,
             width,
         ),
         row![
-            button(text("Load…").size(11))
+            button(text(t!("Load…")).size(11))
                 .on_press(Message::PlotDlg(PlotDlgMsg::LoadStyle))
                 .style(btn(false))
                 .padding([4, 10]),
-            button(text("Save…").size(11))
+            button(text(t!("Save…")).size(11))
                 .on_press(Message::PlotDlg(PlotDlgMsg::SaveStyle))
                 .style(btn(false))
                 .padding([4, 10]),
@@ -724,9 +728,9 @@ pub fn view_window(
     ].spacing(7));
 
     let shaded_panel = panel(column![
-        section_label("Shaded viewport options"),
+        section_label(t!("Shaded viewport options")),
         drop_row(
-            "Shade plot",
+            t!("Shade plot"),
             strs(&[
                 "As displayed",
                 "2D Wireframe",
@@ -742,7 +746,7 @@ pub fn view_window(
             width,
         ),
         drop_row(
-            "Quality",
+            t!("Quality"),
             strs(&["Low", "Normal", "High"]),
             Some(s.quality.clone()),
             PlotDlgMsg::Quality,
@@ -753,7 +757,7 @@ pub fn view_window(
     // ── Output options and orientation ────────────────────────────────────
     let paper_order_option: Element<'_, Message> = if s.paper_space {
         check(
-            "Paper space last",
+            t!("Paper space last"),
             s.paperspace_last,
             PlotFlag::PaperspaceLast,
         )
@@ -761,19 +765,19 @@ pub fn view_window(
         Space::new().height(0).into()
     };
     let options_panel = panel(column![
-        section_label("Plot options"),
+        section_label(t!("Plot options")),
         row![
             column![
-                check("Plot in background", s.background, PlotFlag::Background),
-                check("Object lineweights", s.lineweights, PlotFlag::Lineweights),
-                check("Plot transparency", s.transparency, PlotFlag::Transparency),
+                check(t!("Plot in background"), s.background, PlotFlag::Background),
+                check(t!("Object lineweights"), s.lineweights, PlotFlag::Lineweights),
+                check(t!("Plot transparency"), s.transparency, PlotFlag::Transparency),
             ]
             .spacing(6)
             .width(width),
             column![
                 paper_order_option,
-                check("Merge overlapping lines", s.merge_lines, PlotFlag::MergeLines),
-                check("Plot stamp", s.stamp, PlotFlag::Stamp),
+                check(t!("Merge overlapping lines"), s.merge_lines, PlotFlag::MergeLines),
+                check(t!("Plot stamp"), s.stamp, PlotFlag::Stamp),
             ]
             .spacing(6)
             .width(width),
@@ -783,13 +787,13 @@ pub fn view_window(
 
     let orientation_panel = panel(column![
         drop_row(
-            "Orientation",
+            t!("Orientation"),
             strs(&["Portrait", "Landscape"]),
             Some(s.orientation.clone()),
             PlotDlgMsg::Orientation,
             width,
         ),
-        check("Plot upside-down", s.upside_down, PlotFlag::UpsideDown),
+        check(t!("Plot upside-down"), s.upside_down, PlotFlag::UpsideDown),
     ].spacing(7));
 
     let left = column![
@@ -825,12 +829,12 @@ pub fn view_window(
         row![
             left_bar,
             Space::new().width(width),
-            button(text("Set current").size(11))
+            button(text(t!("Set current")).size(11))
                 .on_press(Message::PlotDlg(PlotDlgMsg::SetCurrent))
                 .style(btn(false))
                 .padding([4, 12]),
             Space::new().width(6),
-            button(text("Preview").size(11))
+            button(text(t!("Preview")).size(11))
                 .on_press(Message::PlotDlg(PlotDlgMsg::Preview))
                 .style(btn(false))
                 .padding([4, 12]),

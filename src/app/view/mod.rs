@@ -14,6 +14,7 @@ use iced::widget::{
 use iced::window;
 use iced::{keyboard, Background, Border, Color, Element, Fill, Subscription, Task, Theme};
 use iced_aw::ContextMenu;
+use rust_i18n::t;
 
 mod controls;
 mod modal;
@@ -1210,7 +1211,7 @@ impl OpenCADStudio {
             let copy_btn = button(
                 row![
                     crate::ui::icons::themed_primary(crate::ui::icons::COPY, 11.0),
-                    text("Copy").size(11),
+                    text(t!("Copy")).size(11),
                 ]
                 .spacing(4)
                 .align_y(iced::Center),
@@ -1221,7 +1222,7 @@ impl OpenCADStudio {
             let clear_btn = button(
                 row![
                     crate::ui::icons::themed_danger(crate::ui::icons::TRASH, 11.0),
-                    text("Clear").size(11),
+                    text(t!("Clear")).size(11),
                 ]
                 .spacing(4)
                 .align_y(iced::Center),
@@ -1230,7 +1231,7 @@ impl OpenCADStudio {
             .style(perf_button_style)
             .padding([2, 6]);
             let header = row![
-                text("PERF").size(12).style(|theme: &Theme| iced::widget::text::Style {
+                text(t!("PERF")).size(12).style(|theme: &Theme| iced::widget::text::Style {
                     color: Some(theme.palette().success.base.color),
                 }),
                 Space::new().width(iced::Length::Fill),
@@ -2363,7 +2364,7 @@ fn start_page_content<'a>(
     let headline = text("Open CAD Studio").size(40).style(start_primary_style);
 
     // Plain outlined button (Open / New / Help / Contribute).
-    let outline_btn = |label: &'static str, msg: Message| {
+    let outline_btn = |label: String, msg: Message| {
         button(text(label).size(14))
             .on_press(msg)
             .padding([10, 22])
@@ -2391,7 +2392,7 @@ fn start_page_content<'a>(
         button(
             row![
                 crate::ui::icons::themed_danger_text(crate::ui::icons::HEART, 14.0),
-                text("Donate").size(14),
+                text(t!("Donate").into_owned()).size(14),
             ]
             .spacing(5)
             .align_y(iced::Center),
@@ -2405,8 +2406,8 @@ fn start_page_content<'a>(
     };
 
     let primary_row = WrapFlow::new(vec![
-        outline_btn("New Drawing", Message::TabNew).into(),
-        outline_btn("Open File…", Message::OpenFile).into(),
+        outline_btn(t!("New Drawing").into_owned(), Message::TabNew).into(),
+        outline_btn(t!("Open File…").into_owned(), Message::OpenFile).into(),
         donate_btn.into(),
     ])
     .spacing_x(12.0)
@@ -2416,16 +2417,16 @@ fn start_page_content<'a>(
     #[cfg_attr(target_arch = "wasm32", allow(unused_mut))]
     let mut secondary_items: Vec<Element<'a, Message>> = vec![
         outline_btn(
-            "Send Feedback",
+            t!("Send Feedback").into_owned(),
             Message::RibbonToolClick {
                 tool_id: "REPORT".to_string(),
                 event: crate::modules::ModuleEvent::Command("REPORT".to_string()),
             },
         )
         .into(),
-        outline_btn("Options", Message::OptionsOpen).into(),
+        outline_btn(t!("Options").into_owned(), Message::OptionsOpen).into(),
     ];
-    secondary_items.push(outline_btn("Plugins", Message::PluginManagerOpen).into());
+    secondary_items.push(outline_btn(t!("Plugins").into_owned(), Message::PluginManagerOpen).into());
     // The web build is already in the browser, so only the desktop offers a
     // link to the web version.
     #[cfg(not(target_arch = "wasm32"))]
@@ -2448,7 +2449,7 @@ fn start_page_content<'a>(
         .report_natural_width(action_width_out.clone());
 
     let sponsors = column![
-        text("Sponsors").size(15),
+        text(t!("Sponsors").into_owned()).size(15),
         mouse_area(
             container(
                 iced::widget::svg(iced::widget::svg::Handle::from_memory(include_bytes!(
@@ -2550,7 +2551,7 @@ fn start_page_content<'a>(
         // whole thumbnail remains visible when that width changes.
         let thumb_h =
             (panel_w - VIDEO_PANEL_PADDING * 2.0 - VIDEO_SCROLL_GUTTER) * 9.0 / 16.0;
-        let mut list = column![text("Tutorials").size(15)]
+        let mut list = column![text(t!("Tutorials").into_owned()).size(15)]
             .spacing(10)
             .width(Fill)
             // Keep the scrollbar off the thumbnails.
@@ -2590,14 +2591,14 @@ fn start_page_content<'a>(
         }
         if videos.is_empty() {
             let note = if videos_loading {
-                "Loading videos…"
+                t!("Loading videos…").into_owned()
             } else {
-                "Videos load from the internet."
+                t!("Videos load from the internet.").into_owned()
             };
             list = list.push(text(note).size(12).style(start_muted_style));
         }
         let playlist_btn = mouse_area(
-            container(text("Open playlist on YouTube").size(12))
+            container(text(t!("Open playlist on YouTube").into_owned()).size(12))
             .padding([6, 10])
             .width(Fill)
             .center_x(Fill)
@@ -2650,7 +2651,7 @@ fn start_page_content<'a>(
     // web builds read the CI-generated snapshot. Both sources mark pinned
     // discussions and sort them before the rest of the list.
     let discussions_panel: Element<'a, Message> = {
-        let mut list = column![text("Discussions").size(15)]
+        let mut list = column![text(t!("Discussions").into_owned()).size(15)]
             .spacing(8)
             .width(Fill);
         for discussion in discussions {
@@ -2663,7 +2664,7 @@ fn start_page_content<'a>(
             .align_y(iced::Center);
             if discussion.pinned {
                 meta = meta.push(
-                    text("Pinned")
+                    text(t!("Pinned").into_owned())
                         .size(10)
                         .style(start_primary_style),
                 );
@@ -2706,14 +2707,14 @@ fn start_page_content<'a>(
         }
         if discussions.is_empty() {
             let note = if discussions_loading {
-                "Loading discussions…"
+                t!("Loading discussions…").into_owned()
             } else {
-                "Discussions load from GitHub."
+                t!("Discussions load from GitHub.").into_owned()
             };
             list = list.push(text(note).size(12).style(start_muted_style));
         }
         let open_btn = mouse_area(
-            container(text("Open Discussions on GitHub").size(12))
+            container(text(t!("Open Discussions on GitHub").into_owned()).size(12))
                 .padding([6, 10])
                 .width(Fill)
                 .center_x(Fill)
@@ -2770,7 +2771,7 @@ fn start_page_content<'a>(
     // shows, so the rail always invites support.
     let supporters: Element<'a, Message> = {
         let mut list = column![
-            text("Supporters").size(15),
+            text(t!("Supporters").into_owned()).size(15),
             Space::new().height(iced::Length::Fixed(12.0)),
         ]
         .spacing(6)
@@ -2791,7 +2792,7 @@ fn start_page_content<'a>(
             container(
                 iced::widget::row![
                     crate::ui::icons::themed_danger_text(crate::ui::icons::HEART, 13.0),
-                    text("Support on Patreon").size(12),
+                    text(t!("Support on Patreon").into_owned()).size(12),
                 ]
                 .spacing(6)
                 .align_y(iced::Center),
@@ -2876,7 +2877,7 @@ fn start_page_content<'a>(
             .height(Fill)
             .into(),
         StartLayout::Compact => {
-            let tab_btn = |label: &'static str, section: super::StartSection| {
+            let tab_btn = |label: String, section: super::StartSection| {
                 let is_active = active == section;
                 button(text(label).size(14))
                     .on_press(Message::StartSectionSelect(section))
@@ -2909,11 +2910,11 @@ fn start_page_content<'a>(
                     })
             };
             let tab_bar = Row::with_children(vec![
-                tab_btn("Recent Files", super::StartSection::Recent).into(),
-                tab_btn("Videos", super::StartSection::Videos).into(),
-                tab_btn("Welcome", super::StartSection::Welcome).into(),
-                tab_btn("Discussions", super::StartSection::Discussions).into(),
-                tab_btn("Supporters", super::StartSection::Supporters).into(),
+                tab_btn(t!("Recent Files").into_owned(), super::StartSection::Recent).into(),
+                tab_btn(t!("Videos").into_owned(), super::StartSection::Videos).into(),
+                tab_btn(t!("Welcome").into_owned(), super::StartSection::Welcome).into(),
+                tab_btn(t!("Discussions").into_owned(), super::StartSection::Discussions).into(),
+                tab_btn(t!("Supporters").into_owned(), super::StartSection::Supporters).into(),
             ])
             .spacing(6.0)
             .align_y(iced::Center)
@@ -2989,11 +2990,11 @@ pub(super) fn recent_files_panel<'a>(
 ) -> Element<'a, Message> {
     // Title mirrors the Supporters rail: size 15 in the bright text colour,
     // followed by a 12px gap before the content.
-    let title = text("Recent Documents").size(15);
+    let title = text(t!("Recent Documents").into_owned()).size(15);
 
     let body: Element<'a, Message> = if recents.is_empty() {
         container(
-            text("Files you open will show up here.")
+            text(t!("Files you open will show up here.").into_owned())
                 .size(12)
                 .style(start_muted_style)
         )
@@ -3021,7 +3022,7 @@ pub(super) fn recent_files_panel<'a>(
             // directory line.
             #[cfg(target_arch = "wasm32")]
             let dir = if dir.is_empty() {
-                "Browser storage".to_string()
+                t!("Browser storage").into_owned()
             } else {
                 dir
             };
@@ -3132,7 +3133,7 @@ pub(super) fn recent_files_panel<'a>(
         .padding([2, 6])
         .width(iced::Length::Fixed(46.0));
     let limit_row = row![
-        text("Keep recent files").size(11).style(start_muted_style).width(Fill),
+        text(t!("Keep recent files").into_owned()).size(11).style(start_muted_style).width(Fill),
         button(crate::ui::icons::themed(crate::ui::icons::MINUS, 11.0))
             .on_press(Message::SetRecentLimit(shown.saturating_sub(STEP)))
             .padding([3, 6])

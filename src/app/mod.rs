@@ -850,6 +850,8 @@ pub(super) struct OpenCADStudio {
     save_dialog_for_unsaved: bool,
     /// User preference for the first save of a new/unsaved drawing.
     default_save_format: String,
+    /// Current UI language; persisted in settings and applied globally.
+    language: crate::i18n::Language,
 
     // ── DimStyle Dialog ───────────────────────────────────────────────────
     /// Name of the style currently shown in the dialog.
@@ -1578,6 +1580,8 @@ pub enum Message {
     OptionsThemeChanged(String),
     /// Edit one of Custom theme's six base colours as #RRGGBB.
     OptionsThemeColorChanged(usize, String),
+    /// Switch the UI language (English / 简体中文).
+    LanguageChanged(crate::i18n::Language),
     ClearScene,
     SetWireframe(bool),
     /// Set the active tab's render mode (one of acadrust's seven visual
@@ -2621,6 +2625,9 @@ impl OpenCADStudio {
     fn new() -> Self {
         // Boot with only the Welcome/Start tab. The user creates drawings
         // explicitly (File → New); we never auto-spawn Drawing1.
+        // Apply the detected system language before any UI string is built
+        // (CommandLine::new pushes the localized welcome lines below).
+        crate::i18n::Language::default().apply();
         let start_tab = DocumentTab::new_start();
         let mut app = Self {
             start: Instant::now(),
@@ -2796,6 +2803,7 @@ impl OpenCADStudio {
             save_dialog_filename: "drawing.dwg".to_string(),
             save_dialog_for_unsaved: false,
             default_save_format: crate::io::DEFAULT_SAVE_FORMAT.to_string(),
+            language: crate::i18n::Language::default(),
             // Plot style
             active_plot_style: crate::io::plot_style::PlotStyleTable::load_named(
                 crate::io::plot_style::DEFAULT_PLOT_STYLE,

@@ -1,11 +1,14 @@
 #![allow(non_snake_case)]
 
+rust_i18n::i18n!("locales", fallback = "en");
+
 pub mod app;
 pub mod config;
 #[cfg(not(target_arch = "wasm32"))]
 pub mod cli;
 pub mod command;
 pub mod entities;
+pub mod i18n;
 pub mod io;
 #[cfg(not(target_arch = "wasm32"))]
 pub(crate) mod network;

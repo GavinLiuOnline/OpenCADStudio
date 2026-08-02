@@ -1,0 +1,1917 @@
+_version: 1
+# 简体中文 locale — the key is the English source text.
+# ── Options dialog ─────────────────────────────────────────────────────────
+"Close": "关闭"
+"Language": "语言"
+"Language:": "语言："
+"Open and Save": "打开和保存"
+"Default save format:": "默认保存格式："
+"Used for the first save of a new drawing. Existing drawings keep their file type and version.": "用于新图形的首次保存。现有图形会保留其自身的文件类型和版本。"
+"Theme": "主题"
+"Iced theme:": "Iced 主题："
+"Changing a base colour switches to Custom. Iced generates every component shade from these six colours.": "更改基础颜色会切换到自定义主题。Iced 将基于这六种颜色生成所有组件色调。"
+"Background": "背景"
+"Text": "文字"
+"Primary": "主要"
+"Success": "成功"
+"Warning": "警告"
+"Danger": "危险"
+
+# ── About dialog ───────────────────────────────────────────────────────────
+"Version": "版本"
+"Platform": "平台"
+"Arch": "架构"
+"Copy Info": "复制信息"
+"CAD application for Architecture & Engineering": "面向建筑与工程的 CAD 应用程序"
+
+# ── Ribbon ─────────────────────────────────────────────────────────────────
+"options": "选项"
+"%{count} steps available": "可用 %{count} 步"
+"%{label} history": "%{label} 历史"
+
+# Panel density modes (CollapseMode::label).
+"Auto": "自动"
+"Full": "全屏"
+"Compact": "紧凑"
+"Collapsed": "折叠"
+
+# Module (tab) titles.
+"Layout": "布局"
+"Manage": "管理"
+"View": "视图"
+"Insert": "插入"
+"Model": "模型"
+"Draw": "绘图"
+"Annotate": "注释"
+
+# Ribbon group titles.
+"Viewport": "视口"
+"Plot": "打印"
+"Viewport Tools": "视口工具"
+"Navigate": "导航"
+"Model Viewports": "模型视口"
+"Visual Style": "视觉样式"
+"Projection": "投影"
+"Preset": "预设"
+"Palettes": "面板"
+"Interface": "界面"
+"Design": "设计"
+"Customization": "自定义"
+"Cleanup": "清理"
+"Application": "应用程序"
+"Dimensions": "标注"
+"Leaders": "引线"
+"Tables": "表格"
+"Markup": "标记"
+"Annotation Scaling": "注释比例"
+"Reference": "参照"
+"Point Cloud": "点云"
+"Block": "块"
+"Attributes": "属性"
+"Import": "导入"
+"Content": "内容"
+"Modify": "修改"
+"Annotation": "注释"
+"Layers": "图层"
+"Properties": "特性"
+"Groups": "组"
+"Clipboard": "剪贴板"
+
+# ── Tool labels ────────────────────────────────────────────────────────────
+"Zoom Window": "窗口缩放"
+"Zoom Out": "缩小"
+"Persp": "透视"
+"Page Setup": "页面设置"
+"Export PDF": "导出 PDF"
+"Zoom In": "放大"
+"Right": "右视图"
+"Zoom\nExtents": "缩放\n范围"
+"Pan": "平移"
+"X-Ray": "X 射线"
+"Iso": "等轴测"
+"Ortho": "正交"
+"Wireframe": "线框"
+"Front": "前视图"
+"Hidden": "隐藏"
+"3D Orbit": "三维动态观察"
+"Restore": "恢复"
+"User\nInterface": "用户\n界面"
+"Tile\nVert.": "垂直\n平铺"
+"UCS\nIcon": "UCS\n图标"
+"Named": "命名"
+"File\nTabs": "文件\n选项卡"
+"Clip": "剪裁"
+"Purge": "清理"
+"Viewport\nConfiguration": "视口\n配置"
+"Visual\nStyle": "视觉\n样式"
+"Tool\nPalettes": "工具\n选项板"
+"Join": "合并"
+"Tile\nHoriz.": "水平\n平铺"
+"Overkill": "删除重复对象"
+"Attach XREF": "附着外部参照"
+"View\nCube": "视图\n立方体"
+"Top": "俯视图"
+"Cascade": "层叠"
+"Edit Block": "编辑块"
+"Adjust": "调整"
+"Solid": "实体"
+"Define\nAttributes": "定义\n属性"
+"Set Base\nPoint": "设置基点"
+"Options": "选项"
+"Design\nCenter": "设计\n中心"
+"Write Block": "写块"
+"Sheet Set\nManager": "图纸集\n管理器"
+"Synchronize": "同步"
+"Cylinder": "圆柱体"
+"Underlay\nLayers": "底图\n图层"
+"Layout\nTabs": "布局\n选项卡"
+"Find Non-\nPurgeable Items": "查找不可\n清理项目"
+"Clear": "清除"
+"Sphere": "球体"
+"Create Block": "创建块"
+"Edit\nAttribute": "编辑\n属性"
+"Box": "长方体"
+"Multi-View\nBlock": "多视图\n块"
+"Attach": "附着"
+"Snap to\nUnderlays": "捕捉到\n底图"
+"Content\nBrowser": "内容\n浏览器"
+"Export": "导出"
+"Changelog": "更新日志"
+"Land\nXML": "地形\nXML"
+"Open": "打开"
+"Audit": "核查"
+"Donate": "捐赠"
+"Array Insert": "阵列插入"
+"Insert Block": "插入块"
+"About": "关于"
+"Report": "报告"
+"Aligned": "对齐"
+"Angular": "角度"
+"Link\nData": "链接\n数据"
+"Extract\nData": "提取\n数据"
+"Jog Line": "折弯线"
+"Edit Text": "编辑文字"
+"Baseline": "基线"
+"Dim Break": "标注打断"
+"Dim Text Edit": "标注文字编辑"
+"Continue": "连续"
+"Dim Space": "标注间距"
+"Dim Edit": "标注编辑"
+"Ordinate": "坐标标注"
+"Diameter": "直径标注"
+"Quick Dim": "快速标注"
+"Table": "表格"
+"Radius": "半径标注"
+"Leader": "引线"
+"Cut": "剪切"
+"MText": "多行文字"
+"MLeader": "多重引线"
+"Tolerance": "公差"
+"Match": "匹配"
+"Copy": "复制"
+"Center Line": "中心线"
+"Center Mark": "中心标记"
+"Multiline\nText": "多行\n文字"
+"Find": "查找"
+"Dimension": "标注"
+"Multileader": "多重引线"
+"Scale List": "比例列表"
+"Add Scale": "添加比例"
+"Scale Edit": "比例编辑"
+"Sync Scales": "同步比例"
+"Linear": "线性标注"
+"ByLayer": "随层"
+"Sketch": "徒手画"
+"Point": "点"
+"Polyline": "多段线"
+"Add Leader": "添加引线"
+"Remove Leader": "删除引线"
+"Align Leaders": "对齐引线"
+"Collect Leaders": "合并引线"
+"Helix": "螺旋线"
+"Line": "直线"
+"3D Polyline": "三维多段线"
+"Wipeout": "区域覆盖"
+"Rev Cloud": "修订云线"
+"Spline": "样条曲线"
+"Trace": "宽线"
+"Color": "颜色"
+"Layer Freeze": "图层冻结"
+"Isolate Layer": "隔离图层"
+"2D Solid": "二维实体"
+"Group": "组"
+"Ungroup": "取消组"
+"Layer Off": "关闭图层"
+"Layer Lock": "锁定图层"
+"Layer Unlock": "解锁图层"
+"Turn All Layers On": "打开所有图层"
+"Match Layer": "匹配图层"
+"Thaw All Layers": "解冻所有图层"
+"Make Current": "置为当前"
+"Unisolate Layers": "取消隔离图层"
+"Circle": "圆"
+"Arc": "圆弧"
+"Paste": "粘贴"
+"Break": "打断"
+"Save Block": "保存块"
+"Discard Block Edit": "放弃块编辑"
+"Explode": "分解"
+"Delete": "删除"
+"Rotate": "旋转"
+"Offset": "偏移"
+"Mirror": "镜像"
+"Save Block Edit": "保存块编辑"
+"Spline Edit": "样条编辑"
+"Scale": "缩放"
+"Move": "移动"
+"Stretch": "拉伸"
+"Reverse": "反转"
+"Measure Geometry": "测量几何"
+
+# ── Command line ───────────────────────────────────────────────────────────
+"Open CAD Studio ready.": "Open CAD Studio 已就绪。"
+"Type a command or use the ribbon. Open OBJ: INSERT tab.": "输入命令或使用功能区。打开 OBJ：插入选项卡。"
+"Command:": "命令："
+"Invalid": "无效"
+"Literal spaces: Space stays in the line instead of running the command (same as typing a leading '>'). Stays on until toggled off.": "字面空格：空格保留在输入行中而不是执行命令（等同于输入前导 '>'）。持续开启直到关闭。"
+
+# ── Status bar ─────────────────────────────────────────────────────────────
+"Open or create a drawing to manage layouts.": "打开或创建图形以管理布局。"
+"Model and layout list": "模型与布局列表"
+"Open or create a drawing to add a layout.": "打开或创建图形以添加布局。"
+"Open or create a drawing to switch layouts.": "打开或创建图形以切换布局。"
+"Annotation / Viewport Scale\nClick to change": "注释/视口比例\n单击更改"
+"Cursor coordinates ($COORDS)\nClick to cycle: static / live / polar": "光标坐标 ($COORDS)\n单击循环：静态 / 实时 / 极轴"
+"Orthogonal Mode\nF8": "正交模式\nF8"
+"Show Lineweight\nLWDISPLAY": "显示线宽\nLWDISPLAY"
+"Dynamic Input\nF12": "动态输入\nF12"
+"Object Snap Tracking\nF11": "对象捕捉追踪\nF11"
+"PAPER: double-click viewport to enter MSPACE\nMODEL: click to switch to Model Space": "图纸：双击视口进入模型空间\n模型：单击切换到模型空间"
+"Drawing Units (INSUNITS)\nClick to change": "图形单位 (INSUNITS)\n单击更改"
+"Show Transparency\nForce opaque when off": "显示透明度\n关闭时强制不透明"
+"Isolate Objects\nClick for Isolate / Hide / End": "隔离对象\n单击进行隔离 / 隐藏 / 结束"
+"Quick Properties\nFloating panel on selection": "快捷特性\n选中时显示浮动面板"
+"Selection Filtering\nLimit which object types can be picked": "选择过滤\n限制可选择的对象类型"
+"Selection Cycling\nRepeat-click to step through overlapping objects": "选择循环\n重复单击可循环选择重叠对象"
+"Viewport count in active layout": "当前布局中的视口数量"
+"Clean Screen\nHide ribbon and panels": "全屏\n隐藏功能区和面板"
+"Customization\nShow or hide status-bar items": "自定义\n显示或隐藏状态栏项目"
+"Polar Tracking (%{angle})\nF10 — left-click on/off\nRight-click cycles · ▾ picks angle": "极轴追踪 (%{angle})\nF10 — 左键单击开/关\n右键循环 · ▾ 选择角度"
+"Polar angle\nClick to choose": "极轴角度\n单击选择"
+"Object Snap: toggle on/off\nF3": "对象捕捉：开/关\nF3"
+"Object Snap list\nClick to choose snap types": "对象捕捉列表\n单击选择捕捉类型"
+"Rename": "重命名"
+"MODEL": "模型"
+"PAPER": "图纸"
+
+# Status-pill names in the customization menu.
+"Coordinates": "坐标"
+"Ortho Mode": "正交模式"
+"Show Lineweight": "显示线宽"
+"Polar Tracking": "极轴追踪"
+"Dynamic Input": "动态输入"
+"Object Snap Tracking": "对象捕捉追踪"
+"Object Snap": "对象捕捉"
+"Model/Paper Space": "模型/图纸空间"
+"Annotation Scale": "注释比例"
+"Drawing Units": "图形单位"
+"Show Transparency": "显示透明度"
+"Isolate Objects": "隔离对象"
+"Quick Properties": "快捷特性"
+"Selection Filtering": "选择过滤"
+"Selection Cycling": "选择循环"
+"Viewport Count": "视口数量"
+"Clean Screen": "全屏"
+
+# ── Shortcuts reference window ─────────────────────────────────────────────
+"Type  SHORTCUTS SET <key> <cmd>  to add custom shortcuts.": "输入  SHORTCUTS SET <key> <cmd>  可添加自定义快捷键。"
+"── Function Keys ──────────────────────────────────────": "── 功能键 ──────────────────────────────────────"
+"Toggle Object Snap": "切换对象捕捉"
+"Toggle Grid": "切换网格"
+"Toggle Ortho": "切换正交"
+"Toggle Grid Snap": "切换栅格捕捉"
+"Toggle Polar Tracking": "切换极轴追踪"
+"Toggle Object Snap Tracking": "切换对象捕捉追踪"
+"Toggle Dynamic Input": "切换动态输入"
+"── %{MOD} Shortcuts ──────────────────────────────────────": "── %{MOD} 快捷键 ──────────────────────────────────────"
+"New Drawing": "新建图形"
+"Open File": "打开文件"
+"Save": "保存"
+"Save As": "另存为"
+"Undo": "撤销"
+"Redo": "重做"
+"Find and Replace": "查找和替换"
+"Copy to Clipboard": "复制到剪贴板"
+"Cut to Clipboard": "剪切到剪贴板"
+"Paste from Clipboard": "从剪贴板粘贴"
+"── Other Keys ──────────────────────────────────────────": "── 其他按键 ──────────────────────────────────────────"
+"Finalize command / Repeat last": "完成命令 / 重复上一个"
+"Cancel active command": "取消活动命令"
+"Delete selected entities": "删除选定的实体"
+"Command history navigation": "命令历史导航"
+"── Custom Overrides (SHORTCUTS SET) ──────────────────": "── 自定义覆盖 (SHORTCUTS SET) ──────────────────"
+"  (none — use: SHORTCUTS SET <key> <command>)": "  （无 — 使用：SHORTCUTS SET <key> <command>）"
+"Key": "键"
+"Action": "操作"
+
+# ── Find & Replace dialog ──────────────────────────────────────────────────
+"Text to find": "要查找的文字"
+"Replacement text": "替换为"
+"Find:": "查找："
+"Replace with:": "替换为："
+"Searches Text, MText, Attribute Definitions, and block attribute values.": "搜索文字、多行文字、属性定义和块属性值。"
+"Replace": "替换"
+"Replace All": "全部替换"
+"Find Next": "查找下一个"
+
+# ── Command Alias editor ───────────────────────────────────────────────────
+"Command Aliases": "命令别名"
+"Type an alias and the command it runs (e.g. L → LINE). Apply to save to ocad.pgp; closing discards unapplied edits.": "输入别名及其运行的命令（例如 L → LINE）。应用以保存到 ocad.pgp；关闭将丢弃未应用的编辑。"
+"Alias": "别名"
+"Command": "命令"
+"alias": "别名"
+"command": "命令"
+"+ Add alias": "+ 添加别名"
+"Apply": "应用"
+
+# ── Layout Manager dialog ──────────────────────────────────────────────────
+"New Layout": "新建布局"
+"Move Left": "左移"
+"Move Right": "右移"
+"Set Current": "置为当前"
+"Layouts": "布局"
+"Model Space": "模型空间"
+"Paper Space Layout": "图纸空间布局"
+"Name:": "名称："
+"Status:": "状态："
+"Active": "活动"
+"Inactive": "不活动"
+"New name…": "新名称…"
+"OK": "确定"
+
+# ── Plot / Print dialog ────────────────────────────────────────────────────
+"Print": "打印"
+"(no page setups)": "（无页面设置）"
+"Page setups": "页面设置"
+"New": "新建"
+"Layout plots the current sheet using the selected paper size.": "布局使用所选纸张尺寸打印当前图纸。"
+"Output": "输出"
+"Properties…": "特性…"
+"Copies": "份数"
+"Printer / plotter": "打印机/绘图仪"
+"Paper": "纸张"
+"Size": "尺寸"
+"Extents": "范围"
+"Display": "显示"
+"Window": "窗口"
+"What to plot": "打印内容"
+"Pick…": "拾取…"
+"Plot area": "打印区域"
+"Plot offset": "打印偏移"
+"X (mm)": "X (毫米)"
+"Y (mm)": "Y (毫米)"
+"Center the plot": "居中打印"
+"Plot scale": "打印比例"
+"Fit to paper": "布满图纸"
+"Scale lineweights": "缩放线宽"
+"Plot style table (pen assignments)": "打印样式表（笔指定）"
+"Load…": "加载…"
+"Save…": "保存…"
+"Shaded viewport options": "着色视口选项"
+"Shade plot": "着色打印"
+"As displayed": "按显示"
+"2D Wireframe": "二维线框"
+"3D Wireframe": "三维线框"
+"Hidden Line": "隐藏线"
+"Flat Shaded": "平面着色"
+"Gouraud Shaded": "体着色"
+"Flat Shaded + Edges": "平面着色 + 边"
+"Gouraud Shaded + Edges": "体着色 + 边"
+"Quality": "质量"
+"Low": "低"
+"Normal": "中"
+"High": "高"
+"Paper space last": "最后打印图纸空间"
+"Plot options": "打印选项"
+"Plot in background": "后台打印"
+"Object lineweights": "对象线宽"
+"Plot transparency": "打印透明度"
+"Merge overlapping lines": "合并重叠线"
+"Plot stamp": "打印戳记"
+"Orientation": "方向"
+"Portrait": "纵向"
+"Landscape": "横向"
+"Plot upside-down": "上下颠倒打印"
+"Set current": "置为当前"
+"Preview": "预览"
+
+# ── Layer Manager dialog ───────────────────────────────────────────────────
+"Search…": "搜索…"
+"Status": "状态"
+"Name": "名称"
+"On": "开"
+"Freeze": "冻结"
+"Lock": "锁定"
+"Linetype": "线型"
+"Lineweight": "线宽"
+"Transparency": "透明度"
+"linetype": "线型"
+"lineweight": "线宽"
+
+# ── Update notice dialog ───────────────────────────────────────────────────
+"New Release Available": "有新版本可用"
+"A newer Open CAD Studio version is published on GitHub.": "GitHub 上发布了更新的 Open CAD Studio 版本。"
+"Installed": "已安装"
+"Latest": "最新"
+"Later": "稍后"
+"Open Release Page": "打开发布页面"
+"What's new": "更新内容"
+"No release notes provided.": "未提供发行说明。"
+
+# ── Open progress dialog ───────────────────────────────────────────────────
+"Opening file": "正在打开文件"
+"Reading file…": "正在读取文件…"
+"Parsing entities…": "正在解析实体…"
+"Loading references…": "正在加载参照…"
+"Building scene caches…": "正在构建场景缓存…"
+"Finalizing…": "正在完成…"
+"Working…": "正在处理…"
+"Cancel": "取消"
+
+# ── Attribute editor dialog ────────────────────────────────────────────────
+"Block:  %{block}": "块：  %{block}"
+"Attribute": "属性"
+"Text Options": "文字选项"
+"This block has no attributes.": "此块没有属性。"
+"Tag": "标签"
+"Prompt": "提示"
+"Value": "值"
+"Value:": "值："
+"Text Style": "文字样式"
+"Justification": "对齐"
+"Height": "高度"
+"Rotation": "旋转"
+"Width Factor": "宽度因子"
+"Oblique Angle": "倾斜角度"
+"Backwards": "反向"
+"Upside down": "上下颠倒"
+
+# ── Plugin Manager dialog ──────────────────────────────────────────────────
+"Enable": "启用"
+"Disable": "禁用"
+"Disabled": "已禁用"
+"Loaded": "已加载"
+"API incompatible": "API 不兼容"
+"Load failed": "加载失败"
+"No library": "无库文件"
+"Restart to load": "重启后加载"
+"Commands:  %{cmds}": "命令：  %{cmds}"
+"Plugin API  %{plugin}  is incompatible with this build's API  %{build}  ribbon ABI. Update or rebuild the plugin.": "插件 API  %{plugin}  与此构建的 API  %{build}  功能区 ABI 不兼容。请更新或重新构建插件。"
+"Load failed:  %{error}": "加载失败：  %{error}"
+"Update to  %{tag}": "更新到  %{tag}"
+"Uninstall": "卸载"
+"no releases": "无发布版本"
+"Install": "安装"
+"Incompatible": "不兼容"
+"Unavailable": "不可用"
+"GitHub URL or owner/repository": "GitHub URL 或 所有者/仓库"
+"Add repository": "添加仓库"
+"Add from GitHub": "从 GitHub 添加"
+"Paste a public repository URL. Compatible releases and the README are detected automatically.": "粘贴公开的仓库 URL。会自动检测兼容的发布版本和 README。"
+"Unable to verify the server certificate": "无法验证服务器证书"
+"Open CAD Studio could not trust the certificate presented for the plugin registry. Check your system certificate and proxy settings, then retry.": "Open CAD Studio 无法信任插件注册表提供的证书。请检查系统证书和代理设置后重试。"
+"Plugin registry request timed out": "插件注册表请求超时"
+"Check your internet or proxy connection, then retry. Manually added repositories remain available.": "请检查网络或代理连接后重试。手动添加的仓库仍然可用。"
+"Unable to load the plugin registry": "无法加载插件注册表"
+"Retry": "重试"
+"Hide details": "隐藏详情"
+"Show details": "显示详情"
+"Copy details": "复制详情"
+"Loading plugin catalog…": "正在加载插件目录…"
+"Connecting securely using your system certificate settings.": "正在使用您的系统证书设置安全连接。"
+"Available plugins": "可用插件"
+"Added from GitHub": "从 GitHub 添加"
+"No additional plugins are available.": "没有其他可用插件。"
+"No available plugins match your search.": "没有与搜索匹配的可用插件。"
+"Plugin details": "插件详情"
+"Select a plugin to read its GitHub README.": "选择一个插件以阅读其 GitHub README。"
+"View on GitHub": "在 GitHub 上查看"
+"Loading README…": "正在加载 README…"
+"Fetching the default branch from GitHub.": "正在从 GitHub 获取默认分支。"
+"README could not be loaded": "无法加载 README"
+"Select the plugin again to load its README.": "请重新选择插件以加载其 README。"
+"Plugins": "插件"
+"Browse, install, and manage add-ons. Select one to view its README.": "浏览、安装和管理插件。选择一个以查看其 README。"
+"No plugins installed yet.": "尚未安装插件。"
+"No installed plugins match your search.": "没有与搜索匹配的已安装插件。"
+"Search plugins…": "搜索插件…"
+"Download desktop app": "下载桌面应用"
+"Plugins are available in the desktop app": "桌面应用提供插件"
+"Open CAD Studio plugins are native packages and cannot run inside a browser. Download the desktop app to browse, install, and use plugins.": "Open CAD Studio 插件是原生程序包，无法在浏览器中运行。请下载桌面应用以浏览、安装和使用插件。"
+
+# ── Layer State Manager dialog ─────────────────────────────────────────────
+"Not set": "未设置"
+"On/Off": "开/关"
+"New VP Freeze": "新建视口冻结"
+"Plot style": "打印样式"
+"%{n} layers": "%{n} 个图层"
+"No layer states in this drawing": "此图纸中没有图层状态"
+"No matching layer states": "没有匹配的图层状态"
+"Choose New to capture the current layer settings.": "选择“新建”以捕获当前图层设置。"
+"Search layer states…": "搜索图层状态…"
+"Saved state details": "已保存状态详情"
+"Current layer": "当前图层"
+"Restored properties": "恢复的属性"
+"New layer state": "新建图层状态"
+"Save captures the current settings of every layer in the drawing.": "保存将捕获图纸中每个图层的当前设置。"
+"Edit": "编辑"
+"Layer": "图层"
+"New VP": "新建视口"
+"Description": "描述"
+"Layer state name": "图层状态名称"
+"Optional description": "可选描述"
+"Layer states are stored inside the drawing and remain available after reopening it.": "图层状态存储在图纸内部，重新打开后仍然可用。"
+"Update from Drawing": "从图纸更新"
+"Save New State": "保存新状态"
+"On / Off": "开 / 关"
+"Default": "默认"
+"%{n} saved layers": "%{n} 个已保存图层"
+"Properties restored by this state": "此状态恢复的属性"
+"Saved layer values": "已保存的图层值"
+"Search layers…": "搜索图层…"
+"Changes affect the saved state only; the drawing is unchanged until Restore.": "更改仅影响已保存的状态；在点击“恢复”之前，图纸保持不变。"
+"Save Changes": "保存更改"
+
+# ── Properties panel / colour selector ─────────────────────────────────────
+"More…": "更多…"
+"Select an object to view properties": "选择对象以查看属性"
+"Search patterns…": "搜索图案…"
+"No matching patterns": "无匹配的图案"
+
+# ── Ribbon extras / popup menus ────────────────────────────────────────────
+"Layer State Manager…": "图层状态管理器…"
+"Manage…": "管理…"
+"Manage...": "管理…"
+"Custom…": "自定义…"
+"No objects": "无对象"
+
+# ── Style manager dialogs ──────────────────────────────────────────────────
+"Styles": "样式"
+"Scales": "比例"
+"Point Style": "点样式"
+"Point Size:": "点大小："
+"units": "单位"
+"Set Size Relative to Screen": "按屏幕设置大小"
+"Set Size in Absolute Units": "以绝对单位设置大小"
+"Font File": "字体文件"
+"font file…": "字体文件…"
+"Big Font:": "大字体："
+"big-font file…": "大字体文件…"
+"TrueType Font:": "TrueType 字体："
+"e.g. Arial": "例如 Arial"
+"Fixed Height:": "固定高度："
+"0 = variable": "0 = 可变"
+"Width Factor:": "宽度因子："
+"Oblique (°):": "倾斜(°)："
+"Backward": "反向"
+"Annotative": "注释性"
+"TrueType (system)": "TrueType（系统）"
+"TrueType font…": "TrueType 字体…"
+"Paper units": "图纸单位"
+"Drawing units": "图形单位"
+"Double-click a scale to rename it; edit its paper : drawing ratio here. New / Copy add a scale. Changes are kept only if you click Apply before closing.": "双击比例可重命名；在此编辑其图纸:图形比例。新建/复制可添加比例。只有在关闭前点击“应用”才会保留更改。"
+"Object: %{object_label}": "对象：%{object_label}"
+"Click a scale to add or remove the object's representation for it.": "单击比例以添加或移除该对象的对应表示。"
+"Elements:": "元素："
+"  Off   Color        Ltype": "  关    颜色          线型"
+"Select a style to view details.": "选择样式以查看详情。"
+"Description:": "描述："
+"Leader Format": "引线格式"
+"Path type:": "路径类型："
+"Line color (ACI):": "线颜色 (ACI)："
+"Line type:": "线型："
+"Arrowhead block:": "箭头块："
+"Arrowhead size:": "箭头大小："
+"Break gap size:": "断裂间隙大小："
+"Leader Structure": "引线结构"
+"Enable landing": "启用着陆线"
+"Enable dogleg": "启用折弯"
+"Landing distance:": "着陆距离："
+"Landing gap:": "着陆间隙："
+"Max leader points:": "最大引线点数："
+"First seg. angle:": "第一段角度："
+"Second seg. angle:": "第二段角度："
+"Scale factor:": "比例因子："
+"Align space:": "对齐间距："
+"Leader draw order:": "引线绘制顺序："
+"Multileader draw order:": "多重引线绘制顺序："
+"Content type:": "内容类型："
+"Default text:": "默认文字："
+"Text style:": "文字样式："
+"Text height:": "文字高度："
+"Text color (ACI):": "文字颜色 (ACI)："
+"Text angle:": "文字角度："
+"Text alignment:": "文字对齐："
+"Left attachment:": "左附着："
+"Right attachment:": "右附着："
+"Top attachment:": "上附着："
+"Bottom attachment:": "下附着："
+"Attachment direction:": "附着方向："
+"Text frame": "文字边框"
+"Text always left": "文字始终靠左"
+"Block Content": "块内容"
+"Block:": "块："
+"Block color (ACI):": "块颜色 (ACI)："
+"Block connection:": "块连接："
+"Block rotation:": "块旋转："
+"Block scale X:": "块比例 X："
+"Block scale Y:": "块比例 Y："
+"Block scale Z:": "块比例 Z："
+"Enable block scale": "启用块比例"
+"Enable block rotation": "启用块旋转"
+"Line weight:": "线宽："
+"Editing: %{selected}": "正在编辑：%{selected}"
+"Extension (DIMDLE)": "延伸量 (DIMDLE)"
+"Spacing (DIMDLI)": "间距 (DIMDLI)"
+"Text gap (DIMGAP)": "文字间隙 (DIMGAP)"
+"Suppress 1st line (DIMSD1)": "抑制第一条尺寸线 (DIMSD1)"
+"Suppress 2nd line (DIMSD2)": "抑制第二条尺寸线 (DIMSD2)"
+"Dimension Line": "尺寸线"
+"Extension Line": "延伸线"
+"Extension (DIMEXE)": "延伸量 (DIMEXE)"
+"Offset (DIMEXO)": "偏移 (DIMEXO)"
+"Suppress 1st line (DIMSE1)": "抑制第一条延伸线 (DIMSE1)"
+"Suppress 2nd line (DIMSE2)": "抑制第二条延伸线 (DIMSE2)"
+"Dim line color ACI (DIMCLRD)": "尺寸线颜色 ACI (DIMCLRD)"
+"Dim line weight (DIMLWD)": "尺寸线线宽 (DIMLWD)"
+"Ext line color ACI (DIMCLRE)": "延伸线颜色 ACI (DIMCLRE)"
+"Ext line weight (DIMLWE)": "延伸线线宽 (DIMLWE)"
+"Fixed-length ext lines (DIMFXLON)": "固定长度延伸线 (DIMFXLON)"
+"Fixed length (DIMFXL)": "固定长度 (DIMFXL)"
+"Dim line linetype (DIMLTYPE)": "尺寸线线型 (DIMLTYPE)"
+"Ext line 1 linetype (DIMLTEX1)": "延伸线 1 线型 (DIMLTEX1)"
+"Ext line 2 linetype (DIMLTEX2)": "延伸线 2 线型 (DIMLTEX2)"
+"Arrowhead (DIMBLK)": "箭头 (DIMBLK)"
+"1st arrowhead (DIMBLK1)": "第一箭头 (DIMBLK1)"
+"2nd arrowhead (DIMBLK2)": "第二箭头 (DIMBLK2)"
+"Leader arrowhead (DIMLDRBLK)": "引线箭头 (DIMLDRBLK)"
+"Arrow size (DIMASZ)": "箭头大小 (DIMASZ)"
+"Center mark (DIMCEN)": "中心标记 (DIMCEN)"
+"Tick size (DIMTSZ)": "刻度大小 (DIMTSZ)"
+"Separate arrow blocks (DIMSAH)": "独立箭头块 (DIMSAH)"
+"Arc length symbol (DIMARCSYM)": "弧长符号 (DIMARCSYM)"
+"Jog angle ° (DIMJOGANG)": "折弯角度° (DIMJOGANG)"
+"Height (DIMTXT)": "高度 (DIMTXT)"
+"Style (DIMTXSTY)": "样式 (DIMTXSTY)"
+"Vertical pos (DIMTAD)": "垂直位置 (DIMTAD)"
+"Horizontal inside (DIMTIH)": "水平内部 (DIMTIH)"
+"Horizontal outside (DIMTOH)": "水平外部 (DIMTOH)"
+"Text color ACI (DIMCLRT)": "文字颜色 ACI (DIMCLRT)"
+"Horizontal just (DIMJUST)": "水平对齐 (DIMJUST)"
+"Vertical pos (DIMTVP)": "垂直位置 (DIMTVP)"
+"Text fill mode (DIMTFILL)": "文字填充模式 (DIMTFILL)"
+"Fill color ACI (DIMTFILLCLR)": "填充颜色 ACI (DIMTFILLCLR)"
+"Left-to-right (DIMTXTDIRECTION)": "从左到右 (DIMTXTDIRECTION)"
+"Overall scale (DIMSCALE)": "全局比例 (DIMSCALE)"
+"Linear factor (DIMLFAC)": "线性因子 (DIMLFAC)"
+"Format (DIMLUNIT)": "格式 (DIMLUNIT)"
+"Decimals (DIMDEC)": "小数位数 (DIMDEC)"
+"Suffix (DIMPOST)": "后缀 (DIMPOST)"
+"Decimal sep ASCII (DIMDSEP)": "小数点分隔符 ASCII (DIMDSEP)"
+"Round off (DIMRND)": "舍入 (DIMRND)"
+"Zero suppress (DIMZIN)": "零抑制 (DIMZIN)"
+"Fraction format (DIMFRAC)": "分数格式 (DIMFRAC)"
+"Angular unit (DIMAUNIT)": "角度单位 (DIMAUNIT)"
+"Angular decimals (DIMADEC)": "角度小数位数 (DIMADEC)"
+"Unit format (DIMUNIT)": "单位格式 (DIMUNIT)"
+"Angular zero supp (DIMAZIN)": "角度零抑制 (DIMAZIN)"
+"Units": "单位"
+"Fit": "适配"
+"Fit (DIMATFIT)": "适配 (DIMATFIT)"
+"Text movement (DIMTMOVE)": "文字移动 (DIMTMOVE)"
+"Fit (legacy DIMFIT)": "适配（旧版 DIMFIT）"
+"Force text inside (DIMTIX)": "强制文字在内部 (DIMTIX)"
+"Suppress outside arrows (DIMSOXD)": "抑制外部箭头 (DIMSOXD)"
+"Place text manually (DIMUPT)": "手动放置文字 (DIMUPT)"
+"Dim line between ext (DIMTOFL)": "延伸线之间绘制尺寸线 (DIMTOFL)"
+"Arrows": "箭头"
+"Alternate": "备用"
+"Enable alternate units (DIMALT)": "启用备用单位 (DIMALT)"
+"Multiplier (DIMALTF)": "倍数 (DIMALTF)"
+"Decimals (DIMALTD)": "小数位数 (DIMALTD)"
+"Unit format (DIMALTU)": "单位格式 (DIMALTU)"
+"Tol decimals (DIMALTTD)": "公差小数位数 (DIMALTTD)"
+"Round off (DIMALTRND)": "舍入 (DIMALTRND)"
+"Suffix (DIMAPOST)": "后缀 (DIMAPOST)"
+"Zero suppress (DIMALTZ)": "零抑制 (DIMALTZ)"
+"Tol zero supp (DIMALTTZ)": "公差零抑制 (DIMALTTZ)"
+"Tolerances": "公差"
+"Generate tolerances (DIMTOL)": "生成公差 (DIMTOL)"
+"Limits generation (DIMLIM)": "生成极限 (DIMLIM)"
+"Plus tolerance (DIMTP)": "正公差 (DIMTP)"
+"Minus tolerance (DIMTM)": "负公差 (DIMTM)"
+"Tol. decimals (DIMTDEC)": "公差小数位数 (DIMTDEC)"
+"Tol. scale (DIMTFAC)": "公差比例 (DIMTFAC)"
+"Tol. vert just (DIMTOLJ)": "公差垂直对齐 (DIMTOLJ)"
+"Tol. zero supp (DIMTZIN)": "公差零抑制 (DIMTZIN)"
+"Scale/Units": "比例/单位"
+"(no table loaded)": "（未加载表格）"
+"Load CTB/STB": "加载 CTB/STB"
+"Save As…": "另存为…"
+"Clear Table": "清除表格"
+"(default)": "（默认）"
+"ACI Color Index": "ACI 颜色索引"
+"(none)": "（无）"
+"object": "对象"
+"ACI:": "ACI："
+"Color override (#RRGGBB):": "颜色覆盖 (#RRGGBB)："
+"#RRGGBB or blank": "#RRGGBB 或留空"
+"Lineweight index (0-24, 255=obj):": "线宽索引 (0-24, 255=对象)："
+"Screening (0-100):": "淡显 (0-100)："
+"Current values:": "当前值："
+"Apply to ACI": "应用到 ACI"
+"Flow direction:": "流向："
+"H Margin:": "水平边距："
+"V Margin:": "垂直边距："
+"Title row suppressed": "抑制标题行"
+"Header row suppressed": "抑制表头行"
+"Apply margins": "应用边距"
+"Data Row:": "数据行："
+"Header Row:": "表头行："
+"Title Row:": "标题行："
+"  Text style:": "  文字样式："
+"  Text height:": "  文字高度："
+"  Text color:": "  文字颜色："
+"  Fill color:": "  填充颜色："
+"  Alignment:": "  对齐："
+"  Background fill enabled": "  启用背景填充"
+"  Data type:": "  数据类型："
+"  Unit type:": "  单位类型："
+"  Format string:": "  格式字符串："
+"  Borders  (type / weight / color / spacing / hidden)": "  边框（类型/线宽/颜色/间距/隐藏）"
+"Apply cell": "应用单元格"
+"  Color: %{cur_color}": "  颜色：%{cur_color}"
+"  Lineweight: %{cur_lw}": "  线宽：%{cur_lw}"
+"  Screening: %{cur_scr}": "  淡显：%{cur_scr}"
+"  ⚠ No closed boundary found.": "  ⚠ 未找到闭合边界。"
+" (%{count} objects)": "（%{count} 个对象）"
+"%{cmd}  Select objects (%{count} selected, Enter to apply):": "%{cmd}  选择对象（已选择 %{count} 个，按 Enter 应用）："
+"%{cmd}  Select objects:": "%{cmd}  选择对象："
+"%{n}  Specify center point:": "%{n}  指定中心点："
+"%{n}  Specify first corner:": "%{n}  指定第一个角点："
+"%{n}  Specify height <Enter for default>:": "%{n}  指定高度（按 Enter 使用默认值）："
+"%{n}  Specify opposite corner:": "%{n}  指定对角点："
+"%{n}  Specify radius:": "%{n}  指定半径："
+"%{n}  Specify tube radius:": "%{n}  指定管半径："
+"%{prefix}TEXTEDIT Enter text edit mode [Single/Multiple] <%{mode}>:": "%{prefix}TEXTEDIT 输入文字编辑模式 [单个/多个] <%{mode}>："
+"%{prefix}TEXTEDITMODE Enter new value for TEXTEDITMODE <%{v}>:": "%{prefix}TEXTEDITMODE 输入 TEXTEDITMODE 的新值 <%{v}>："
+"3DPOLY  Specify next point  [Close/Undo]:": "3DPOLY  指定下一点  [闭合/放弃]："
+"3DPOLY  Specify next point  [Undo]:": "3DPOLY  指定下一点  [放弃]："
+"3DPOLY  Specify start point of polyline:": "3DPOLY  指定多段线起点："
+"ALIGN  Scale objects based on alignment points? [Y/N]:": "ALIGN  是否基于对齐点缩放对象？[Y/N]："
+"ALIGN  Select objects (%{count} selected, Enter when done):": "ALIGN  选择对象（已选择 %{count} 个，完成后按 Enter）："
+"ALIGN  Specify 1st destination point:": "ALIGN  指定第一个目标点："
+"ALIGN  Specify 1st source point:": "ALIGN  指定第一个源点："
+"ALIGN  Specify 2nd destination point:": "ALIGN  指定第二个目标点："
+"ALIGN  Specify 2nd source point (Enter = translate only):": "ALIGN  指定第二个源点（Enter=仅平移）："
+"ARC  Specify center:": "ARC  指定圆心："
+"ARC  Specify end point  [c=(%{cx},%{cy}) r=%{r}]:": "ARC  指定端点  [c=(%{cx},%{cy}) r=%{r}]："
+"ARC  Specify start point:": "ARC  指定起点："
+"ARC 3P  Specify end point:": "ARC 3P  指定端点："
+"ARC 3P  Specify second point on arc:": "ARC 3P  指定圆弧上的第二点："
+"ARC 3P  Specify start point:": "ARC 3P  指定起点："
+"ARC CSA  Click end direction or type arc span in degrees  [start=%{sa}]:": "ARC CSA  单击端点方向或输入圆弧跨度（度）  [start=%{sa}]："
+"ARC CSA  Specify center:": "ARC CSA  指定圆心："
+"ARC CSA  Specify start point:": "ARC CSA  指定起点："
+"ARC CSL  Click chord end or type chord length  [r=%{r}]:": "ARC CSL  单击弦端点或输入弦长  [r=%{r}]："
+"ARC CSL  Specify center:": "ARC CSL  指定圆心："
+"ARC CSL  Specify start point:": "ARC CSL  指定起点："
+"ARC Continue  Specify end point  [Ctrl = flip direction]:": "ARC 继续  指定端点  [Ctrl = 翻转方向]："
+"ARC SCA  Click end direction or type arc span in degrees  [start=%{sa}]:": "ARC SCA  单击端点方向或输入圆弧跨度（度）  [start=%{sa}]："
+"ARC SCA  Specify center:": "ARC SCA  指定圆心："
+"ARC SCA  Specify start point:": "ARC SCA  指定起点："
+"ARC SCE  Specify center:": "ARC SCE  指定圆心："
+"ARC SCE  Specify end point  [r=%{r}]:": "ARC SCE  指定端点  [r=%{r}]："
+"ARC SCE  Specify start point:": "ARC SCE  指定起点："
+"ARC SCL  Click chord end or type chord length  [r=%{r}]:": "ARC SCL  单击弦端点或输入弦长  [r=%{r}]："
+"ARC SCL  Specify center:": "ARC SCL  指定圆心："
+"ARC SCL  Specify start point:": "ARC SCL  指定起点："
+"ARC SEA  Specify angle (move cursor perpendicular to chord):": "ARC SEA  指定角度（将光标移动到弦的垂直方向）："
+"ARC SEA  Specify end point:": "ARC SEA  指定端点："
+"ARC SEA  Specify start point:": "ARC SEA  指定起点："
+"ARC SED  Specify end point:": "ARC SED  指定端点："
+"ARC SED  Specify start point:": "ARC SED  指定起点："
+"ARC SED  Specify tangent direction at start:": "ARC SED  指定起点处的切线方向："
+"ARC SER  Click radius point or type radius value:": "ARC SER  单击半径点或输入半径值："
+"ARC SER  Specify end point:": "ARC SER  指定端点："
+"ARC SER  Specify start point:": "ARC SER  指定起点："
+"AREA  Specify first corner point (Enter to cancel):": "AREA  指定第一个角点（按 Enter 取消）："
+"AREA  Specify next point (%{n} picked, Enter to calculate):": "AREA  指定下一点（已拾取 %{n} 个点，按 Enter 计算）："
+"ARRAY3D  Column spacing  [%{rows}×%{cols}×%{levels}, row=%{rs}]:": "ARRAY3D  列间距  [%{rows}×%{cols}×%{levels}, row=%{rs}]："
+"ARRAY3D  Enter column count  [%{rows} rows]:": "ARRAY3D  输入列数  [%{rows} 行]："
+"ARRAY3D  Enter level count  [%{rows}×%{cols}]:": "ARRAY3D  输入层数  [%{rows}×%{cols}]："
+"ARRAY3D  Enter row count:": "ARRAY3D  输入行数："
+"ARRAY3D  Level spacing  [%{rows}×%{cols}×%{levels}, r=%{rs} c=%{cs}]:": "ARRAY3D  层间距  [%{rows}×%{cols}×%{levels}, r=%{rs} c=%{cs}]："
+"ARRAY3D  Row spacing  [%{rows}×%{cols}×%{levels}]:": "ARRAY3D  行间距  [%{rows}×%{cols}×%{levels}]："
+"ATTDEF  Enter attribute tag (no spaces):": "ATTDEF  输入属性标记（无空格）："
+"ATTDEF  Enter default value for '%{tag}' (Enter=blank):": "ATTDEF  为“%{tag}”输入默认值（Enter=空白）："
+"ATTDEF  Enter prompt for '%{tag}' (Enter=use tag):": "ATTDEF  为“%{tag}”输入提示（Enter=使用标记）："
+"ATTDEF  Specify insertion point for '%{tag}':": "ATTDEF  指定“%{tag}”的插入点："
+"ATTEDIT  Select block with attributes:": "ATTEDIT  选择带属性的块："
+"Accept": "接受"
+"Alternate Units": "替代单位"
+"Angle = %{angle}°": "角度 = %{angle}°"
+"Angle = 0.0000° (degenerate rays)": "角度 = 0.0000°（退化射线）"
+"Area = %{area},  Perimeter = %{perimeter}": "面积 = %{area}，  周长 = %{perimeter}"
+"BASE  Specify base point:": "BASE  指定基点："
+"BLEND  Enter continuity [Tangent/Curvature] <%{c}>:": "BLEND  输入连续性 [相切/曲率] <%{c}>："
+"BLEND  Select first open curve  [Continuity=%{c}]:": "BLEND  选择第一条开放曲线  [Continuity=%{c}]："
+"BLEND  Select second open curve  [Continuity=%{c}]:": "BLEND  选择第二条开放曲线  [Continuity=%{c}]："
+"BLOCK  Enter block name  [%{count} objects selected]:": "BLOCK  输入块名  [已选择 %{count} 个对象]："
+"BLOCK  Specify base point for \"%{name}\"  [%{count} objects]:": "BLOCK  指定“%{name}”的基点  [%{count} 个对象]："
+"BOUNDARY  Pick internal point:%{miss}": "BOUNDARY  拾取内部点：%{miss}"
+"BREAKATPOINT  Select object:": "BREAKATPOINT  选择对象："
+"BREAKATPOINT  Specify break point:": "BREAKATPOINT  指定打断点："
+"Block \"%{name}\" has no entities.": "块“%{name}”没有实体。"
+"Block \"%{name}\" not found.": "未找到块“%{name}”。"
+"Block \"%{name}\" produced no exportable entities.": "块“%{name}”未生成可导出的实体。"
+"CENTERLINE  Select first line:": "CENTERLINE  选择第一条直线："
+"CENTERLINE  Select second line:": "CENTERLINE  选择第二条直线："
+"CHAMFER  Enter first chamfer distance <%{d1}>:": "CHAMFER  输入第一个倒角距离 <%{d1}>："
+"CHAMFER  Enter second chamfer distance <%{d2}>:": "CHAMFER  输入第二个倒角距离 <%{d2}>："
+"CHAMFER  Select first line  [D1=%{d1} D2=%{d2}]:": "CHAMFER  选择第一条直线  [D1=%{d1} D2=%{d2}]："
+"CHAMFER  Select second line  [D1=%{d1} D2=%{d2}]:": "CHAMFER  选择第二条直线  [D1=%{d1} D2=%{d2}]："
+"CHAMFER  Select the adjacent polyline segment  [D1=%{d1} D2=%{d2}]:": "CHAMFER  选择相邻的多段线线段  [D1=%{d1} D2=%{d2}]："
+"CIRCLE  Specify center point:": "CIRCLE  指定圆心："
+"CIRCLE  Specify radius or type value  <%{r}>  [center (%{cx},%{cy})]:": "CIRCLE  指定半径或输入值  <%{r}>  [圆心 (%{cx},%{cy})]："
+"COPY  Enter number of items to array:": "COPY  输入要阵列的项目数："
+"COPY  Specify base point  [%{count} objects]:": "COPY  指定基点  [%{count} 个对象]："
+"COPY  Specify destination  [%{count} copies so far | Array | Enter=done | base %{bx},%{by}]:": "COPY  指定目标点  [已复制 %{count} 个 | 阵列 | Enter=完成 | 基点 %{bx},%{by}]："
+"COPY  Specify second point for %{n}-item array  [base %{bx},%{by}]:": "COPY  指定 %{n} 项阵列的第二点  [基点 %{bx},%{by}]："
+"COPYBASE  Specify base point:": "COPYBASE  指定基点："
+"Continuity": "连续性"
+"Curvature": "曲率"
+"DDEDIT  Select text entity:": "DDEDIT  选择文字实体："
+"DIMALIGNED  Enter dimension text (blank = measured value):": "DIMALIGNED  输入标注文字（空白 = 测量值）："
+"DIMALIGNED  Specify dimension line location  [Text/Angle]:": "DIMALIGNED  指定尺寸线位置  [文字/角度]："
+"DIMALIGNED  Specify first extension line origin:": "DIMALIGNED  指定第一条尺寸界线原点："
+"DIMALIGNED  Specify second extension line origin  [Text/Angle]:": "DIMALIGNED  指定第二条尺寸界线原点  [文字/角度]："
+"DIMALIGNED  Specify text angle (degrees):": "DIMALIGNED  指定文字角度（度）："
+"DIMANGULAR  Specify angle vertex:": "DIMANGULAR  指定角度顶点："
+"DIMANGULAR  Specify dimension arc location:": "DIMANGULAR  指定标注圆弧位置："
+"DIMANGULAR  Specify first extension line point:": "DIMANGULAR  指定第一条尺寸界线点："
+"DIMANGULAR  Specify second extension line point:": "DIMANGULAR  指定第二条尺寸界线点："
+"DIMBASELINE  No base dimension found. Place a dimension first.": "DIMBASELINE  未找到基准标注。请先放置标注。"
+"DIMBASELINE  Specify a second extension line origin (Enter to exit):": "DIMBASELINE  指定第二条尺寸界线原点（按 Enter 退出）："
+"DIMBREAK  Select dimension to break:": "DIMBREAK  选择要打断的标注："
+"DIMBREAK  Select object to break at, or Enter for Auto:": "DIMBREAK  选择要打断的对象，或按 Enter 使用自动："
+"DIMCENTER  Select arc or circle:": "DIMCENTER  选择圆弧或圆："
+"DIMCONTINUE  No base dimension found. Place a dimension first.": "DIMCONTINUE  未找到基准标注。请先放置标注。"
+"DIMCONTINUE  Specify a second extension line origin (Enter to exit):": "DIMCONTINUE  指定第二条尺寸界线原点（按 Enter 退出）："
+"DIMDIAMETER  Enter dimension text (blank = measured value):": "DIMDIAMETER  输入标注文字（空白 = 测量值）："
+"DIMDIAMETER  Specify center point:": "DIMDIAMETER  指定中心点："
+"DIMDIAMETER  Specify dimension line location  [Text/Angle]:": "DIMDIAMETER  指定尺寸线位置  [文字/角度]："
+"DIMDIAMETER  Specify point on circle:": "DIMDIAMETER  指定圆上的点："
+"DIMDIAMETER  Specify text angle (degrees):": "DIMDIAMETER  指定文字角度（度）："
+"DIMEDIT  Enter text override (blank = reset to measured):": "DIMEDIT  输入文字替代（空白 = 重置为测量值）："
+"DIMEDIT  Select dimension:": "DIMEDIT  选择标注："
+"DIMJOGLINE  Select linear or aligned dimension:": "DIMJOGLINE  选择线性或对齐标注："
+"DIMJOGLINE  Specify jog location:": "DIMJOGLINE  指定折弯位置："
+"DIMLINEAR  Enter dimension text (blank = measured value):": "DIMLINEAR  输入标注文字（空白 = 测量值）："
+"DIMLINEAR  Specify dimension line location  [Text/Angle]:": "DIMLINEAR  指定尺寸线位置  [文字/角度]："
+"DIMLINEAR  Specify first extension line origin:": "DIMLINEAR  指定第一条尺寸界线原点："
+"DIMLINEAR  Specify second extension line origin  [Text/Angle]:": "DIMLINEAR  指定第二条尺寸界线原点  [文字/角度]："
+"DIMLINEAR  Specify text angle (degrees):": "DIMLINEAR  指定文字角度（度）："
+"DIMORDINATE  Specify feature location:": "DIMORDINATE  指定特征位置："
+"DIMORDINATE  Specify leader endpoint:": "DIMORDINATE  指定引线端点："
+"DIMRADIUS  Enter dimension text (blank = measured value):": "DIMRADIUS  输入标注文字（空白 = 测量值）："
+"DIMRADIUS  Specify center point:": "DIMRADIUS  指定中心点："
+"DIMRADIUS  Specify dimension line location  [Text/Angle]:": "DIMRADIUS  指定尺寸线位置  [文字/角度]："
+"DIMRADIUS  Specify radius point:": "DIMRADIUS  指定半径点："
+"DIMRADIUS  Specify text angle (degrees):": "DIMRADIUS  指定文字角度（度）："
+"DIMSPACE  Enter value (0 = auto):": "DIMSPACE  输入值（0 = 自动）："
+"DIMSPACE  Select base dimension:": "DIMSPACE  选择基准标注："
+"DIMSPACE  Select dimension to space (%{count} selected, Enter when done):": "DIMSPACE  选择要调整间距的标注（已选择 %{count} 个，完成后按 Enter）："
+"DIMTEDIT  Select dimension:": "DIMTEDIT  选择标注："
+"DIMTEDIT  Specify new location for dimension text:": "DIMTEDIT  指定标注文字的新位置："
+"DIST  Specify first point:": "DIST  指定第一点："
+"DIST  Specify second point:": "DIST  指定第二点："
+"DIVIDE  Enter number of segments:": "DIVIDE  输入分段数目："
+"DIVIDE  Select object to divide:": "DIVIDE  选择要定数等分的对象："
+"DONUT  Specify center of donut (Enter to exit):": "DONUT  指定圆环圆心（按 Enter 退出）："
+"DONUT  Specify inside diameter <0>:": "DONUT  指定内径 <0>："
+"DONUT  Specify outside diameter:": "DONUT  指定外径："
+"Decurve": "非曲线化"
+"Distance": "距离"
+"Distance = %{dist},  Angle in XY Plane = %{angle_xy}°\n  Delta X = %{dx},  Delta Y = %{dy},  Delta Z = %{dz}": "距离 = %{dist}，  XY 平面内的角度 = %{angle_xy}°\n  ΔX = %{dx}，  ΔY = %{dy}，  ΔZ = %{dz}"
+"Distance = %{dist},  Angle in XY Plane = %{angle_xy}°,  Angle from XY Plane = %{angle_z}°\n  Delta X = %{dx},  Delta Y = %{dy},  Delta Z = %{dz}": "距离 = %{dist}，  XY 平面内的角度 = %{angle_xy}°，  与 XY 平面的夹角 = %{angle_z}°\n  ΔX = %{dx}，  ΔY = %{dy}，  ΔZ = %{dz}"
+"Done": "完成"
+"Draw manually": "手动绘制"
+"ELLIPSE ARC  Specify center:": "ELLIPSE ARC  指定中心点："
+"ELLIPSE ARC  Specify end angle point or type degrees  [start=%{sa}]:": "ELLIPSE ARC  指定端点角度点或输入度数  [start=%{sa}]："
+"ELLIPSE ARC  Specify major axis endpoint:": "ELLIPSE ARC  指定长轴端点："
+"ELLIPSE ARC  Specify minor axis point or type half-length  [major r=%{r}]:": "ELLIPSE ARC  指定短轴点或输入半长  [major r=%{r}]："
+"ELLIPSE ARC  Specify start angle point or type degrees:": "ELLIPSE ARC  指定起始角度点或输入度数："
+"EXPLODE  Select objects to explode:": "EXPLODE  选择要分解的对象："
+"EXTRUDE  Height:": "EXTRUDE  高度："
+"EXTRUDE  Select closed profile (Circle, LwPolyline…):": "EXTRUDE  选择闭合轮廓（圆、多段线…）："
+"GROUP  Enter group name [%{name}]:": "GROUP  输入组名 [%{name}]："
+"HATCH  Boundary point 1:": "HATCH  边界点 1："
+"HATCH  Pick internal point:%{miss}": "HATCH  拾取内部点：%{miss}"
+"HATCH  Point %{n}:": "HATCH  点 %{n}："
+"HATCHEDIT  Pattern:%{name}  Scale:%{scale}  Angle:%{angle}  [P <pat> / S <scale> / A <angle> | Enter to apply]:": "HATCHEDIT  图案：%{name}  比例：%{scale}  角度：%{angle}  [P <图案> / S <比例> / A <角度> | 按 Enter 应用]："
+"HATCHEDIT  Select hatch:": "HATCHEDIT  选择填充："
+"HELIX  Enter number of turns <3>:": "HELIX  输入圈数 <3>："
+"HELIX  Specify base radius:": "HELIX  指定底面半径："
+"HELIX  Specify centre point of base:": "HELIX  指定底面中心点："
+"HELIX  Specify helix height:": "HELIX  指定螺旋高度："
+"HELIX  Specify top radius <same as base>:": "HELIX  指定顶面半径 <与底面相同>："
+"ID  Specify point:": "ID  指定点："
+"IMAGE  Specify insertion point (%{name}):  ": "IMAGE  指定插入点（%{name}）："
+"IMAGE  Specify width (drag right):": "IMAGE  指定宽度（向右拖动）："
+"INSERT  Enter block name:%{hint}": "INSERT  输入块名：%{hint}"
+"INSERT  Filling attributes...": "INSERT  正在填充属性..."
+"INSERT  Specify insertion point for \"%{name}\"  [Scale/Rotate]:": "INSERT  指定“%{name}”的插入点  [比例/旋转]："
+"INSERT  Specify rotation angle <0>:": "INSERT  指定旋转角度 <0>："
+"INSERT  Specify scale factor <1>:": "INSERT  指定比例因子 <1>："
+"Insert view": "插入视图"
+"JOIN  Select objects to join (%{count} selected, Enter to apply):": "JOIN  选择要合并的对象（已选择 %{count} 个，按 Enter 应用）："
+"LEADER  Specify arrowhead point:": "LEADER  指定箭头点："
+"LEADER  Specify next point [%{count} pts — Enter to place text]:": "LEADER  指定下一点 [%{count} 个点 — 按 Enter 放置文字]："
+"LENGTHEN  Enter option [DE <delta> / TO <total> / P <pct>]:": "LENGTHEN  输入选项 [DE <增量> / TO <全部> / P <百分数>]："
+"LENGTHEN  Select object:": "LENGTHEN  选择对象："
+"LIMITS  Specify first corner or [On / Off] <%{v}>:": "LIMITS  指定第一个角点或 [开 / 关] <%{v}>："
+"LIMITS  Specify opposite corner <%{v}>:": "LIMITS  指定对角点 <%{v}>："
+"LINE  Specify first point:": "LINE  指定第一点："
+"LINE  Specify next point  [Close/Undo]:": "LINE  指定下一点  [闭合/放弃]："
+"LINE  Specify next point  [Undo]:": "LINE  指定下一点  [放弃]："
+"LOFT  Select first cross-section:": "LOFT  选择第一条横截面："
+"LOFT  Select next cross-section (%{count} selected, Enter to finish):": "LOFT  选择下一条横截面（已选择 %{count} 个，按 Enter 完成）："
+"Last": "最后"
+"Lines": "直线"
+"MEASURE  Select object to measure:": "MEASURE  选择要定距等分的对象："
+"MEASURE  Specify segment length:": "MEASURE  指定线段长度："
+"MEASUREGEOM  Enter an option [Distance/Radius/Angle/ARea]:": "MEASUREGEOM  输入选项 [距离/半径/角度/面积]："
+"MEASUREGEOM  Select arc or circle:": "MEASUREGEOM  选择圆弧或圆："
+"MEASUREGEOM  Specify first corner point (Enter to cancel):": "MEASUREGEOM  指定第一个角点（按 Enter 取消）："
+"MEASUREGEOM  Specify first point:": "MEASUREGEOM  指定第一点："
+"MEASUREGEOM  Specify first ray point:": "MEASUREGEOM  指定第一条射线的点："
+"MEASUREGEOM  Specify next point (%{n} picked, Enter to calculate):": "MEASUREGEOM  指定下一点（已拾取 %{n} 个点，按 Enter 计算）："
+"MEASUREGEOM  Specify second point:": "MEASUREGEOM  指定第二点："
+"MEASUREGEOM  Specify second ray point:": "MEASUREGEOM  指定第二条射线的点："
+"MEASUREGEOM  Specify vertex point:": "MEASUREGEOM  指定顶点："
+"MINSERT  Enter block name:%{hint}": "MINSERT  输入块名：%{hint}"
+"MINSERT  Enter column spacing <%{val}>:": "MINSERT  输入列间距 <%{val}>："
+"MINSERT  Enter number of columns <%{cols}>:": "MINSERT  输入列数 <%{cols}>："
+"MINSERT  Enter number of rows <%{rows}>:": "MINSERT  输入行数 <%{rows}>："
+"MINSERT  Enter row spacing <%{val}>:": "MINSERT  输入行间距 <%{val}>："
+"MINSERT  Specify insertion point for \"%{name}\":": "MINSERT  指定“%{name}”的插入点："
+"MIRROR  Erase source objects? [Yes/No] <No>:": "MIRROR  是否删除源对象？[是/否] <否>："
+"MIRROR  Specify first mirror-line point  [%{count} objects]:": "MIRROR  指定镜像线第一点  [%{count} 个对象]："
+"MIRROR  Specify second point  [p1=%{px},%{py}]:": "MIRROR  指定第二点  [p1=%{px},%{py}]："
+"MLEADER  Specify arrowhead point:": "MLEADER  指定箭头点："
+"MLEADER  Specify next point [%{count} pts — Enter to place text]:": "MLEADER  指定下一点 [%{count} 个点 — 按 Enter 放置文字]："
+"MLEADERADD  Select a multileader:": "MLEADERADD  选择多重引线："
+"MLEADERADD  Specify arrowhead location:": "MLEADERADD  指定箭头位置："
+"MLEADERADD  Specify next leader point (%{count} pts, Enter to finish):": "MLEADERADD  指定下一个引线点（%{count} 个点，按 Enter 完成）："
+"MLEADERALIGN  Select multileaders to align (Enter when done):": "MLEADERALIGN  选择要对齐的多重引线（完成后按 Enter）："
+"MLEADERALIGN  Specify direction — pick start point:": "MLEADERALIGN  指定方向 — 拾取起点："
+"MLEADERALIGN  Specify end point of alignment direction:": "MLEADERALIGN  指定对齐方向的端点："
+"MLEADERCOLLECT  Select multileaders to collect (Enter when done):": "MLEADERCOLLECT  选择要合并的多重引线（完成后按 Enter）："
+"MLEADERCOLLECT  Specify collected multileader location:": "MLEADERCOLLECT  指定合并后多重引线的位置："
+"MLEADERREMOVE  Click near the leader line to remove:": "MLEADERREMOVE  单击引线附近以移除："
+"MLEADERREMOVE  Select a multileader:": "MLEADERREMOVE  选择多重引线："
+"MLINE  Enter scale factor:": "MLINE  输入比例因子："
+"MLINE  Specify next point (%{count} pts, Enter to finish, C to close, S to set scale):": "MLINE  指定下一点（%{count} 个点，按 Enter 完成，C 闭合，S 设置比例）："
+"MLINE  Specify start point (scale=%{scale}):": "MLINE  指定起点（scale=%{scale}）："
+"MOVE  Specify base point  [%{count} objects]:": "MOVE  指定基点  [%{count} 个对象]："
+"MOVE  Specify destination  [base %{bx},%{by}]:": "MOVE  指定目标点  [基点 %{bx},%{by}]："
+"MTEXT  Specify insertion point:": "MTEXT  指定插入点："
+"MVIEW  Specify corner of viewport or [Polygonal/Object/Fit/Insert view]:": "MVIEW  指定视口角点或 [多段线/对象/布满/插入视图]："
+"MVIEW  Specify opposite corner:": "MVIEW  指定对角点："
+"MVIEW Insert view  Choose a named view or [New]:": "MVIEW 插入视图  选择命名视图或 [新建]："
+"MVIEW Insert view  No named views; choose [New]:": "MVIEW 插入视图  没有命名视图；请选择 [新建]："
+"MVIEW Insert view  Specify placement point:": "MVIEW 插入视图  指定放置点："
+"MVIEW New view  Specify first model-space corner:": "MVIEW 新建视图  指定模型空间第一个角点："
+"MVIEW New view  Specify opposite model-space corner:": "MVIEW 新建视图  指定模型空间对角点："
+"MVIEW Object  Select a circle, full ellipse, or closed polyline:": "MVIEW 对象  选择圆、完整椭圆或闭合多段线："
+"MVIEW Polygonal  Specify start point:": "MVIEW 多段线  指定起点："
+"MVIEW Polygonal [%{mode}]  Specify next point or [Arc/Line/Close/Undo] (%{count} points):": "MVIEW 多段线 [%{mode}]  指定下一点或 [圆弧/直线/闭合/放弃]（%{count} 个点）："
+"Multiple": "多个"
+"No": "否"
+"No entities selected for WBLOCK.": "未为 WBLOCK 选择实体。"
+"None of the selected entities could be exported.": "所选实体均无法导出。"
+"OFFSET  Select object to offset (Enter to finish):": "OFFSET  选择要偏移的对象（按 Enter 完成）："
+"OFFSET  Specify offset distance or [Through] <%{d}>:": "OFFSET  指定偏移距离或 [通过] <%{d}>："
+"OFFSET%{n}  Click side or [Multiple]  [distance %{d}]:": "OFFSET%{n}  单击要偏移的一侧或 [多个]  [距离 %{d}]："
+"OFFSET%{n}  Click through point or [Multiple]:": "OFFSET%{n}  单击通过点或 [多个]："
+"OFFSET%{n} Multiple  Click next side [distance %{d}]:": "OFFSET%{n} 多个  单击下一侧 [距离 %{d}]："
+"OFFSET%{n} Multiple  Click next through point:": "OFFSET%{n} 多个  单击下一个通过点："
+"Object": "对象"
+"Off": "关"
+"PASTECLIP  Pick insertion point:": "PASTECLIP  拾取插入点："
+"PEDIT  Enter option:": "PEDIT  输入选项："
+"PEDIT  Object is not a polyline. Turn it into one?  [Yes/No] <Y>:": "PEDIT  对象不是多段线。是否将其转换为多段线？  [是/否] <Y>："
+"PEDIT  Select polyline (or a line/arc to convert):": "PEDIT  选择多段线（或要转换的直线/圆弧）："
+"PEDIT  Specify new width:": "PEDIT  指定新宽度："
+"PEDIT Join  Select objects to join (%{count} picked), Enter to merge:": "PEDIT 合并  选择要合并的对象（已拾取 %{count} 个），按 Enter 合并："
+"PLOTWINDOW  Specify first corner of plot window:": "PLOTWINDOW  指定打印窗口第一个角点："
+"PLOTWINDOW  Specify opposite corner:": "PLOTWINDOW  指定对角点："
+"POLYGON E  Enter number of sides <%{n}>:": "POLYGON E  输入边数 <%{n}>："
+"POLYGON E  Specify first endpoint of edge [%{n} sides]:": "POLYGON E  指定边的第一个端点 [%{n} 条边]："
+"POLYGON E  Specify second endpoint of edge [%{n} sides]:": "POLYGON E  指定边的第二个端点 [%{n} 条边]："
+"Polygonal": "多段线"
+"Previous": "上一个"
+"QDIM  Select geometry to dimension (Enter when done):": "QDIM  选择要标注的几何对象（完成后按 Enter）："
+"QDIM  Specify dimension line position:": "QDIM  指定尺寸线位置："
+"QUICKPRINT  %{count} selected — Enter to plot, or keep selecting:": "QUICKPRINT  已选择 %{count} 个 — 按 Enter 打印，或继续选择："
+"QUICKPRINT  Select objects to quick-print:": "QUICKPRINT  选择要快速打印的对象："
+"RECT CEN  Specify center point:": "RECT CEN  指定中心点："
+"RECT CEN  Specify corner point:": "RECT CEN  指定角点："
+"REFCLOSE  [Save/Discard] <Save>:": "REFCLOSE  [保存/放弃] <保存>："
+"REVCLOUD  Specify next point (%{count} pts, Enter to close):": "REVCLOUD  指定下一点（%{count} 个点，按 Enter 闭合）："
+"REVCLOUD  Specify start point (arc length = %{arc_length}):": "REVCLOUD  指定起点（弧长 = %{arc_length}）："
+"REVERSE  Select line, polyline or spline to reverse:": "REVERSE  选择要反转的直线、多段线或样条曲线："
+"REVOLVE  Angle of revolution <360>:": "REVOLVE  旋转角度 <360>："
+"REVOLVE  Axis end point:": "REVOLVE  轴端点："
+"REVOLVE  Axis start point:": "REVOLVE  轴起点："
+"REVOLVE  Select profile:": "REVOLVE  选择轮廓："
+"ROTATE  Specify first reference point or type reference angle:": "ROTATE  指定第一个参照点或输入参照角度："
+"ROTATE  Specify new absolute angle  [ref=%{a}]:": "ROTATE  指定新的绝对角度  [参照=%{a}]："
+"ROTATE  Specify rotation angle  <%{a}>:": "ROTATE  指定旋转角度  <%{a}>："
+"ROTATE  Specify rotation center  [%{count} objects]:": "ROTATE  指定旋转中心  [%{count} 个对象]："
+"ROTATE  Specify second reference point:": "ROTATE  指定第二个参照点："
+"Radius = %{radius},  Diameter = %{diameter}": "半径 = %{radius}，  直径 = %{diameter}"
+"SCALE  Specify base point  [%{count} objects]:": "SCALE  指定基点  [%{count} 个对象]："
+"SCALE  Specify first reference point or type reference length:": "SCALE  指定第一个参照点或输入参照长度："
+"SCALE  Specify new length from base or type a length  [ref=%{d}]:": "SCALE  指定基点起的新长度或输入长度  [参照=%{d}]："
+"SCALE  Specify scale factor  <%{f}>:": "SCALE  指定比例因子  <%{f}>："
+"SCALE  Specify second reference point:": "SCALE  指定第二个参照点："
+"SKETCH  Pen down — move to sketch, click to lift, Enter to record:": "SKETCH  落笔 — 移动以绘图，单击抬笔，按 Enter 记录："
+"SKETCH  Pen up — click to lower the pen, Enter to record:": "SKETCH  抬笔 — 单击落笔，按 Enter 记录："
+"SOLID  Specify first point:": "SOLID  指定第一点："
+"SOLID  Specify fourth point:": "SOLID  指定第四点："
+"SOLID  Specify second point:": "SOLID  指定第二点："
+"SOLID  Specify third point:": "SOLID  指定第三点："
+"SPLINE  Specify first control point:": "SPLINE  指定第一个控制点："
+"SPLINE  Specify next point  [%{n} pts]:": "SPLINE  指定下一点  [%{n} 个点]："
+"STRETCH  Specify base point:": "STRETCH  指定基点："
+"STRETCH  Specify first corner of crossing window  [%{count} objects]:": "STRETCH  指定交叉窗口第一个角点  [%{count} 个对象]："
+"STRETCH  Specify first corner of crossing window:": "STRETCH  指定交叉窗口第一个角点："
+"STRETCH  Specify new point  [base %{bx},%{bz}]:": "STRETCH  指定新点  [基点 %{bx},%{bz}]："
+"STRETCH  Specify opposite corner:": "STRETCH  指定对角点："
+"SWEEP  Select path (Line, Arc, LwPolyline):": "SWEEP  选择路径（直线、圆弧、多段线）："
+"SWEEP  Select profile to sweep:": "SWEEP  选择要扫掠的轮廓："
+"TABLE  Enter number of columns [%{cols}]:": "TABLE  输入列数 [%{cols}]："
+"TABLE  Enter number of rows (incl. header) [%{rows}]  (%{cols} cols):": "TABLE  输入行数（含表头）[%{rows}]  （%{cols} 列）："
+"TABLE  Specify insertion point  [%{cols}×%{rows}]:": "TABLE  指定插入点  [%{cols}×%{rows}]："
+"TEXT  Specify insertion point:": "TEXT  指定插入点："
+"TEXTEDIT Select an annotation object or [Undo Mode] <exit>:": "TEXTEDIT 选择注释对象或 [放弃模式] <退出>："
+"TEXTEDIT Select an annotation object or [Undo Mode]:": "TEXTEDIT 选择注释对象或 [放弃模式]："
+"TOLERANCE  Enter tolerance text:": "TOLERANCE  输入公差文字："
+"TOLERANCE  Specify insertion point  [%{text}]:": "TOLERANCE  指定插入点  [%{text}]："
+"TORIENT  New absolute rotation <Most Readable>:": "TORIENT  新的绝对旋转 <最易读>："
+"TORIENT  Specify second point:": "TORIENT  指定第二点："
+"TRACE  Specify next point  [Undo]:": "TRACE  指定下一点  [放弃]："
+"TRACE  Specify start point:": "TRACE  指定起点："
+"TRACE  Specify trace width <%{w}>:": "TRACE  指定带宽 <%{w}>："
+"Tangent": "相切"
+"Through": "通过"
+"UCS  name of UCS to delete:": "UCS  要删除的 UCS 名称："
+"UCS  name to save current UCS as:": "UCS  保存当前 UCS 为的名称："
+"UCS  new origin point:": "UCS  新原点："
+"UCS  option [World/Z/X/Y/Origin/Save/Delete] or name:": "UCS  选项 [世界/Z/X/Y/原点/保存/删除] 或名称："
+"UCS  rotation angle about X (degrees):": "UCS  绕 X 轴的旋转角度（度）："
+"UCS  rotation angle about Y (degrees):": "UCS  绕 Y 轴的旋转角度（度）："
+"UCS  rotation angle about Z (degrees):": "UCS  绕 Z 轴的旋转角度（度）："
+"UCS  value:": "UCS  值："
+"UNGROUP  Select grouped objects:": "UNGROUP  选择成组对象："
+"VPLAYER  F <layer> = Freeze  |  T <layer> = Thaw  |  Enter = Exit": "VPLAYER  F <图层> = 冻结  |  T <图层> = 解冻  |  Enter = 退出"
+"WIPEOUT  Specify first point or [Polyline]:": "WIPEOUT  指定第一点或 [多段线]："
+"WIPEOUT  Specify next point or [Undo/Close] (%{n} points):": "WIPEOUT  指定下一点或 [放弃/闭合]（%{n} 个点）："
+"WIPEOUT Polyline  Select a closed planar polyline:": "WIPEOUT 多段线  选择闭合平面多段线："
+"WIPEOUT Rectangular  Specify first corner:": "WIPEOUT 矩形  指定第一个角点："
+"WIPEOUT Rectangular  Specify opposite corner:": "WIPEOUT 矩形  指定对角点："
+"Width": "宽度"
+"X = %{x},  Y = %{y},  Z = %{z}": "X = %{x}，  Y = %{y}，  Z = %{z}"
+"XATTACH  Specify insertion point for \"%{name}\":": "XATTACH  指定“%{name}”的插入点："
+"XLINE  Specify a point:": "XLINE  指定点："
+"XLINE  Specify through point:": "XLINE  指定通过点："
+"Yes": "是"
+"ZOOM WINDOW  Specify first corner:": "ZOOM WINDOW  指定第一个角点："
+"ZOOM WINDOW  Specify opposite corner:": "ZOOM WINDOW  指定对角点："
+"eXit": "退出"
+
+# ---- Start page / properties panel labels ----
+'%{count} objects selected': '%{count} 个对象已选择'
+'%{scope} Visual Style': '%{scope} 视觉样式'
+3D Visualization: 三维可视化
+AC Version: AC 版本
+Active Viewport: 活动视口
+Adjust Colors for Background: 针对背景调整颜色
+Advanced: 高级
+Alignment: 对齐
+All: 全部
+Alt enabled: 换算单位启用
+Alt format: 换算单位格式
+Alt precision: 换算单位精度
+Alt prefix/suffix: 换算单位前缀/后缀
+Alt roundoff: 换算单位舍入
+Alt scale factor: 换算单位比例因子
+Alt suppress leading zeros: 换算单位消零（前导零）
+Alt suppress trailing zeros: 换算单位消零（后续零）
+Ambient: 环境光
+Angle: 角度
+Angle format: 角度格式
+Angle precision: 角度精度
+Angles: 角度
+Annotation scale: 注释比例
+Annotative scale: 注释性比例
+Arc End (deg): 弧终点（度）
+Arc Start (deg): 弧起点（度）
+Arc X: 弧 X
+Arc Y: 弧 Y
+Arc Z: 弧 Z
+Arc length: 弧长
+Arc-Aligned Text: 沿弧对齐的文字
+Area: 面积
+Arrow: 箭头
+Arrow size: 箭头大小
+Arrowhead: 箭头
+Arrowhead size: 箭头大小
+Associative: 关联
+Attachment type: 附着类型
+Attenuation: 衰减
+Axis Point: 轴点
+Axis Vector: 轴矢量
+Back Line: 背景线
+Background color: 背景颜色
+Background mask: 背景遮罩
+Background transparency: 背景透明度
+Base X: 基点 X
+Base Y: 基点 Y
+Base Z: 基点 Z
+Base point X: 基点 X
+Base point Y: 基点 Y
+Base point Z: 基点 Z
+Base radius: 底部半径
+Big Font: 大字体
+Blend Creases: 混合折缝
+Block color: 块颜色
+Block connection: 块连接
+Block contents: 块内容
+Block rotation: 块旋转
+Block scale: 块比例
+Bold: 粗体
+Book: 书
+Bottom Height: 底部高度
+Boundary width: 边界宽度
+Break heights: 打断高度
+Brightness: 亮度
+Browser storage: 浏览器存储
+Bump Map: 凹凸贴图
+C++ Class: C++ 类
+CV Hull: CV 外壳
+Camera: 相机
+Cast Shadows: 投射阴影
+Center: 中心
+Center X: 中心 X
+Center Y: 中心 Y
+Center Z: 中心 Z
+Centered: 居中
+Centroid: 质心
+Character Set: 字符集
+Character Spacing: 字符间距
+Chord X: 弦 X
+Chord Y: 弦 Y
+Chord Z: 弦 Z
+Circumference: 周长
+Class: 类
+Class / Entity: 类/实体
+Class ID: 类 ID
+Class Version: 类版本
+Classification Scheme: 分类方案
+Clip inverted: 裁剪反转
+Clipping: 裁剪
+Clippings: 裁剪
+Closed: 闭合
+Color 1: 颜色 1
+Color 2: 颜色 2
+Color Book: 颜色书
+Color Name: 颜色名称
+Color Temperature: 色温
+Column count: 列数
+Column gutter: 列间距
+Column width: 列宽
+Columns: 列
+Constant: 常量
+Constrain: 约束
+Contents: 内容
+Contrast: 对比度
+Control Point: 控制点
+Control Point Count: 控制点数
+Control Point X: 控制点 X
+Control Point Y: 控制点 Y
+Control Point Z: 控制点 Z
+Coordination Model: 协调模型
+Creased Edges: 锐边
+Croppings: 裁剪
+Cumulative area: 累计面积
+Current Color Scheme: 当前颜色方案
+Current Vertex: 当前顶点
+Current vertex: 当前顶点
+Cutting Line: 剖切线
+DWG Payload: DWG 有效负载
+DWG Version: DWG 版本
+DXF Codes: DXF 代码
+DXF Name: DXF 名称
+DXF Subclass: DXF 子类
+Data: 数据
+Data Points: 数据点
+Data Size: 数据大小
+Database Curves: 数据库曲线
+Decimal separator: 小数分隔符
+Decoded Data: 解码数据
+Defined height: 定义高度
+Defined width: 定义宽度
+Definition: 定义
+Definition X: 定义 X
+Definition Y: 定义 Y
+Definition Z: 定义 Z
+Degree: 阶数
+Delta X: 增量 X
+Delta Y: 增量 Y
+Delta Z: 增量 Z
+Diffuse: 漫射
+Diffuse Map: 漫射贴图
+Dim line 1: 尺寸线 1
+Dim line 2: 尺寸线 2
+Dim line color: 尺寸线颜色
+Dim line ext: 尺寸线延伸
+Dim line forced: 强制尺寸线
+Dim line inside: 尺寸线内
+Dim line lineweight: 尺寸线线宽
+Dim prefix/suffix: 前缀/后缀
+Dim roundoff: 标注舍入
+Dim scale linear: 线性比例因子
+Dim scale overall: 全局比例因子
+Dim style: 标注样式
+Dim units: 标注单位
+Dimension style: 标注样式
+Direction: 方向
+Direction X: 方向 X
+Direction Y: 方向 Y
+Direction Z: 方向 Z
+Direction vector X: 方向矢量 X
+Direction vector Y: 方向矢量 Y
+Direction vector Z: 方向矢量 Z
+Discussions: 讨论
+Discussions load from GitHub.: 讨论从 GitHub 加载。
+Double: 双向
+Draft: 拔模
+Draft Distances: 拔模距离
+Drawing View: 工程视图
+Dynamic Block Entity: 动态块实体
+Edge 1: 边 1
+Edge 2: 边 2
+Edge 3: 边 3
+Edge 4: 边 4
+Edge style: 边样式
+Edges: 边
+Elevation: 标高
+Elevation Gradient: 标高渐变
+Elevation Max: 标高最大值
+Elevation Min: 标高最小值
+Embedded Curves: 嵌入曲线
+Embedded MText: 嵌入多行文字
+Enabled: 启用
+End Angle: 终止角度
+End Limit: 结束限制
+End Tangent X: 端点切线 X
+End Tangent Y: 端点切线 Y
+End Tangent Z: 端点切线 Z
+End X: 端点 X
+End Y: 端点 Y
+End Z: 端点 Z
+End angle: 终止角度
+End parameter: 终止参数
+End segment width: 端点段宽度
+Entity Transform: 实体变换
+Ext Rotation (deg): 延伸旋转（度）
+Ext line 1: 尺寸界线 1
+Ext line 2: 尺寸界线 2
+Ext line color: 尺寸界线颜色
+Ext line ext: 尺寸界线延伸
+Ext line fixed: 固定长度尺寸界线
+Ext line fixed length: 尺寸界线固定长度
+Ext line lineweight: 尺寸界线线宽
+Ext line offset: 尺寸界线偏移
+Extended Lighting: 扩展照明
+Extents Max: 范围最大值
+Extents Min: 范围最小值
+Extra Modeler Data: 附加建模器数据
+Face: 面
+Face count: 面数
+Face style: 面样式
+Fade: 淡入淡出
+Falloff Angle: 衰减角
+Feature X: 特征点 X
+Feature Y: 特征点 Y
+Feature Z: 特征点 Z
+Field contents: 字段内容
+Files you open will show up here.: 您打开的文件将显示在这里。
+Fill color: 填充颜色
+First X: 第一点 X
+First Y: 第一点 Y
+First Z: 第一点 Z
+Fit Point: 拟合点
+Fit Point Count: 拟合点数
+Fit Point X: 拟合点 X
+Fit Point Y: 拟合点 Y
+Fit Point Z: 拟合点 Z
+Fit Tolerance: 拟合公差
+Fit/Smooth: 拟合/平滑
+Fit/smooth: 拟合/平滑
+Fixed Elevation Range: 固定标高范围
+Flag: 标志
+Flags: 标志
+Font: 字体
+Format: 格式
+Frame Text: 边框文字
+From DXF: 来自 DXF
+Frozen Layers: 冻结图层
+General: 常规
+Geographic Position Marker: 地理定位标记
+Geometry: 几何图形
+Global width: 全局宽度
+Gloss: 光泽度
+Gradient type: 渐变色类型
+Graphics: 图形
+Handle: 句柄
+Has Leader: 有引线
+High Threshold: 高阈值
+History: 历史记录
+Horizontal Dir (deg): 水平方向（度）
+Horizontal Landing: 水平基线
+Hotspot Angle: 聚光角
+Hyperlink: 超链接
+ISO pen width: ISO 笔宽
+Identifier: 标识符
+Illuminance Distance: 照度距离
+Indicator Alpha: 指示器 Alpha
+Indicator Color: 指示器颜色
+Insert X: 插入 X
+Insert Y: 插入 Y
+Insert Z: 插入 Z
+Intensity: 强度
+Intensity Color Scheme: 强度颜色方案
+Intensity Gradient: 强度渐变
+Intensity Range: 强度范围
+Intensity Scheme: 强度方案
+Internal: 内部
+Invert: 反转
+Invisible: 不可见
+Island detection style: 孤岛检测样式
+Isoline List: 等值线列表
+Isolines: 等值线
+Italic: 斜体
+Jog Angle: 折弯角度
+Jog X: 折弯 X
+Jog Y: 折弯 Y
+Jog Z: 折弯 Z
+Justify: 对正
+Keep recent files: 保留最近文件
+Kind: 类型
+Knot Parameterization: 节点参数化
+Lamp Preset: 灯光预设
+Landing Gap: 基线间隙
+Landing distance: 基线距离
+Landing gap: 基线间隙
+Layout Print Configuration: 布局打印配置
+Leader 1 X: 引线 1 X
+Leader 1 Y: 引线 1 Y
+Leader 1 Z: 引线 1 Z
+Leader 2 X: 引线 2 X
+Leader 2 Y: 引线 2 Y
+Leader 2 Z: 引线 2 Z
+Leader Length: 引线长度
+Leader X: 引线 X
+Leader Y: 引线 Y
+Leader Z: 引线 Z
+Leader color: 引线颜色
+Leader extension: 引线延伸
+Leader linetype: 引线线型
+Leader lineweight: 引线线宽
+Leader type: 引线类型
+Left Attachment: 左侧附着
+Left Offset: 左侧偏移
+Legacy Entity: 遗留实体
+Length: 长度
+Less: 收起
+Level of Smoothness: 平滑度级别
+Light: 灯光
+Line Spacing: 行距
+Line space distance: 行距距离
+Line space factor: 行距比例
+Line space style: 行距样式
+Lines & Arrows: 直线和箭头
+Linetype generation: 线型生成
+Linetype scale: 线型比例
+Linked cells: 链接单元
+Loading discussions…: 正在加载讨论…
+Loading videos…: 正在加载视频…
+Lock position: 锁定位置
+Locked: 已锁定
+Loft Flags: 放样标志
+Loft Transform: 放样变换
+Low Threshold: 低阈值
+Luminance: 亮度
+M closed: M 闭合
+M density: M 密度
+M vertex count: M 顶点数
+Major axis vector X: 长轴矢量 X
+Major axis vector Y: 长轴矢量 Y
+Major axis vector Z: 长轴矢量 Z
+Major radius: 长半轴
+Manual heights: 手动高度
+Manual positions: 手动位置
+Map Size: 贴图大小
+Mass Properties: 质量特性
+Material: 材质
+Material Bindings: 材质绑定
+Material Details: 材质详细信息
+Maximum Intensity: 最大强度
+Measurement: 测量
+Merged ranges: 合并范围
+Minimum Intensity: 最小强度
+Minor axis vector X: 短轴矢量 X
+Minor axis vector Y: 短轴矢量 Y
+Minor axis vector Z: 短轴矢量 Z
+Minor radius: 短半轴
+Misc: 其他
+Mode: 模式
+Modeler Display Data: 建模器显示数据
+Modeler Format: 建模器格式
+Modeler Geometry: 建模器几何图形
+Monochrome: 单色
+More Colors…: 更多颜色…
+Multileader style: 多重引线样式
+Multiple lines: 多行
+N closed: N 闭合
+N density: N 密度
+N vertex count: N 顶点数
+NURB Version: NURB 版本
+Named View: 命名视图
+No selection: 无选择
+Normal Map: 法线贴图
+Normal X: 法线 X
+Normal Y: 法线 Y
+Normal Z: 法线 Z
+Notes: 注释
+Number: 编号
+Number of Edges: 边数
+Number of Faces: 面数
+Number of Grips: 夹点数
+Number of Vertices: 顶点数
+Number of turns: 圈数
+OLE Frame: OLE 框架
+Object References: 对象参照
+Obliquing: 倾斜
+Offset From Arc: 距弧偏移
+Opacity: 不透明度
+Opacity Map: 不透明贴图
+Open Discussions on GitHub: 在 GitHub 上打开讨论
+Open File…: 打开文件…
+Open playlist on YouTube: 在 YouTube 上打开播放列表
+Ordinate Type: 坐标类型
+Origin: 原点
+Origin X: 原点 X
+Origin Y: 原点 Y
+Origin Z: 原点 Z
+Out Of Range Behavior: 超出范围行为
+Overall scale: 全局比例
+Override Center X: 替代中心 X
+Override Center Y: 替代中心 Y
+Override Center Z: 替代中心 Z
+Override Option: 覆盖选项
+Partial: 部分
+Path Entity Transform: 路径实体变换
+Path Transform: 路径变换
+Pattern: 图案
+Pattern name: 图案名称
+Payload: 有效负载
+Perimeter: 周长
+Photometric: 光度
+Physical Intensity: 物理强度
+Physical Method: 物理方法
+Pinned: 已置顶
+Pitch And Family: 字距和字族
+Planar: 平面
+Plot Glyph: 图形符号
+Plot style table: 打印样式表
+Plot table attached to: 打印样式表应用于
+Plot table type: 打印样式表类型
+Point 1 X: 点 1 X
+Point 1 Y: 点 1 Y
+Point 1 Z: 点 1 Z
+Point 2 X: 点 2 X
+Point 2 Y: 点 2 Y
+Point 2 Z: 点 2 Z
+Point 3 X: 点 3 X
+Point 3 Y: 点 3 Y
+Point 3 Z: 点 3 Z
+Point 4 X: 点 4 X
+Point 4 Y: 点 4 Y
+Point 4 Z: 点 4 Z
+Point Cloud Display: 点云显示
+Point Cloud Ex: 点云 Ex
+Point Cloud Ex Display: 点云 Ex 显示
+Point Count: 点计数
+Point X: 点 X
+Point Y: 点 Y
+Point Z: 点 Z
+Position: 位置
+Position X: 位置 X
+Position Y: 位置 Y
+Position Z: 位置 Z
+Precision: 精度
+Primary Units: 主单位
+Property Bag: 属性包
+Proxy Entity: 代理实体
+Proxy ID: 代理 ID
+Radius ratio: 半径比
+Reactor: 反应器
+Recent Documents: 最近文档
+Recent Files: 最近文件
+Records: 记录
+Reference Point: 参照点
+Reflection Map: 反射贴图
+Reflectivity: 反射率
+Refraction: 折射
+Refraction Map: 折射贴图
+Registered Class Entity: 已注册类实体
+Remote Text: 远程文字
+Render Flags: 渲染标志
+Repeat bottom labels: 重复底部标签
+Repeat top labels: 重复顶部标签
+Revision: 修订
+Revolve Entity: 旋转实体
+Revolve Flags: 旋转标志
+Right Attachment: 右侧附着
+Right Offset: 右侧偏移
+Rows: 行
+SHX: SHX
+Saved File: 保存的文件
+Scale Object: 缩放对象
+Scale X: 比例 X
+Scale Y: 比例 Y
+Scale Z: 比例 Z
+Second X: 第二点 X
+Second Y: 第二点 Y
+Second Z: 第二点 Z
+Section Object: 截面对象
+Section Points: 截面点
+Section Symbol: 截面符号
+Section Vertices: 截面顶点
+Segments: 段数
+Self Illumination: 自发光
+Send Feedback: 发送反馈
+Settings: 设置
+Shadow flags: 阴影标志
+Shadows: 阴影
+Shape: 形状
+Show: 显示
+Show Clipping: 显示裁剪
+Show Cropping: 显示裁剪
+Show Intensity: 显示强度
+Show clipped: 显示裁剪
+Show image: 显示图像
+Show underlay: 显示底图
+Softness: 柔和度
+Source Files: 源文件
+Source block: 源块
+Spacing: 间距
+Specular: 镜面
+Specular Map: 镜面贴图
+Sponsors: 赞助商
+Start Angle: 起始角度
+Start Limit: 开始限制
+Start Tangent X: 起点切线 X
+Start Tangent Y: 起点切线 Y
+Start Tangent Z: 起点切线 Z
+Start X: 起点 X
+Start Y: 起点 Y
+Start Z: 起点 Z
+Start angle: 起始角度
+Start parameter: 起始参数
+Start segment width: 起点段宽度
+State: 状态
+Storage Size: 存储大小
+Stored Point Counts: 存储的点计数
+Style: 样式
+Style Handle: 样式句柄
+Style Name: 样式名称
+Style justification: 样式对正
+Style scale: 样式比例
+Stylization Type: 样式化类型
+Support on Patreon: 在 Patreon 上支持我们
+Supporters: 支持者
+Suppress leading zeros: 消零（前导零）
+Suppress trailing zeros: 消零（后续零）
+Surface Area: 表面积
+Surface Construction: 曲面构造
+Sweep / Path: 扫掠/路径
+Sweep Entity: 扫掠实体
+Sweep Entity Transform: 扫掠实体变换
+Sweep Options: 扫掠选项
+Sweep Transform: 扫掠变换
+Sweep Vector: 扫掠矢量
+Symbol Scale: 符号比例
+Table Breaks: 表格打断
+Table height: 表格高度
+Table style: 表格样式
+Table width: 表格宽度
+Target X: 目标点 X
+Target Y: 目标点 Y
+Target Z: 目标点 Z
+Tessellation: 镶嵌
+Text Alignment: 文字对齐
+Text Color: 文字颜色
+Text Direction: 文字方向
+Text Payload: 文字有效负载
+Text Position: 文字位置
+Text Rotation (deg): 文字旋转（度）
+Text Size: 文字大小
+Text Visible: 文字可见
+Text X: 文字 X
+Text Y: 文字 Y
+Text Z: 文字 Z
+Text alignment X: 文字对齐 X
+Text alignment Y: 文字对齐 Y
+Text alignment Z: 文字对齐 Z
+Text color: 文字颜色
+Text height: 文字高度
+Text inside: 文字在内
+Text inside align: 文字内侧对齐
+Text movement: 文字移动
+Text offset: 文字偏移
+Text outside align: 文字外侧对齐
+Text pos hor: 文字水平位置
+Text pos vert: 文字垂直位置
+Text style: 文字样式
+Thickness: 厚度
+Tolerance display: 公差格式
+Tolerance limit lower: 公差下限
+Tolerance limit upper: 公差上限
+Tolerance pos vert: 公差垂直位置
+Tolerance precision: 公差精度
+Tolerance suppress leading zeros: 公差消零（前导零）
+Tolerance suppress trailing zeros: 公差消零（后续零）
+Tolerance text height: 公差文字高度
+Top Height: 顶部高度
+Top radius: 顶部半径
+Total angle: 总角度
+Transform: 变换
+Translucence: 半透明度
+Triangles: 三角面
+Turn height: 圈高度
+Turn slope: 圈斜率
+Turns: 圈数
+Tutorials: 教程
+Twist: 扭曲
+Type: 类型
+U Isolines: U 等值线
+U Vector 1: U 矢量 1
+U Vector 2: U 矢量 2
+UCS Name: UCS 名称
+UCS Origin: UCS 原点
+UCS X: UCS X
+UCS Y: UCS Y
+UCS Z: UCS Z
+UCS icon On: UCS 图标开
+UCS icon at origin: UCS 图标位于原点
+UCS per viewport: 每个视口的 UCS
+UID: UID
+Underlay Adjust: 底图调整
+Underlay layers: 底图图层
+Underlay name: 底图名称
+Underlay path: 底图路径
+Underlined: 下划线
+Uniform scale: 统一比例
+Unit Factor: 单位因子
+Unknown Flags: 未知标志
+Use Limits: 使用界限
+User Text: 用户文字
+V Isolines: V 等值线
+V Vector 1: V 矢量 1
+V Vector 2: V 矢量 2
+V-Align: 垂直对齐
+Verify: 验证
+Vertex: 顶点
+Vertex 1 X: 顶点 1 X
+Vertex 1 Y: 顶点 1 Y
+Vertex 1 Z: 顶点 1 Z
+Vertex 2 X: 顶点 2 X
+Vertex 2 Y: 顶点 2 Y
+Vertex 2 Z: 顶点 2 Z
+Vertex 3 X: 顶点 3 X
+Vertex 3 Y: 顶点 3 Y
+Vertex 3 Z: 顶点 3 Z
+Vertex 4 X: 顶点 4 X
+Vertex 4 Y: 顶点 4 Y
+Vertex 4 Z: 顶点 4 Z
+Vertex X: 顶点 X
+Vertex Y: 顶点 Y
+Vertex Z: 顶点 Z
+Vertex count: 顶点数
+Vertical Direction: 垂直方向
+Vertices: 顶点
+Videos: 视频
+Videos load from the internet.: 视频从互联网加载。
+View Representation: 视图表示
+View Silhouettes: 视图轮廓
+View Symbol Flags: 视图符号标志
+View Symbol Version: 视图符号版本
+Visual style: 视觉样式
+Volume: 体积
+Watertight: 水密
+Web: Web
+Web File: Web 文件
+Weight: 权重
+Welcome: 欢迎
+Width factor: 宽度因子
+Wireframe Cache: 线框缓存
+Wires: 线框
+Wizard Flag: 向导标志
+X Scale: X 比例
+
+# ---- Start page / properties panel labels ----
+'"%{file_name}" could not be saved.': 无法保存“%{file_name}”。
+'"%{file_name}" was changed by another application.': “%{file_name}”已被其他应用程序更改。
+'%{count} selected layers': '%{count} 个选定图层'
+? '%{subject} still %{has} %{count} %{obj}.
+
+
+  Deleting will also remove %{those} from the drawing. Continue?'
+: '“%{subject}”仍包含 %{count} 个对象。
+
+
+  删除图层也将从图形中移除这些对象。是否继续？'
+3D Face: 三维面
+3D Solid: 三维实体
+Annotation Object Scale: 注释对象比例
+Append to current selection: 追加到当前选择
+Attribute Definition: 属性定义
+Attribute Editor: 属性编辑器
+Back: 返回
+Block End: 块结尾
+Block Reference: 块参照
+Body: 体
+Bring Above Object: 置于对象之上
+Bring to Front: 置于最前
+Default Application: 默认应用程序
+Delete Layer: 删除图层
+Delete Objects: 删除对象
+'Details: %{error}': 详细信息：%{error}
+Dimension Style Manager: 标注样式管理器
+Discard: 放弃
+Do you want to save changes to "%{name}"?: 是否保存对“%{name}”的更改？
+Draw Order: 绘图次序
+Drawing: 图形
+Drawing Changed on Disk: 磁盘上的图形已更改
+Edit Layer State: 编辑图层状态
+Ellipse: 椭圆
+End Object Isolation: 结束对象隔离
+Enter: 回车
+Extended Entity: 扩展实体
+External Reference: 外部参照
+'File name:': 文件名：
+'Format:': 格式：
+Hatch: 图案填充
+Hide Objects: 隐藏对象
+Invert Selection: 反选
+Keyboard Shortcuts: 键盘快捷键
+Layer "%{name}": 图层“%{name}”
+Layer Manager: 图层管理器
+Layer State Manager: 图层状态管理器
+Layout Manager: 布局管理器
+MLine: 多线
+Make Open CAD Studio your default CAD app?: 将 Open CAD Studio 设置为默认 CAD 应用程序？
+Mesh: 网格
+MultiLeader: 多重引线
+Multileader Style Manager: 多重引线样式管理器
+Multiline Style Manager: 多线样式管理器
+Not now: 暂不
+'Object type:': 对象类型：
+Open .dwg and .dxf drawings in Open CAD Studio by default. You can change this later in your system settings.: 默认使用 Open CAD Studio 打开 .dwg 和 .dxf 图形。您可以稍后在系统设置中更改。
+'Operator:': 运算符：
+Overwrite: 覆盖
+PERF: 性能
+'Path: %{path}': 路径：%{path}
+Plot Style Editor: 打印样式编辑器
+Plugin Manager: 插件管理器
+PolyfaceMesh: 多面网格
+PolygonMesh: 多边形网格
+Polyline2D: 二维多段线
+Polyline3D: 三维多段线
+'Property:': 特性：
+Quick Select: 快速选择
+Quick Select...: 快速选择...
+Raster Image: 光栅图像
+Ray: 射线
+Region: 面域
+Reload from Disk: 从磁盘重新加载
+Repeat %{last}: 重复 %{last}
+Save Drawing As: 图形另存为
+Save Warning: 保存警告
+Save anyway: 仍然保存
+Save as...: 另存为...
+Save in source version: 保存为源版本
+? Saving now could destroy those external changes. Reload the disk copy, save your local work elsewhere, or explicitly overwrite it.
+: 现在保存可能会破坏这些外部更改。请重新加载磁盘副本、在其他位置保存本地工作，或明确覆盖它。
+Scale Manager: 比例管理器
+Select All: 全部选择
+Select Similar: 选择类似对象
+Send Under Object: 置于对象之下
+Send to Back: 置于最后
+Seqend: 序列结束
+Surface: 曲面
+Table Style Manager: 表格样式管理器
+Text Editor: 文字编辑器
+Text Style Manager: 文字样式管理器
+? The file is open or being used by another application. Close it there and retry, or save this drawing under a different name.
+: 该文件正被其他应用程序打开或使用。请关闭后重试，或将此图形另存为其他名称。
+The selected layer state is no longer available.: 选定的图层状态不再可用。
+? 'This drawing contains %{count} AEC/Civil objects that "%{target}" cannot store, so they will not be saved.
+
+
+  To keep them, save in the source version (%{src_version}).'
+: '此图形包含 %{count} 个“%{target}”无法存储的 AEC/Civil 对象，它们将不会被保存。
+
+
+  若要保留它们，请保存为源版本（%{src_version}）。'
+Unable to Save Drawing: 无法保存图形
+Underlay: 底图
+Unknown: 未知
+Unsaved Changes: 未保存的更改
+Update Available: 发现更新
+View Border: 视图边框
+'Width: %{value}': 宽度：%{value}
+XLine: 构造线
+Yes, set as default: 是，设置为默认
+Zoom Extents: 范围缩放
+
+# ---- Ribbon dynamic tool / dropdown labels ----
+? 'Autodesk
+
+  ReCap'
+: 'Autodesk
+
+  ReCap'
+2-Point: 两点
+3-Point: 三点
+Axis, End: 轴、端点
+Boundary: 边界
+Center, Axes: 圆心、轴
+Center, Diameter: 圆心、直径
+Center, Radius: 圆心、半径
+Center, Start, Angle: 圆心、起点、角度
+Center, Start, End: 圆心、起点、端点
+Center, Start, Length: 圆心、起点、长度
+Chamfer: 倒角
+Cone: 圆锥体
+Edit Aliases: 编辑别名
+Ellipse Arc: 椭圆弧
+Extend: 延伸
+Fillet: 圆角
+Frames & Print: 边框与打印
+Frames Off: 边框关
+Frames On: 边框开
+Gradient: 渐变色
+Intersect: 交集
+Load Partial CUI: 加载局部 CUI
+Paste as Block: 粘贴为块
+Paste to Original Coordinates: 粘贴到原坐标
+Path Array: 路径阵列
+Polar Array: 环形阵列
+Polygon - Circumscribed: 多边形 - 外切
+Polygon - Edge: 多边形 - 边
+Polygon - Inscribed: 多边形 - 内接
+Rectangle - Center: 矩形 - 中心
+Rectangle - Rotated: 矩形 - 旋转
+Rectangle - Two Corners: 矩形 - 两点
+Rectangular Array: 矩形阵列
+Shaded: 着色
+Start, Center, Angle: 起点、圆心、角度
+Start, Center, End: 起点、圆心、端点
+Start, Center, Length: 起点、圆心、长度
+Start, End, Angle: 起点、端点、角度
+Start, End, Direction: 起点、端点、方向
+Start, End, Radius: 起点、端点、半径
+Subtract: 差集
+Tan, Tan, Radius: 相切、相切、半径
+Tan, Tan, Tan: 相切、相切、相切
+Torus: 圆环体
+Trim: 修剪
+Union: 并集
+Wedge: 楔体

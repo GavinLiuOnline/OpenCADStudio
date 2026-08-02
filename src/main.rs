@@ -4,12 +4,15 @@
 // attached so eprintln! / panics stay visible while developing.
 #![cfg_attr(all(windows, not(debug_assertions)), windows_subsystem = "windows")]
 
+rust_i18n::i18n!("locales", fallback = "en");
+
 mod app;
 mod config;
 #[cfg(not(target_arch = "wasm32"))]
 mod cli;
 mod command;
 mod entities;
+mod i18n;
 mod io;
 #[cfg(not(target_arch = "wasm32"))]
 mod network;
