@@ -1554,6 +1554,7 @@ Spacing: Spacing
 Specular: Specular
 Specular Map: Specular Map
 Sponsors: Sponsors
+Start: Start
 Start Angle: Start Angle
 Start Limit: Start Limit
 Start Tangent X: Start Tangent X
@@ -1692,6 +1693,12 @@ View Representation: View Representation
 View Silhouettes: View Silhouettes
 View Symbol Flags: View Symbol Flags
 View Symbol Version: View Symbol Version
+ViewCube Back: BACK
+ViewCube Bottom: BOTTOM
+ViewCube Front: FRONT
+ViewCube Left: LEFT
+ViewCube Right: RIGHT
+ViewCube Top: TOP
 Visual style: Visual style
 Volume: Volume
 Watertight: Watertight

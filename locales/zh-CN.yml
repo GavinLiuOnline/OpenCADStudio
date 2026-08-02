@@ -1594,6 +1594,7 @@ Spacing: 间距
 Specular: 镜面
 Specular Map: 镜面贴图
 Sponsors: 赞助商
+Start: 开始
 Start Angle: 起始角度
 Start Limit: 开始限制
 Start Tangent X: 起点切线 X
@@ -1732,6 +1733,12 @@ View Representation: 视图表示
 View Silhouettes: 视图轮廓
 View Symbol Flags: 视图符号标志
 View Symbol Version: 视图符号版本
+ViewCube Back: 后
+ViewCube Bottom: 下
+ViewCube Front: 前
+ViewCube Left: 左
+ViewCube Right: 右
+ViewCube Top: 上
 Visual style: 视觉样式
 Volume: 体积
 Watertight: 水密

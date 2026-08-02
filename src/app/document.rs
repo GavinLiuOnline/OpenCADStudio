@@ -10,6 +10,7 @@ use crate::ui::{LayerPanel, PropertiesPanel};
 use acadrust::tables::Ucs;
 use acadrust::{CadDocument, EntityType, Handle};
 use iced;
+use rust_i18n::t;
 use std::any::Any;
 use std::collections::HashMap;
 use std::path::PathBuf;
@@ -492,7 +493,13 @@ impl DocumentTab {
                 .unwrap_or_default()
                 .to_string_lossy()
                 .to_string(),
-            None => self.tab_title.clone(),
+            None => {
+                if self.is_start {
+                    t!("Start").into_owned()
+                } else {
+                    self.tab_title.clone()
+                }
+            }
         }
     }
 }
