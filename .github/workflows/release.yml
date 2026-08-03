@@ -73,6 +73,17 @@ jobs:
     permissions:
       contents: write
 
+    # Azure Trusted Signing is optional: the signing steps below only run when
+    # the secrets are configured. `secrets` cannot be referenced in `if:`
+    # conditions (job- or step-level), so mirror the three gating secrets into
+    # job-level env vars — an unset secret becomes an empty string — and gate
+    # the steps on `env.*` instead. (`jobs.<job_id>.env` is a place where the
+    # `secrets` context is allowed.)
+    env:
+      AZURE_ENDPOINT: ${{ secrets.AZURE_ENDPOINT }}
+      AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+      AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -119,7 +130,7 @@ jobs:
         # `endpoint`, so an empty secret would fail the whole Windows job
         # with "The 'endpoint' input is required." — skip instead and ship
         # unsigned artifacts.
-        if: ${{ secrets.AZURE_ENDPOINT != '' && secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_CLIENT_SECRET != '' }}
+        if: ${{ env.AZURE_ENDPOINT != '' && env.AZURE_CLIENT_ID != '' && env.AZURE_CLIENT_SECRET != '' }}
         # Sign the bare .exe *before* the MSI is built so the copy packed
         # into the installer carries the signature too. AZURE_CLIENT_SECRET
         # authenticates the App Registration; the remaining AZURE_* secrets
@@ -184,7 +195,7 @@ jobs:
       - name: Sign MSI installer (Azure Trusted Signing)
         # Same best-effort gate as the .exe signing step above: without the
         # Azure secrets the build skips signing instead of failing.
-        if: ${{ secrets.AZURE_ENDPOINT != '' && secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_CLIENT_SECRET != '' }}
+        if: ${{ env.AZURE_ENDPOINT != '' && env.AZURE_CLIENT_ID != '' && env.AZURE_CLIENT_SECRET != '' }}
         # The installer itself must be signed separately — light produces a
         # fresh, unsigned .msi even though the .exe inside is already signed.
         uses: azure/artifact-signing-action@v2
