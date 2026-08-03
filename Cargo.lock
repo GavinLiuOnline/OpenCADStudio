@@ -33,6 +33,7 @@ dependencies = [
  "iced",
  "iced_aw",
  "iced_core",
+ "iced_graphics",
  "image",
  "inventory",
  "js-sys",

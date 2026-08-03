@@ -114,6 +114,12 @@ jobs:
           cargo build --release -p dwg-thumbnailer-win
 
       - name: Sign executable (Azure Trusted Signing)
+        # Signing is best-effort: it only runs when the Azure Trusted Signing
+        # secrets are configured in the repo. The action hard-requires
+        # `endpoint`, so an empty secret would fail the whole Windows job
+        # with "The 'endpoint' input is required." — skip instead and ship
+        # unsigned artifacts.
+        if: ${{ secrets.AZURE_ENDPOINT != '' && secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_CLIENT_SECRET != '' }}
         # Sign the bare .exe *before* the MSI is built so the copy packed
         # into the installer carries the signature too. AZURE_CLIENT_SECRET
         # authenticates the App Registration; the remaining AZURE_* secrets
@@ -176,6 +182,9 @@ jobs:
           if ($LASTEXITCODE -ne 0) { throw "light failed" }
 
       - name: Sign MSI installer (Azure Trusted Signing)
+        # Same best-effort gate as the .exe signing step above: without the
+        # Azure secrets the build skips signing instead of failing.
+        if: ${{ secrets.AZURE_ENDPOINT != '' && secrets.AZURE_CLIENT_ID != '' && secrets.AZURE_CLIENT_SECRET != '' }}
         # The installer itself must be signed separately — light produces a
         # fresh, unsigned .msi even though the .exe inside is already signed.
         uses: azure/artifact-signing-action@v2

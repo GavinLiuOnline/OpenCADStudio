@@ -269,6 +269,15 @@ impl OpenCADStudio {
             Message::WebFontLoaded(script, res) => {
                 match res {
                     Ok(bytes) => {
+                        // Web UI: register the CJK font with iced so the
+                        // Chinese UI renders — iced's bundled font has no Han
+                        // glyphs and wasm has no system fonts to fall back on.
+                        // Covers both the boot-time UI fetch and drawing-
+                        // triggered loads.
+                        #[cfg(target_arch = "wasm32")]
+                        if script == crate::scene::text::web_font::Script::Chinese {
+                            crate::scene::text::web_font::load_ui_font(bytes.clone());
+                        }
                         crate::scene::text::web_font::insert(script, Some(bytes));
                         crate::scene::text::ttf_glyph::clear_fallback_cache();
                         for tab in self.tabs.iter_mut() {
@@ -4288,6 +4297,18 @@ impl OpenCADStudio {
                 self.language = language;
                 language.apply();
                 self.persist_settings_if_changed();
+                // Web: switching to Chinese needs the CJK font registered with
+                // iced (no system fonts / no Han glyphs in the bundled font).
+                // Queue a fetch if it isn't loaded yet, or register it right
+                // away when a drawing already fetched it.
+                #[cfg(target_arch = "wasm32")]
+                if language == crate::i18n::Language::ZhCn {
+                    if let Some(bytes) = crate::scene::text::web_font::request(
+                        crate::scene::text::web_font::Script::Chinese,
+                    ) {
+                        crate::scene::text::web_font::load_ui_font((*bytes).clone());
+                    }
+                }
                 Task::none()
             }
 

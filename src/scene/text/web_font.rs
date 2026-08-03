@@ -111,6 +111,7 @@ pub fn script_of(ch: char) -> Option<Script> {
 #[cfg(target_arch = "wasm32")]
 mod imp {
     use super::Script;
+    use std::borrow::Cow;
     use std::collections::HashMap;
     use std::sync::{Arc, Mutex, OnceLock};
 
@@ -179,6 +180,19 @@ mod imp {
             .map_err(|e| format!("{e:?}"))?;
         Ok(js_sys::Uint8Array::new(&ab).to_vec())
     }
+
+    /// Register a fetched script font with iced's global UI font system so
+    /// UI text can fall back to it. The web build has no system fonts and
+    /// iced's bundled font (Fira Sans) has no Han glyphs, so without this
+    /// the Chinese UI renders as missing-glyph boxes. `load_font` bumps the
+    /// FontSystem version, which makes iced re-shape every paragraph on the
+    /// next frame.
+    pub fn load_ui_font(bytes: Vec<u8>) {
+        iced_graphics::text::font_system()
+            .write()
+            .expect("write iced font system")
+            .load_font(Cow::Owned(bytes));
+    }
 }
 
 #[cfg(not(target_arch = "wasm32"))]
@@ -198,9 +212,12 @@ mod imp {
     pub async fn fetch(_script: Script) -> Result<Vec<u8>, String> {
         Err("web only".into())
     }
+    // Kept for parity with the wasm impl; only the wasm path has a caller.
+    #[allow(dead_code)]
+    pub fn load_ui_font(_bytes: Vec<u8>) {}
 }
 
 pub use imp::{fetch, insert, take_pending};
-// `request` only has a caller in the wasm font-fallback path.
+// `request` / `load_ui_font` only have callers in the wasm font paths.
 #[cfg(target_arch = "wasm32")]
-pub use imp::request;
+pub use imp::{load_ui_font, request};

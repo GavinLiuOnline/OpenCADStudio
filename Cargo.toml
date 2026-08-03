@@ -31,6 +31,10 @@ serde = { version = "1", features = ["derive"] }
 semver = "1"
 lzma-sys = { version = "0.1", features = ["static"], optional = true }
 iced = { git = "https://github.com/iced-rs/iced.git", rev = "23604ff22ab0aad9e00b9327cb7b8546ed84db39", features = ["image", "svg", "advanced", "canvas", "smol", "markdown"] }
+# Same git rev as `iced`: exposes `iced_graphics::text::font_system()` so the
+# web build can register the lazily-fetched CJK font with iced's UI text
+# pipeline (Fira Sans has no Han glyphs and wasm has no system fonts).
+iced_graphics = { git = "https://github.com/iced-rs/iced.git", rev = "23604ff22ab0aad9e00b9327cb7b8546ed84db39" }
 iced_core = { git = "https://github.com/iced-rs/iced.git", rev = "23604ff22ab0aad9e00b9327cb7b8546ed84db39" }
 iced_aw = { git = "https://github.com/HakanSeven12/iced_aw.git", branch = "agent/fix-iced-fonts", features = ["menu", "context_menu", "color_picker", "drop_down"] }
 bytemuck = { version = "1.25", features = ["derive"] }

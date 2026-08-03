@@ -3186,6 +3186,16 @@ impl OpenCADStudio {
     fn boot_web() -> (Self, Task<Message>) {
         #[cfg_attr(target_arch = "wasm32", allow(unused_mut))]
         let mut s = Self::new();
+        // Web: when the UI language is Chinese, preload the CJK script font —
+        // iced's bundled font has no Han glyphs and wasm has no system fonts,
+        // so without it the Chinese UI renders as missing-glyph boxes.
+        // `request` is idempotent (never double-fetches); the PollWebFonts
+        // subscription picks the fetch up within ~300ms and WebFontLoaded
+        // registers the bytes with iced's UI font system.
+        #[cfg(target_arch = "wasm32")]
+        if s.language == crate::i18n::Language::ZhCn {
+            crate::scene::text::web_font::request(crate::scene::text::web_font::Script::Chinese);
+        }
         let focus = s.focus_cmd_input();
         // Web can't reach the Patreon API directly (CORS); fetch the CI-built
         // supporters.json served on the same origin instead.
