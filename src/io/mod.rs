@@ -6,6 +6,7 @@
 pub mod file_association;
 #[cfg(not(target_arch = "wasm32"))]
 pub mod edit_lock;
+pub mod mif;
 pub mod obj;
 #[cfg(not(target_arch = "wasm32"))]
 pub mod single_instance;
@@ -633,6 +634,7 @@ async fn load_web_bytes(
         fix_dxf_dimension_rotations(&mut doc);
         fix_dxf_layout_plot_settings(&mut doc);
     }
+    decode_mif_text(&mut doc);
     fix_viewport_status_flags(&mut doc);
     fix_current_style_names(&mut doc);
     progress.set(crate::app::OPEN_PHASE_CACHING, 7000, 0, 1);
@@ -673,6 +675,7 @@ pub fn load_bytes(name: &str, bytes: Vec<u8>) -> Result<CadDocument, String> {
             let mut doc = DwgReader::from_stream(Cursor::new(bytes))
                 .read()
                 .map_err(|e| e.to_string())?;
+            decode_mif_text(&mut doc);
             fix_viewport_status_flags(&mut doc);
             fix_current_style_names(&mut doc);
             Ok(doc)
@@ -684,6 +687,7 @@ pub fn load_bytes(name: &str, bytes: Vec<u8>) -> Result<CadDocument, String> {
                 .map_err(|e| e.to_string())?;
             fix_dxf_dimension_rotations(&mut doc);
             fix_dxf_layout_plot_settings(&mut doc);
+            decode_mif_text(&mut doc);
             fix_viewport_status_flags(&mut doc);
             fix_current_style_names(&mut doc);
             Ok(doc)
@@ -913,6 +917,7 @@ fn finalize_loaded_outcome(
 ) -> Result<acadrust::ReadOutcome, String> {
     let doc = &mut outcome.document;
     normalize_block_origins(doc);
+    decode_mif_text(doc);
     if outcome.stats.source_format == Some(acadrust::SourceFormat::Dxf) {
         fix_dxf_dimension_rotations(doc);
         fix_dxf_layout_plot_settings(doc);
@@ -1978,6 +1983,29 @@ fn fix_viewport_status_flags(doc: &mut CadDocument) {
                 vp.status.is_on = true;
                 vp.status.locked = (bits & 0x4000) != 0;
             }
+        }
+    }
+}
+
+/// Decode AutoCAD MIF escapes (`\M+<hex>` / `\m+<hex>`) in every text-bearing
+/// entity, using the drawing's code page to pick the double-byte encoding
+/// (GBK / Big5 / Shift-JIS / EUC-KR). Without this, big-font characters stored
+/// by AutoCAD as MIF codes render as literal `\M+19094`-style garbage.
+/// Escapes that don't decode are left untouched.
+fn decode_mif_text(doc: &mut CadDocument) {
+    let code_page = doc.header.code_page.clone();
+    for entity in doc.entities_mut() {
+        let value = match entity {
+            EntityType::Text(t) => &mut t.value,
+            EntityType::MText(m) => &mut m.value,
+            EntityType::AttributeDefinition(a) => &mut a.default_value,
+            EntityType::AttributeEntity(a) => &mut a.value,
+            EntityType::Tolerance(t) => &mut t.text,
+            EntityType::Dimension(d) => &mut d.base_mut().text,
+            _ => continue,
+        };
+        if value.contains("\\M+") || value.contains("\\m+") {
+            *value = crate::io::mif::decode(value, &code_page);
         }
     }
 }

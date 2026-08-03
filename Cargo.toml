@@ -43,6 +43,7 @@ i18n-embed = { version = "0.16", features = ["fluent-system"] }
 i18n-embed-fl = "0.10"
 rust-embed = "8"
 inventory = "0.3"
+encoding_rs = "0.8"
 truck-shapeops = { version = "0.4", optional = true }
 rustc-hash = "2"
 sha2 = "0.10"
